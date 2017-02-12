@@ -47,7 +47,7 @@ series_id | integer | not null, indexed
 rating | integer | not null, default: 0
 body | text | not null
 
-### reviews
+### genres
 column name | data type | details
 ------------ | ------------- | -------------
 id | integer | not null, primary key
