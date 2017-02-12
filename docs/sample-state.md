@@ -1,6 +1,6 @@
 {  
   session: {  
-    currentUser: {  
+      currentUser: {  
       id: 321,  
       email: "test@gmail.com",  
       reviews: [34, 99, 12, 54],  
