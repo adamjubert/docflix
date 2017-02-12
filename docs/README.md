@@ -12,8 +12,11 @@ This is the proposal README.
 - [ ] Add video to 'My List'
 
 ## Design Docs
-* [View Wireframes](/wireframes/)
+* [View Wireframes](wireframes/)
 * [React Components](component-hierarchy.md)
+* [API Endpoints](api-endpoints.md)
+* [DB Schema](schema.md)
+* [Sample State](sample-state.md)
 
 
 ## Implementation Timeline
