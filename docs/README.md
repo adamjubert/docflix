@@ -27,7 +27,7 @@ This is the proposal README.
 ### Phase 2: Series (3 days)
 **Objective:** Series and their overview, episodes, and details can be viewed
 
-### Phase 3: Episodes (1 day)
+### Phase 3: Episodes (1-2 days)
 **Objective:** Episodes can be watched in a fullscreen video player
 
 ### Phase 4: Reviews (2 days)
