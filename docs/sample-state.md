@@ -1,7 +1,7 @@
 {  
-  session: {  
-      currentUser: {  
-      id: 321,  
+ session: {  
+  currentUser: {  
+  id: 321,  
       email: "test@gmail.com",  
       reviews: [34, 99, 12, 54],  
       favorites: [5, 7, 8]  
