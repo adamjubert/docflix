@@ -8,6 +8,7 @@
       favorites: [5, 7, 8]  
     }  
   },  
+
   forms: {  
     signUp: {errors: []},  
     logIn: {errors: []},  
@@ -21,7 +22,7 @@
       mpaaRating: "TV-G",  
       description: "This landmark series transports nature lovers from the  
       Himalayan Mountains to the depths of the ocean and everywhere inbetween.",  
-      genre: ["Nature", "Science"],  
+      genre: [1, 2],  
       episodes: [12, 19, 32, 55]  
       reviews: [34, 25, 98, 65, 11],  
       reviewAvg: 4.8  
