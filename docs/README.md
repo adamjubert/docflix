@@ -12,7 +12,8 @@ This is the proposal README.
 - [ ] Add video to 'My List'
 
 ## Design Docs
-
+* [View Wireframes](/wireframes/)
+* [React Components](component-hierarchy.md)
 
 
 ## Implementation Timeline
