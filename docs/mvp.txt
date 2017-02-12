@@ -1,0 +1,14 @@
+1. New account creation, login, and guest/demo login
+2. A production README
+3. Hosting on Heroku
+4. Browse videos
+5. See video details and play video
+6. Reviews
+7. My List
+Bonus: Video search
+Bonus: Continue watching
+Bonus: Review helpfulness
+Bonus: Profile updating (avatar)
+Bonus: Friend lists
+Bonus: Follow users
+Bonus: Video recommendations (user-to-user)
