@@ -10,14 +10,15 @@
 * Navbar
   * BrowseDropdown
     * Browse
-    * MyList
-  * Search (bonus)
+    * *MyList (bonus)*
+  * *Search (bonus)*
+  * SignOut
 
 #### DashboardContainer
 * FeaturedEpisode
 * Genres
 
-#### GenresContainer
+#### BrowseContainer
 * GenreItems
   * Series
 
@@ -27,6 +28,9 @@
   * Overview
   * Episodes
   * Details
+
+#### WatchEpisodeContainer
+  * WatchEpisode
 
 #### OverviewContainer
 * Rating
@@ -39,22 +43,32 @@
 
 #### DetailsContainer
 * ReadReviews
-* ReviewsIndex
+* Reviews
 * MakeReview
 
 #### ReviewsIndex
 * StarRating
 * Description
 
-#### MyList
-* MyListItems
-  * SeriesIndex
+#BONUS
 
-#### SearchContainer (bonus)
+#### GenreContainer
+* GenreItems
+  * Series
+
+#### SearchContainer 
 * SearchResults
-  * SeriesIndex
+  * Series
 
 
 
 
 # Routes
+Path | Component
+------------ | -------------
+"/signup" | "AuthFormContainer
+"/signin" | "AuthFormContainer
+"browse" | "BrowseContainer"
+"/search" | "SearchContainer"
+"/browse/genre/:genreId" | "Genre"
+"/watch/:episodeId" | "WatchEpisodeContainer"
