@@ -1,4 +1,5 @@
-# Component Hierarchy
+# Nested Component Hierarchy
+*Sample use only* 
 
 #### AuthFormContainer
 * SignUpForm
