@@ -32,12 +32,12 @@
   episodes: {  
     1: {  
       id: 12,  
+      seriesId: 5  
       name: 'From Pole to Pole',  
       description: 'This episode looks at our planet as a whole and considers  
       the key factors that have shaped its natural history.',  
       runtime: '1m',  
       videoURL: 'youtube.com/12345667',  
-      seriesId: 5  
     }  
   }  
 
@@ -45,12 +45,14 @@
     1: {  
       id: 34,  
       seriesId: 5,  
+      userId: 3,
       stars: 5,  
       comment: 'I loved this documentary so much! It was amazing.'  
     },  
     2: {  
       id: 22,  
       seriesId: 5,  
+      userId: 4,
       stars: 3,  
       comment: 'It was pretty good.'  
     }  
