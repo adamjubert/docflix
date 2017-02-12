@@ -56,7 +56,7 @@
 * GenreItems
   * Series
 
-#### SearchContainer 
+#### SearchContainer
 * SearchResults
   * Series
 
@@ -68,7 +68,7 @@ Path | Component
 ------------ | -------------
 "/signup" | "AuthFormContainer
 "/signin" | "AuthFormContainer
-"browse" | "BrowseContainer"
-"/search" | "SearchContainer"
-"/browse/genre/:genreId" | "Genre"
+"/browse" | "BrowseContainer"
 "/watch/:episodeId" | "WatchEpisodeContainer"
+"/browse/genre/:genreId" | "GenreContainer"
+"/search" | "SearchContainer"
