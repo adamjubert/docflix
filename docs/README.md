@@ -17,4 +17,4 @@ This is the proposal README.
 
 ## Implementation Timeline
 ### Phase 1: Let's talk about it
-**Objective:** This is the first objecting
+**Objective:** This is the first object
