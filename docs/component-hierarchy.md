@@ -16,7 +16,7 @@
 
 #### DashboardContainer
 * FeaturedEpisode
-* Genres
+* Browse
 
 #### BrowseContainer
 * GenreItems
@@ -50,7 +50,7 @@
 * StarRating
 * Description
 
-#BONUS
+## Bonus
 
 #### GenreContainer
 * GenreItems
