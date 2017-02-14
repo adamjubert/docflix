@@ -1,0 +1,60 @@
+/*
+main-top
+  navbar
+    navbar-header
+      navbar-header-link
+        navbar-header-title
+    navbar-greeting
+      (GreetingContainer)
+      header-group
+        header-name
+          header-button-signin  / header-button-signout
+
+*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 18px;
+}
+
+.navbar-header {
+  margin-left: 22px;
+}
+
+.navbar-header-link {
+  text-decoration: none;
+
+}
+
+.navbar-header-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: $netflix-red;
+}
+
+.navbar-greeting {
+
+}
+
+.header-group {
+  margin-right: 22px;
+}
+
+.login {
+  margin-top: 5px;
+}
+
+.header-button-login {
+  text-decoration: none;
+  color: #fff;
+  background: $netflix-red;
+  padding: 6px 16px;
+  font-weight: 200;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.header-button-login:hover {
+  background: $netflix-red-hover;
+}
