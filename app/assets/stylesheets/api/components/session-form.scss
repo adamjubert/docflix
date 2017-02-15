@@ -63,6 +63,11 @@ login-form-container
   cursor: pointer;
 }
 
+.auth-errors {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 12px;
+}
 
 .below-form-item {
   margin-top: 10px;

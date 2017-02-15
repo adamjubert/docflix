@@ -11,7 +11,6 @@ class SessionForm extends React.Component {
 
   componentDidUpdate() {
     this.redirectIfLoggedIn();
-    
   }
 
   redirectIfLoggedIn() {
@@ -48,7 +47,7 @@ class SessionForm extends React.Component {
     }
   }
 
-  formText() {
+  headerText() {
     if (this.props.formType === 'login') {
       return 'Sign In';
     } else {
@@ -105,13 +104,24 @@ class SessionForm extends React.Component {
     }
   }
 
+  errorHandling() {
+
+      return this.props.errors.map((error) => (
+        <ul>
+          <li key={error.id}>{error}</li>
+        </ul>
+      ));
+
+  }
+
+
   render() {
     return (
       <div className='login-form-container'>
         <form onSubmit={this.handleSubmit} className='login-form-box'>
           <div className='login-form'>
-            {this.props.errors}
-            <h3 className="login-header-text">{this.formText()}</h3>
+            <h3 className="login-header-text">{this.headerText()}</h3>
+            <div className='auth-errors'>{this.errorHandling()}</div>
             <div className='login-labels'>
               <label htmlFor='email'>Email  </label>
               <input id='email'
