@@ -12,11 +12,21 @@ main-top
 
 */
 
-.navbar {
+/*** Navbar - Root or Auth - determined in app.jsx ***/
+.root-navbar {
   display: flex;
   justify-content: space-between;
   padding-top: 18px;
+  padding-bottom: 18px;
 }
+
+.auth-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+/**************/
 
 .navbar-header {
   margin-left: 22px;
@@ -42,7 +52,7 @@ main-top
 }
 
 .login {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .header-button-login {
@@ -57,4 +67,10 @@ main-top
 
 .header-button-login:hover {
   background: $netflix-red-hover;
+}
+
+@media (max-width: 740px) {
+  .auth-navbar {
+    background: #fafafa;
+  }
 }

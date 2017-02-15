@@ -33,9 +33,9 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <Link to='/signup'>Sign up now.</Link>;
+      return <Link to='/signup' className='form-bottom-link'>Sign up now.</Link>;
     } else {
-      return <Link to='/login'>Sign in to Docflix.</Link>;
+      return <Link to='/login' className='form-bottom-link'>Sign in to Docflix.</Link>;
     }
   }
 
@@ -78,24 +78,28 @@ class SessionForm extends React.Component {
   _fName() {
     if (this.props.formType === 'signup') {
       return(
-          <label>First Name:
+        <div>
+          <label>First Name:</label>
             <input type='text'
                    value={this.state.fname}
                    onChange={this.update('fname')}
                    className='login-input'/>
-          </label>
+          <br/>
+        </div>
       );
     }
   }
   _lName() {
     if (this.props.formType === 'signup') {
       return(
-          <label>Last Name:
+        <div>
+          <label>Last Name:</label>
             <input type='text'
                    value={this.state.lname}
                    onChange={this.update('lname')}
                    className='login-input'/>
-          </label>
+          <br/>
+        </div>
       );
     }
   }
@@ -105,28 +109,34 @@ class SessionForm extends React.Component {
       <div className='login-form-container'>
         <form onSubmit={this.handleSubmit} className='login-form-box'>
           <div className='login-form'>
-          <h3 className="login-header-text">{this.formText()}</h3>
-            <label>Email:
-              <input type='text'
+            <h3 className="login-header-text">{this.formText()}</h3>
+            <div className='login-labels'>
+              <label htmlFor='email'>Email  </label>
+              <input id='email'
+                     type='text'
                      value={this.state.email}
                      onChange={this.update('email')}
                      className='login-input'/>
-            </label>
-            <br/>
-            <label>Password:
-              <input type='password'
-                     value={this.state.password}
-                     onChange={this.update('password')}
-                     className='login-input'/>
-                 </label><br/>
-            { this._fName() }
-            { this._lName() }
-            <br/>
-
-            <input type='submit' value={this.submitButtonText()}></input>
+              <label htmlFor='password'>Password</label>
+                <input id='password'
+                       type='password'
+                       value={this.state.password}
+                       onChange={this.update('password')}
+                       className='login-input'/>
+              { this._fName() }
+              { this._lName() }
+            </div>
+            <input type='submit' value={this.submitButtonText()} className='auth-form-submit-btn'></input>
           </div>
-          Login with guest account
-          {this.navText()} {this.navLink()}
+          <div className='below-form-item'>
+            <Link to="/" className='guest-login'>
+              <i className="fa fa-user" aria-hidden="true"></i>
+              <p>Login with guest account</p>
+            </Link>
+          </div>
+          <div className='form-text'>
+            {this.navText()} {this.navLink()}
+          </div>
         </form>
       </div>
     );

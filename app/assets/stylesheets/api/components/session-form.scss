@@ -4,3 +4,111 @@ login-form-container
     login-form
     login-header-text
 */
+
+* {
+  font-weight: 300;
+}
+
+.login-form-container {
+  background: $off-white;
+  margin: 0 auto 24px;
+  width: 420px;
+  min-height: 400px;
+}
+
+.login-form-box {
+  padding: 32px 32px 40px;
+}
+
+.login-header-text {
+  color: $netflix-grey;
+  font-size: 30px;
+}
+
+.login-form-box label {
+  font-size: 14px;
+  display: block;
+}
+
+.login-labels {
+  margin-top: 20px;
+}
+
+.login-labels input {
+  width: 95%;
+  height: 28px;
+  font-size: 14px;
+  padding-left: 8px;
+  margin-bottom: 20px;
+}
+
+.login-labels input:focus {
+  border-color: none;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+.auth-form-submit-btn {
+  width: 100%;
+  border: none;
+  background: $netflix-red;
+  color: white;
+  font-size: 16px;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  box-shadow: 0px 1px 1px -1px rgba(0,0,0,1);
+}
+
+.auth-form-submit-btn:hover {
+  cursor: pointer;
+}
+
+
+.below-form-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.guest-login {
+  display: flex;
+}
+
+.guest-login p {
+  margin-top: 4px;
+  margin-left: 4px;
+}
+
+.below-form-item i {
+  color: $blue-link;
+  width: 18px;
+  height: 18px;
+  font-size: 22px;
+}
+
+.guest-login {
+  padding: 10px 0;
+  font-size: 12px;
+  color: $blue-link;
+  text-decoration: none;
+}
+
+.form-bottom-link {
+  color: $blue-link;
+  text-decoration: none;
+}
+.form-bottom-link:hover {
+  text-decoration: underline;
+}
+.form-bottom-link:visited {
+  color: $blue-link;
+}
+
+
+@media (max-width: 740px) {
+  .login-form-container {
+    width: 100%;
+  }
+
+
+
+}

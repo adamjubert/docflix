@@ -23,6 +23,13 @@
 // Components
 @import "api/components/*";
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 * {
   font-family: $net-helvetica;
+}
+
+body {
+  background: url('auth-princess.png');
 }
