@@ -12,29 +12,31 @@ main-top
 
 */
 
-/*** Navbar - Root or Auth - determined in app.jsx ***/
-.root-navbar {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 18px;
-  padding-bottom: 18px;
-}
 
 .auth-navbar {
-  display: flex;
-  justify-content: space-between;
   padding-top: 18px;
   padding-bottom: 18px;
 }
-/**************/
 
-.navbar-header {
-  margin-left: 22px;
+
+.all-nav-container {
+  display: flex;
+  justify-content: space-between;
 }
 
-.navbar-header-link {
-  text-decoration: none;
+.all-nav-header {
+  margin-left: 22px;
+  display: flex;
+}
 
+.all-nav-header-link {
+  text-decoration: none;
+}
+
+.all-nav-header-browse {
+  color: $netflix-red;
+  margin-left: 30px;
+  margin-top: 8px;
 }
 
 .navbar-header-title {
@@ -44,7 +46,8 @@ main-top
 }
 
 .navbar-greeting {
-
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .header-group {
@@ -67,4 +70,93 @@ main-top
 
 .header-button-login:hover {
   background: $netflix-red-hover;
+}
+
+.main-nav-right {
+  margin-right: 22px;
+  color: white;
+  display: flex;
+}
+
+.main-nav-right i {
+  color: white;
+}
+
+.header-button-signout {
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.header-button-signout:hover {
+  text-decoration: underline;
+}
+
+/************/
+
+#primary_nav_wrap
+{
+  color: white;
+  margin-right: 60px;
+  align-items: center;
+}
+
+#primary_nav_wrap ul
+{
+	list-style:none;
+	position:relative;
+	margin:0;
+	padding:0
+}
+
+#primary_nav_wrap ul a
+{
+	display:block;
+	color:#fff;
+	text-decoration:none;
+	font-size:14px;
+	line-height:32px;
+	padding:0 15px;
+}
+
+#primary_nav_wrap ul li
+{
+	position:relative;
+	margin:0;
+	padding:0
+}
+
+#primary_nav_wrap ul ul
+{
+	display:none;
+	position:absolute;
+	top:100%;
+  left: 2px;
+	background:#000;
+	padding:0
+}
+
+#primary_nav_wrap ul ul li
+{
+  align-items: center;
+	float:none;
+	width:200px
+}
+
+#primary_nav_wrap ul ul a
+{
+	line-height:120%;
+	padding:10px 15px
+}
+
+
+#primary_nav_wrap ul li:hover > ul
+{
+	display:block;
+  transition: 2s;
+}
+
+.nav-dropdown-items {
+  padding: 20px;
 }

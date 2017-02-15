@@ -40,6 +40,3 @@ const Root = ({ store }) => {
 
 
 export default Root;
-
-// define a logged_in helper method to see if we have current user, if we do
-// have current user, switch between which navbar you use - pass down to app
