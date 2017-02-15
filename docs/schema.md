@@ -16,12 +16,11 @@ column name | data type | details
 id | integer | not null, primary key
 name | string | not null
 year | integer | not null
+author | string | 
 mpaa_rating | string | not null
 description | text | not null
 avg_review | integer | default: 0
-image_name | string |
-image_type | string |
-image_size | integer |
+
 
 
 ### episodes
@@ -33,9 +32,7 @@ name | string | not null
 description | text | not null
 runtime | integer | not null
 view_url | string | not null
-image_name | string |
-image_type | string |
-image_size | integer |
+
 
 
 ### reviews
