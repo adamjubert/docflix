@@ -19,3 +19,5 @@ const Greeting = ({ currentUser, logout }) => (
 );
 
 export default Greeting;
+
+// this.props.location.pathname == '/' then render sessionLink, else don't

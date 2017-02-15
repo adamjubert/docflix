@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
-import GreetingContainer from './greeting/greeting_container'
+import GreetingContainer from './greeting/greeting_container';
 
 const App = (props) => {
   let _isRoot = props.location.pathname === '/' ? 'root-navbar' : 'auth-navbar';
+  let signInBtn;
+  if (props.location.pathname === '/') signInBtn = <GreetingContainer />;
   return(
   <div className='main-top'>
     <div className={ _isRoot }>
@@ -13,7 +15,7 @@ const App = (props) => {
         </Link>
       </div>
       <div className='navbar-greeting'>
-        <GreetingContainer />
+        { signInBtn }
       </div>
     </div>
     { props.children }
@@ -22,4 +24,5 @@ const App = (props) => {
 };
 
 export default App;
-// if this.props.location.pathname = '/login' : /signup :
+
+// will recieve logged in helper function from root, then determine which navbar to show

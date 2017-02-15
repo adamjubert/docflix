@@ -13,6 +13,12 @@ class SessionForm extends React.Component {
     this.redirectIfLoggedIn();
   }
 
+  componentWillReceiveProps(newProps) {
+    if (this.props.location.pathname !== newProps.location.pathname) {
+      this.props.clearErrors();
+    }
+  }
+
   redirectIfLoggedIn() {
     if (this.props.loggedIn) {
       this.props.router.push("/");
@@ -29,6 +35,24 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.processForm(user);
+  }
+
+  handleGuestLogin() {
+    const user = {email: 'guest@docflix.tech', password: 'testing'};
+    this.props.processForm(user);
+  }
+
+  guestLogin() {
+    if (this.props.formType === 'login') {
+      return (
+        <div className='below-form-item'>
+          <a onClick={this.handleGuestLogin.bind(this)} className='guest-login'>
+            <i className="fa fa-user" aria-hidden="true"></i>
+            <p>Login with guest account</p>
+          </a>
+        </div>
+      );
+    }
   }
 
   navLink() {
@@ -63,17 +87,7 @@ class SessionForm extends React.Component {
     }
   }
 
-  renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((erorr, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
-  }
+
 
   _fName() {
     if (this.props.formType === 'signup') {
@@ -104,13 +118,19 @@ class SessionForm extends React.Component {
     }
   }
 
-  errorHandling() {
+  errorHandler() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
-      return this.props.errors.map((error) => (
-        <ul>
-          <li key={error.id}>{error}</li>
-        </ul>
-      ));
+  renderErrors() {
 
   }
 
@@ -121,7 +141,7 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className='login-form-box'>
           <div className='login-form'>
             <h3 className="login-header-text">{this.headerText()}</h3>
-            <div className='auth-errors'>{this.errorHandling()}</div>
+            <div className='auth-errors'>{this.errorHandler()}</div>
             <div className='login-labels'>
               <label htmlFor='email'>Email  </label>
               <input id='email'
@@ -140,12 +160,7 @@ class SessionForm extends React.Component {
             </div>
             <input type='submit' value={this.submitButtonText()} className='auth-form-submit-btn'></input>
           </div>
-          <div className='below-form-item'>
-            <Link to="/" className='guest-login'>
-              <i className="fa fa-user" aria-hidden="true"></i>
-              <p>Login with guest account</p>
-            </Link>
-          </div>
+          {this.guestLogin()}
           <div className='form-text'>
             {this.navText()} {this.navLink()}
           </div>
