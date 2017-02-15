@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import { login } from './actions/session_actions';
-import { fetchSeries, fetchSerie } from './util/serie_api_util';
+import { fetchSeries, fetchSerie } from './actions/serie_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.fetchSeries = fetchSeries;
   window.fetchSerie = fetchSerie;
+  window.store = store;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
 });
