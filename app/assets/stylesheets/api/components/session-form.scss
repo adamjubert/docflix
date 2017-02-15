@@ -35,7 +35,7 @@ login-form-container
 }
 
 .login-labels input {
-  width: 95%;
+  width: 96%;
   height: 28px;
   font-size: 14px;
   padding-left: 8px;
@@ -104,11 +104,8 @@ login-form-container
 }
 
 
-@media (max-width: 740px) {
+@media (max-width: 670px) {
   .login-form-container {
     width: 100%;
   }
-
-
-
 }

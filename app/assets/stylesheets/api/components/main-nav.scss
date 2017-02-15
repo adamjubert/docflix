@@ -68,9 +68,3 @@ main-top
 .header-button-login:hover {
   background: $netflix-red-hover;
 }
-
-@media (max-width: 740px) {
-  .auth-navbar {
-    background: #fafafa;
-  }
-}
