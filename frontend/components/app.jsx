@@ -19,7 +19,7 @@ const App = (props) => {
         { currentNavbar }
       </div>
       { props.children }
-      { Footer }
+      < Footer />
     </div>
   );
 };
