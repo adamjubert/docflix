@@ -6,7 +6,9 @@ class Splash extends React.Component {
   render() {
     return (
       <div className='splash-main'>
-        <h1>See what's new</h1>
+        <h1>See what's next.</h1>
+        <h2>WATCH ANYWHERE. CANCEL ANYTIME.</h2>
+        
       </div>
     );
   }
