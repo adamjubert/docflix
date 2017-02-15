@@ -54,3 +54,4 @@ group :production do
 end
 
 gem 'font-awesome-sass'
+gem "paperclip", "~> 5.0.0.beta1"
