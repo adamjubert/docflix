@@ -1,5 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
+
+// const handleLogout = (logout) => {
+//   logout();
+//   this.props.router.push('/');
+// }
 
 const personalGreeting = (currentUser, logout) => (
   <div className='header-group'>
