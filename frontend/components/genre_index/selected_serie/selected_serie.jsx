@@ -29,9 +29,9 @@ class SelectedSerie extends React.Component {
             <ul className='serie-overview-list'>
               <li>{serie.avg_review} Stars</li>
               <li>{serie.year}</li>
-              <li>TV-{serie.mpaa_rating}</li>
+              <li className='mpaa-rating'>TV-{serie.mpaa_rating}</li>
             </ul>
-          {this.props.serie.description}
+            <p>{this.props.serie.description}</p>
           </section>
         </div>
         <div className='serie-overview-right'>

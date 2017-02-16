@@ -11,7 +11,7 @@ class GenreIndex extends React.Component {
     this.props.fetchGenres().then(() => this.setState({fetching: false}));
   }
 
-  // NB: if slowdown, this is the issue. Ask Meagan for help 
+  // NB: if slowdown, this is the issue. Ask Meagan for help
   showSerie(serie, genre) {
     return () => {
       this.setState({
@@ -29,7 +29,6 @@ class GenreIndex extends React.Component {
             <li className='series-list-item'
                 key={"serie-" + serie.id}
                 onClick={this.showSerie(serie, genre)}>
-                {serie.name}
             </li>
 
           )) }

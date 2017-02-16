@@ -9,5 +9,13 @@
     font-size: 18px;
     margin-top: 8px;
   }
+  .serie-overview-left-container h2 {
+    font-size: 20px;
+  }
+
+  .serie-expand-main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
 }
