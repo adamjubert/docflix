@@ -1,0 +1,37 @@
+.serie-index-main {
+  color: white;
+  margin-top: 40px;
+}
+
+.serie-genre-main {
+  margin-left: 24px;
+}
+
+.serie-genre-main h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.serie-specific-genre-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.serie-specific-genre-list-item {
+  width: 18%;
+  max-width: 300px;
+  height: 120px;
+  border: 1px solid grey;
+  transition: all .5s ease-in-out;
+  background: grey;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.serie-specific-genre-list-item:hover {
+  width: 300px;
+  transform: scale(1.4);
+  cursor: pointer;
+  z-index: 100;
+}

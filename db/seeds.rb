@@ -6,9 +6,27 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Serie.destroy_all
+User.destroy_all
+User.create!(email: 'guest@docflix.tech', password: 'testing', fname: 'Guest', lname: 'Smith')
 
-Serie.create!(name: 'Planet Earth', year: 2014, author: 'Discovery Channel', mpaa_rating: 'PG', description: 'A wonderful nature series about our planet')
-Serie.create!(name: 'Vice on HBO', year: 2015, author: 'Vice', mpaa_rating: 'MA', description: 'Travel around the globe and watch interesting stories')
-Serie.create!(name: 'The Barkley Marathons', year: 2014, author: 'Barkley Movie', mpaa_rating: 'PG', description: 'The documentary follows the story of unlikely athletes pushing themselves to their limits.')
-Serie.create!(name: 'Russias Secret Rainforest', year: 201409, author: 'National Geographic', mpaa_rating: 'PG', description: 'Exploring a rainforest in Russia')
+Serie.destroy_all
+planet_earth = Serie.create!(name: 'Planet Earth', year: 2014, author: 'Discovery Channel', mpaa_rating: 'PG', description: 'A wonderful nature series about our planet')
+vice = Serie.create!(name: 'Vice on HBO', year: 2015, author: 'Vice', mpaa_rating: 'MA', description: 'Travel around the globe and watch interesting stories')
+barkley_marathons = Serie.create!(name: 'The Barkley Marathons', year: 2014, author: 'Barkley Movie', mpaa_rating: 'PG', description: 'The documentary follows the story of unlikely athletes pushing themselves to their limits.')
+russias_rain = Serie.create!(name: 'Russias Secret Rainforest', year: 2009, author: 'National Geographic', mpaa_rating: 'PG', description: 'Exploring a rainforest in Russia')
+ants_secret = Serie.create!(name: 'Ants: The Secret Power of Nature', year: '2011', author: 'Discovery Channel', mpaa_rating: 'G', description:'Learn a lot about ants' )
+animal_homes = Serie.create!(name: 'Animal Homes', year: '2013', author: 'BBC', mpaa_rating: 'G', description:'See how different animals build their homes' )
+
+Genre.destroy_all
+my_list = Genre.create!(name: 'My List')
+nature = Genre.create!(name: 'Nature')
+social = Genre.create!(name: 'Social & Cultural')
+
+SeriesGenre.destroy_all
+SeriesGenre.create!(series_id: planet_earth.id, genre_id: nature.id)
+SeriesGenre.create!(series_id: vice.id, genre_id: social.id)
+SeriesGenre.create!(series_id: barkley_marathons.id, genre_id: social.id)
+SeriesGenre.create!(series_id: russias_rain.id, genre_id: nature.id)
+SeriesGenre.create!(series_id: ants_secret.id, genre_id: nature.id)
+SeriesGenre.create!(series_id: animal_homes.id, genre_id: nature.id)
+SeriesGenre.create!(series_id: animal_homes.id, genre_id: social.id)

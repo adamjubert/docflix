@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170215221900) do
+ActiveRecord::Schema.define(version: 20170216160354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "genres", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "genres", ["name"], name: "index_genres_on_name", using: :btree
 
   create_table "series", force: :cascade do |t|
     t.string   "name",                    null: false
@@ -28,6 +36,16 @@ ActiveRecord::Schema.define(version: 20170215221900) do
   end
 
   add_index "series", ["name"], name: "index_series_on_name", using: :btree
+
+  create_table "series_genres", force: :cascade do |t|
+    t.integer  "series_id",  null: false
+    t.integer  "genre_id",   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "series_genres", ["genre_id"], name: "index_series_genres_on_genre_id", using: :btree
+  add_index "series_genres", ["series_id"], name: "index_series_genres_on_series_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",           null: false
