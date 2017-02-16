@@ -16,14 +16,22 @@
   font-weight: 600;
   margin-left: 36px;
   margin-bottom: 16px;
+  color: #999;
 }
 
+.genre-list-item > h3:hover {
+  color: white;
+  cursor: pointer;
+}
 /***Series***/
 
 .series-list-item {
   width: 18%;
-  max-width: 300px;
+  max-width: 250px;
+  min-width: 200px;
   height: 120px;
+  min-height: 100px;
+  max-height: 225px;
   border: 1px solid grey;
   transition: all .5s ease-in-out;
   background: grey;
@@ -33,7 +41,8 @@
 
 .series-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  margin-left: 36px;
 }
 
 .series-list-item:hover {

@@ -11,7 +11,6 @@ User.create!(email: 'guest@docflix.tech', password: 'testing', fname: 'Guest', l
 
 Serie.destroy_all
 planet_earth = Serie.create!(name: 'Planet Earth', year: 2014, author: 'Discovery Channel', mpaa_rating: 'PG', description: 'This landmark series transports nature lovers from the Himalayan Mountains to the depths of the ocean and everywhere in between.')
-africa = Serie.create!(name: 'Africa', year: 2014, author: 'Discovery Channel', mpaa_rating: 'PG', description: 'This landmark series transports nature lovers from the Himalayan Mountains to the depths of the ocean and everywhere in between.')
 natures_great = Serie.create!(name: 'Nature\'s Great Events', year: 2014, author: 'Discovery Channel', mpaa_rating: 'PG', description: 'This landmark series transports nature lovers from the Himalayan Mountains to the depths of the ocean and everywhere in between.')
 vice = Serie.create!(name: 'Vice on HBO', year: 2015, author: 'Vice', mpaa_rating: 'MA', description: 'Travel around the globe and watch interesting stories')
 barkley_marathons = Serie.create!(name: 'The Barkley Marathons', year: 2014, author: 'Barkley Movie', mpaa_rating: 'PG', description: 'The documentary follows the story of unlikely athletes pushing themselves to their limits.')
@@ -20,6 +19,9 @@ ants_secret = Serie.create!(name: 'Ants: The Secret Power of Nature', year: '201
 animal_homes = Serie.create!(name: 'Animal Homes', year: '2013', author: 'BBC', mpaa_rating: 'G', description:'See how different animals build their homes' )
 hungry_for = Serie.create!(name: 'Hungry for Change', year: '2013', author: 'BBC', mpaa_rating: 'G', description:'This documentary exposes shocking secrets the diet, weight loss and food industries use to keep consumers coming back for more.' )
 killer_legends = Serie.create!(name: 'Killer Legends', year: '2013', author: 'BBC', mpaa_rating: 'G', description:'This documentary exposes shocking secrets the diet, weight loss and food industries use to keep consumers coming back for more.' )
+africa = Serie.create!(name: 'Africa', year: 2014, author: 'Discovery Channel', mpaa_rating: 'PG', description: 'This landmark series transports nature lovers from the Himalayan Mountains to the depths of the ocean and everywhere in between.')
+asia = Serie.create!(name: 'Asia', year: 2014, author: 'Discovery Channel', mpaa_rating: 'PG', description: 'This landmark series transports nature lovers from the Himalayan Mountains to the depths of the ocean and everywhere in between.')
+birds = Serie.create!(name: 'Birds of Paradise', year: 2014, author: 'Discovery Channel', mpaa_rating: 'PG', description: 'This landmark series transports nature lovers from the Himalayan Mountains to the depths of the ocean and everywhere in between.')
 
 
 Genre.destroy_all
@@ -29,6 +31,8 @@ social = Genre.create!(name: 'Social & Cultural')
 
 SeriesGenre.destroy_all
 SeriesGenre.create!(series_id: planet_earth.id, genre_id: nature.id)
+SeriesGenre.create!(series_id: birds.id, genre_id: nature.id)
+SeriesGenre.create!(series_id: asia.id, genre_id: nature.id)
 SeriesGenre.create!(series_id: africa.id, genre_id: nature.id)
 SeriesGenre.create!(series_id: natures_great.id, genre_id: nature.id)
 SeriesGenre.create!(series_id: vice.id, genre_id: social.id)

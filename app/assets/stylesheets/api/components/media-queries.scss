@@ -1,3 +1,10 @@
+@media (max-width: 900px) {
+  .series-list {
+    justify-content: flex-start
+  }
+}
+
+
 @media (max-width: 670px) {
   .mobile-white {
     background: #fafafa;
@@ -9,13 +16,31 @@
     font-size: 18px;
     margin-top: 8px;
   }
+
+  /** Series List Items **/
+  .series-list {
+    justify-content: flex-start
+  }
+  .series-list-item {
+    width: 250px;
+  }
+
+  /**Expanded Series View**/
   .serie-overview-left-container h2 {
     font-size: 20px;
   }
 
-  .serie-expand-main {
-    display: flex;
-    flex-direction: column-reverse;
+  .serie-overview-list {
+    font-size: 0.9em;
   }
+
+  .serie-overview-left-container p {
+    font-size: 0.9em;
+  }
+
+  .serie-expand-main {
+    width: 100%;
+  }
+
 
 }
