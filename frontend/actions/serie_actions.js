@@ -10,8 +10,6 @@ export const fetchSeries = () => dispatch => {
 };
 
 
-
-
 export const fetchSerie = id => dispatch => {
   return APIUtil.fetchSerie(id).then(serie => dispatch(receiveSerie(serie)));
 };

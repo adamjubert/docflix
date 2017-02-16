@@ -1,4 +1,4 @@
-import { RECEIVE_SERIES } from '../actions/serie_actions';
+import { RECEIVE_SERIES} from '../actions/serie_actions';
 
 const SeriesReducer = (state = {}, action) => {
   Object.freeze(state);
