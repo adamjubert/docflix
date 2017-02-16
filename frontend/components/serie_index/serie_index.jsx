@@ -5,16 +5,26 @@ class SerieIndex extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    // debugger
+  componentWillReceiveProps() {
+    this.props.fetchSeries();
   }
 
+
+
   render() {
-    return(
-      <div>
-        <h1>Hellooooo</h1>
-      </div>
-    );
+    if (this.props.series.length > 0) {
+      return(
+        <div>
+          {this.props.series.map(serie => (<li key={serie.id}>serie.name</li>))}
+        </div>
+      );
+    } else {
+      return(
+        <div>hellooo</div>
+      );
+    }
+
+
   }
 
 }

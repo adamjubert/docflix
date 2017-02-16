@@ -1,25 +1,5 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
-//
-// const MainNav = ({ currentUser, logout }) => (
-//   <div className='navbar-header'>
-//     <Link to='/' className='navbar-header-link'>
-//       <h1 className='navbar-header-title'>DOCFLIX</h1>
-//     </Link>
-//     <div className='navbar-greeting'>
-//       <div className='header-group'>
-//         <h2 className='header-name'>{currentUser.fname}</h2>
-//         <button className='header-button-signout' onClick={logout}>Sign Out of Docflix</button>
-//       </div>
-//     </div>
-//   </div>
-// );
-//
-// export default MainNav;
-//
-// //
-// import React from 'react';
-// import { Link, withRouter } from 'react-router';
 
 class MainNav extends React.Component {
 
@@ -48,9 +28,11 @@ class MainNav extends React.Component {
           <nav id="primary_nav_wrap">
             <ul>
               <li>
-                <a href="#">
-                  <img src=""></img>
+                <a href="#" className='nav-profile-link'>
+                  <div className='user-icon'></div>
                   <h2 className='header-name'>{user}</h2>
+                  <i className="fa fa-caret-down" aria-hidden="true"></i>
+
                 </a>
                 <ul className="nav-dropdown-items">
                   <li>

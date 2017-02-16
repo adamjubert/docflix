@@ -84,6 +84,7 @@ main-top
 
 .header-button-signout {
   background: black;
+  font-weight: 600;
   color: white;
   border: none;
   cursor: pointer;
@@ -93,13 +94,16 @@ main-top
   text-decoration: underline;
 }
 
+.header-name {
+  font-size: 12px;
+}
+
 /************/
 
 #primary_nav_wrap
 {
   color: white;
   margin-right: 60px;
-  align-items: center;
 }
 
 #primary_nav_wrap ul
@@ -110,38 +114,59 @@ main-top
 	padding:0
 }
 
+/**/
 #primary_nav_wrap ul a
 {
-	display:block;
 	color:#fff;
 	text-decoration:none;
 	font-size:14px;
 	line-height:32px;
-	padding:0 15px;
+	padding:10px 15px;
+  display: flex;
+  justify-content: space-between;
 }
+
+#primary_nav_wrap ul a > * {
+  margin-right: 10px;
+}
+.user-icon {
+  background: url('user-icon.png');
+  height: 34px;
+  width: 34px;
+}
+
+.fa-caret-down {
+  margin-top: 10px;
+}
+
 
 #primary_nav_wrap ul li
 {
 	position:relative;
 	margin:0;
-	padding:0
+	padding:0;
 }
 
 #primary_nav_wrap ul ul
 {
+  border: 1px solid #555;
+  border-top: 2px solid white;
+
 	display:none;
 	position:absolute;
 	top:100%;
-  left: 2px;
+  right: -16px;
 	background:#000;
-	padding:0
+	padding: 10px 4px;
+  text-align: center;
 }
 
 #primary_nav_wrap ul ul li
 {
   align-items: center;
 	float:none;
-	width:200px
+	width:160px;
+
 }
 
 #primary_nav_wrap ul ul a
