@@ -11,6 +11,7 @@ class GenreIndex extends React.Component {
     this.props.fetchGenres().then(() => this.setState({fetching: false}));
   }
 
+  // NB: if slowdown, this is the issue. Ask Meagan for help 
   showSerie(serie, genre) {
     return () => {
       this.setState({

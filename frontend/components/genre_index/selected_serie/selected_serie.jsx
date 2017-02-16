@@ -12,6 +12,12 @@ class SelectedSerie extends React.Component {
     this.props.fetchSerie(this.props.serieId);
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.serieId !== this.props.serieId) {
+      this.props.fetchSerie(newProps.serieId);
+    }
+  }
+
   render() {
     if (!this.props.serie.id) return null;
     const serie = this.props.serie;
