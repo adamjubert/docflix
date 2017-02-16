@@ -6,16 +6,19 @@ import Footer from './footer/footer';
 
 const App = (props) => {
   let currentNavbar;
+  let navbarClass;
   let path = props.location.pathname;
   if (path === '/' || path === '/login' || path === '/signup') {
     currentNavbar = <GreetingContainer path={path}/>;
+    navbarClass = 'auth-navbar mobile-white';
   } else {
     currentNavbar = <MainNavContainer />;
+    navbarClass = 'auth-navbar';
   }
 
   return(
     <div className='main-top'>
-      <div className='auth-navbar'>
+      <div className={navbarClass}>
         { currentNavbar }
       </div>
       { props.children }

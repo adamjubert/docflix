@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import SessionFormContainer from './session_form/session_form_container';
 import FeaturedVid from './featured_vid/featured_vid';
-
+import SerieIndexContainer from './serie_index/serie_index_container';
 
 
 const Root = ({ store }) => {
@@ -32,13 +32,15 @@ const Root = ({ store }) => {
           <Route path='/login' component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path='/signup' component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path='/browse' component={ Browse } onEnter={_redirectIfNotLoggedIn}>
-            <FeaturedVid />
           </Route>
         </Route>
       </Router>
     </Provider>
   );
 }
+
+// <FeaturedVid />
+//
 
 
 

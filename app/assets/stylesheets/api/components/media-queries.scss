@@ -1,8 +1,13 @@
 @media (max-width: 670px) {
-  .auth-navbar {
+  .mobile-white {
     background: #fafafa;
   }
   .login-form-container {
     width: 100%;
   }
+  .navbar-header-title {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
 }
