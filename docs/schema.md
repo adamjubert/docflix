@@ -16,7 +16,7 @@ column name | data type | details
 id | integer | not null, primary key
 name | string | not null
 year | integer | not null
-author | string | 
+author | string |
 mpaa_rating | string | not null
 description | text | not null
 avg_review | integer | default: 0
@@ -42,8 +42,8 @@ column name | data type | details
 id | integer | not null, primary key
 user_id | integer | not null, indexed
 series_id | integer | not null, indexed
-rating | integer | not null, default: 0
-body | text | not null
+stars | integer | not null, default: 0
+comment | text | not null
 
 ### genres
 column name | data type | details

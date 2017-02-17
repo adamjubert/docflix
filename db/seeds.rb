@@ -119,3 +119,16 @@ SeriesGenre.create!(series_id: ants_secret.id, genre_id: nature.id)
 SeriesGenre.create!(series_id: animal_homes.id, genre_id: nature.id)
 SeriesGenre.create!(series_id: animal_homes.id, genre_id: social.id)
 SeriesGenre.create!(series_id: killer_legends.id, genre_id: social.id)
+
+
+mike = User.create!(email: 'test1@gmail.com', password: 'testing', fname: 'Mike', lname: 'Smith')
+john = User.create!(email: 'test2@gmail.com', password: 'testing', fname: 'John', lname: 'Smith')
+suzie = User.create!(email: 'test3@gmail.com', password: 'testing', fname: 'Suzie', lname: 'Smith')
+
+Review.destroy_all
+Review.create!(stars: 5, comment: Faker::Hacker.say_something_smart, user_id: mike.id, series_id: planet_earth.id )
+Review.create!(stars: 2, comment: Faker::Hacker.say_something_smart, user_id: mike.id, series_id: planet_earth.id )
+Review.create!(stars: 3, comment: Faker::Hacker.say_something_smart, user_id: mike.id, series_id: planet_earth.id )
+Review.create!(stars: 1, comment: Faker::Hacker.say_something_smart, user_id: mike.id, series_id: planet_earth.id )
+Review.create!(stars: 5, comment: Faker::Hacker.say_something_smart, user_id: mike.id, series_id: planet_earth.id )
+Review.create!(stars: 4, comment: Faker::Hacker.say_something_smart, user_id: mike.id, series_id: planet_earth.id )

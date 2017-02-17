@@ -11,8 +11,12 @@ class SerieDetails extends React.Component {
       <div className='serie-expand-main'>
         <div className='serie-reviews-container'>
           <h2>{serie.name}</h2>
-          <div className='__all-reviews__'></div>
-          <div className='__create-update-review__'></div>
+          <div className='serie-reviews-preview'>
+            
+          </div>
+          <div className='serie-reviews-create'>
+
+          </div>
         </div>
       </div>
     );

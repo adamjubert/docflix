@@ -25,6 +25,9 @@ class Serie < ActiveRecord::Base
     source: :genre
   has_many :episodes,
     class_name: 'Episode',
+    foreign_key: :series_id
+  has_many :reviews,
+    class_name: 'Review',
     foreign_key: :series_id 
 
   has_attached_file :thumbnail, default_url: "old_netflix_logo.png"
