@@ -10,7 +10,7 @@ import FootLinks from './foot_links';
 class SerieShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {selectedPane: 0}
+    this.state = {selectedPane: 0};
   }
 
   componentDidMount() {
@@ -20,10 +20,11 @@ class SerieShow extends React.Component {
   componentWillReceiveProps(newProps) {
     if (newProps.serieId !== this.props.serieId) {
       this.props.fetchSerie(newProps.serieId);
+      this.setState({selectedPane: 0});
     }
   }
 
-  selectedPane(num) {
+  selectPane(num) {
     const panes = [
       <SerieOverview serie={this.props.serie}/>,
       <SerieEpisodes serie={this.props.serie}/>,
@@ -46,7 +47,7 @@ class SerieShow extends React.Component {
     return(
       <div className='serie-expand'>
         <div className='serie-expand-content'>
-          { this.selectedPane(this.state.selectedPane) }
+          { this.selectPane(this.state.selectedPane) }
           <FootLinks selectedPane={this.state.selectedPane}
                      onTabChosen={this.selectTab.bind(this)} />
         </div>
