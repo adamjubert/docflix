@@ -54,4 +54,6 @@ group :production do
 end
 
 gem 'font-awesome-sass'
+gem 'figaro'
 gem "paperclip", "~> 5.0.0.beta1"
+gem 'aws-sdk', '>= 2.0'

@@ -31,6 +31,8 @@ class GenreIndex extends React.Component {
             <li className='series-list-item'
                 key={"serie-" + serie.id}
                 onClick={this.showSerie(serie, genre)}>
+
+                <img src={serie.thumbnail_url} width="100%" height="100%"></img>
             </li>
 
           )) }

@@ -1,12 +1,11 @@
 import React from 'react';
-import App from './app'
-import Splash from './splash/splash'
-import Browse from './browse/browse'
+import App from './app';
+import Splash from './splash/splash';
+import Browse from './browse/browse';
 import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import SessionFormContainer from './session_form/session_form_container';
 import FeaturedVid from './featured_vid/featured_vid';
-import SerieIndexContainer from './serie_index/serie_index_container';
 import GenreShowContainer from './genre_show/genre_show_container';
 
 
@@ -16,13 +15,13 @@ const Root = ({ store }) => {
     if (currentUser) {
       replace('/browse');
     }
-  }
+  };
   const _redirectIfNotLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (!currentUser) {
       replace('/');
     }
-  }
+  };
 
 
   return(
@@ -39,7 +38,7 @@ const Root = ({ store }) => {
       </Router>
     </Provider>
   );
-}
+};
 
 // <FeaturedVid />
 //

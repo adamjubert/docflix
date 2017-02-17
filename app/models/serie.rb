@@ -4,4 +4,8 @@ class Serie < ActiveRecord::Base
   has_many :genres,
     through: :series_genres,
     source: :genre
+
+  has_attached_file :thumbnail, default_url: "old_netflix_logo.png"
+  validates_attachment_content_type :thumbnail, content_type: /\Aimage\/.*\z/
+
 end

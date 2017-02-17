@@ -5,6 +5,7 @@
     json.series genre.series do |serie|
       json.id serie.id
       json.name serie.name
+      json.thumbnail_url asset_path(serie.thumbnail.url)
     end
 
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170216160354) do
+ActiveRecord::Schema.define(version: 20170217144302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,14 +25,18 @@ ActiveRecord::Schema.define(version: 20170216160354) do
   add_index "genres", ["name"], name: "index_genres_on_name", using: :btree
 
   create_table "series", force: :cascade do |t|
-    t.string   "name",                    null: false
-    t.integer  "year",                    null: false
-    t.string   "mpaa_rating",             null: false
-    t.text     "description",             null: false
-    t.integer  "avg_review",  default: 0
+    t.string   "name",                               null: false
+    t.integer  "year",                               null: false
+    t.string   "mpaa_rating",                        null: false
+    t.text     "description",                        null: false
+    t.integer  "avg_review",             default: 0
     t.string   "author"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
   add_index "series", ["name"], name: "index_series_on_name", using: :btree
@@ -48,14 +52,18 @@ ActiveRecord::Schema.define(version: 20170216160354) do
   add_index "series_genres", ["series_id"], name: "index_series_genres_on_series_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",           null: false
-    t.string   "fname",           null: false
-    t.string   "lname",           null: false
-    t.string   "password_digest", null: false
-    t.string   "session_token",   null: false
+    t.string   "email",               null: false
+    t.string   "fname",               null: false
+    t.string   "lname",               null: false
+    t.string   "password_digest",     null: false
+    t.string   "session_token",       null: false
     t.string   "profile_pic"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -10,23 +10,45 @@ User.destroy_all
 User.create!(email: 'guest@docflix.tech', password: 'testing', fname: 'Guest', lname: 'Smith')
 
 Serie.destroy_all
-planet_earth = Serie.create!(name: 'Planet Earth', year: 2014,
-  author: 'Discovery Channel', mpaa_rating: 'PG',
-  description: Faker::Hipster.sentence(22))
-natures_great = Serie.create!(name: 'Nature\'s Great Events', year: 2014,
-  author: 'Discovery Channel', mpaa_rating: 'PG',
-  description: Faker::Hipster.sentence(18))
-vice = Serie.create!(name: 'Vice on HBO', year: 2015,
-  author: 'Vice', mpaa_rating: 'MA',
+planet_earth = Serie.create!(
+  name: 'Planet Earth',
+  year: 2014,
+  author: 'Discovery Channel',
+  mpaa_rating: 'PG',
+  description: Faker::Hipster.sentence(22),
+  thumbnail: File.open("../docflix-media/thumbnails/planet-earth.png")
+  )
+natures_great = Serie.create!(
+  name: 'Nature\'s Great Events',
+  year: 2014,
+  author: 'Discovery Channel',
+  mpaa_rating: 'PG',
+  description: Faker::Hipster.sentence(18),
+  thumbnail: File.open("../docflix-media/thumbnails/natures-great-events.png")
+)
+vice = Serie.create!(
+  name: 'Vice on HBO',
+  year: 2015,
+  author: 'Vice',
+  mpaa_rating: 'MA',
   description: Faker::Hipster.sentence(8))
-barkley_marathons = Serie.create!(name: 'The Barkley Marathons', year: 2014,
-  author: 'Barkley Movie', mpaa_rating: 'PG',
+barkley_marathons = Serie.create!(
+  name: 'The Barkley Marathons',
+  year: 2014,
+  author: 'Barkley Movie',
+  mpaa_rating: 'PG',
   description: Faker::Hipster.sentence(18))
-russias_rain = Serie.create!(name: 'Russias Secret Rainforest', year: 2009,
-  author: 'National Geographic', mpaa_rating: 'PG',
+russias_rain = Serie.create!(
+  name: 'Russias Secret Rainforest',
+  year: 2009,
+  author: 'National Geographic',
+  mpaa_rating: 'PG',
   description: Faker::Hipster.sentence(18))
-ants_secret = Serie.create!(name: 'Ants: The Secret Power of Nature', year: 2011,
-  author: 'Discovery Channel', mpaa_rating: 'G',
+ants_secret = Serie.create!(
+  name: 'Ants: The Secret Power of Nature',
+  year: 2011,
+  author: 'Discovery Channel',
+    mpaa_rating: 'G',
   description:Faker::Hipster.sentence(18))
 animal_homes = Serie.create!(name: 'Animal Homes', year: 2013,
   author: 'BBC', mpaa_rating: 'G',
