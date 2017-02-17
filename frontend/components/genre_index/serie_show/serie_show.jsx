@@ -1,9 +1,9 @@
 // NB: possible point of failure because serie is passed down through props
 
 import React from 'react';
-import SelectedSerieContainer from './selected_serie_container';
+import SerieShowContainer from './serie_show_container';
 
-class SelectedSerie extends React.Component {
+class SerieShow extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -44,4 +44,4 @@ class SelectedSerie extends React.Component {
   }
 }
 
-export default SelectedSerie;
+export default SerieShow;

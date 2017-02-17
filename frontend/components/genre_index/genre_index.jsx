@@ -1,5 +1,5 @@
 import React from 'react';
-import SelectedSerieContainer from './selected_serie/selected_serie_container';
+import SerieShowContainer from './serie_show/serie_show_container';
 import { Link } from 'react-router';
 
 
@@ -52,7 +52,7 @@ class GenreIndex extends React.Component {
               </div>
               { this.seriesList(genre) }
               { genre === this.state.clickedGenre ?
-                          <SelectedSerieContainer serieId={this.state.clickedSerie.id} /> :
+                          <SerieShowContainer serieId={this.state.clickedSerie.id} /> :
                             '' }
             </div>
           ))}

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchSerie } from '../../../actions/serie_actions';
-import SelectedSerie from './selected_serie';
+import SerieShow from './serie_show';
 
 const mapStateToProps = ({ serie }) => {
   return {
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SelectedSerie);
+export default connect(mapStateToProps, mapDispatchToProps)(SerieShow);
