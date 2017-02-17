@@ -31,7 +31,8 @@ series_id | integer | not null, indexed
 name | string | not null
 description | text | not null
 runtime | integer | not null
-view_url | string | not null
+view_url | string | added later w/ paperclip
+ep_thumbnail | string | added later w/ paperclip
 
 
 
