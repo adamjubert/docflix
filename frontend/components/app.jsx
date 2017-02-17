@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import GreetingContainer from './greeting/greeting_container';
+import NavWelcomeContainer from './nav_welcome/nav_welcome_container';
 import MainNavContainer from './main_nav/main_nav_container';
 import Footer from './footer/footer';
 
@@ -9,7 +9,7 @@ const App = (props) => {
   let navbarClass;
   let path = props.location.pathname;
   if (path === '/' || path === '/login' || path === '/signup') {
-    currentNavbar = <GreetingContainer path={path}/>;
+    currentNavbar = <NavWelcomeContainer path={path}/>;
     navbarClass = 'auth-navbar mobile-white';
   } else {
     currentNavbar = <MainNavContainer />;
@@ -28,21 +28,3 @@ const App = (props) => {
 };
 
 export default App;
-
-
-
-// put footer after { props.children }
-
-//
-// will recieve logged in helper function from root, then determine which navbar to show
-
-
-
-// <div className='navbar-header'>
-//   <Link to='/' className='navbar-header-link'>
-//     <h1 className='navbar-header-title'>DOCFLIX</h1>
-//   </Link>
-// </div>
-// <div className='navbar-greeting'>
-//   { currentNavbar }
-// </div>
