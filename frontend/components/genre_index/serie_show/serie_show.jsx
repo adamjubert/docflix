@@ -4,10 +4,13 @@ import React from 'react';
 import SerieShowContainer from './serie_show_container';
 import SerieOverview from './serie_overview/serie_overview';
 import SerieEpisodes from './serie_episodes/serie_episodes';
+import SerieDetails from './serie_details/serie_details';
+import FootLinks from './foot_links';
 
 class SerieShow extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {selectedPane: 0}
   }
 
   componentDidMount() {
@@ -20,12 +23,33 @@ class SerieShow extends React.Component {
     }
   }
 
+  selectedPane(num) {
+    const panes = [
+      <SerieOverview serie={this.props.serie}/>,
+      <SerieEpisodes serie={this.props.serie}/>,
+      <SerieDetails serie={this.props.serie}/>
+    ];
+    return(panes[num]);
+  }
+
+  selectTab(num) {
+    this.setState({selectedPane: num});
+
+  }
+
+
+
   render() {
     if (!this.props.serie.id) return null;
+
     const serie = this.props.serie;
     return(
       <div className='serie-expand'>
-        <SerieEpisodes serie={this.props.serie}/>
+        <div className='serie-expand-content'>
+          { this.selectedPane(this.state.selectedPane) }
+          <FootLinks selectedPane={this.state.selectedPane}
+                     onTabChosen={this.selectTab.bind(this)} />
+        </div>
       </div>
     );
   }
@@ -33,6 +57,15 @@ class SerieShow extends React.Component {
 
 export default SerieShow;
 
+
+////////
+// <SerieOverview serie={this.props.serie}/>
+// <SerieEpisodes serie={this.props.serie}/>
+// <SerieDetails serie={this.props.serie}/>
+
+
+
+///////////
 // <div className='serie-overview-left'>
 //   <section className='serie-overview-left-container'>
 //     <h2>{serie.name}</h2>
