@@ -69,6 +69,36 @@ birds = Serie.create!(name: 'Birds of Paradise', year: 2014,
   author: 'Discovery Channel', mpaa_rating: 'PG',
   description: Faker::Hipster.sentence(18))
 
+Episode.destroy_all
+pe1 = Episode.create!(
+  name: 'Gifts from the Earth',
+  description: 'By examining the earth\'s mineral and energy sources, scientists analyze how the theory of plate tectonics hasrevolutionized the search for earth\'s treasures that lie hidden in locations such as the Red Sea and Antarctic ice cap.',
+  runtime: 5,
+  episode_num: 1,
+  series_id: planet_earth.id
+)
+pe2 = Episode.create!(
+  name: 'Forest',
+  description: 'Flora and fauna thrive in diverse forests.',
+  runtime: 2,
+  episode_num: 2,
+  series_id: planet_earth.id
+)
+pe3 = Episode.create!(
+  name: 'Mountains',
+  description: 'Examining forces that shaped the land and its mountain chains.',
+  runtime: 1,
+  episode_num: 3,
+  series_id: planet_earth.id
+)
+pe4 = Episode.create!(
+  name: 'Seasonal Forests',
+  description: 'The trees of the Taiga forest; giant sequoia, the largest living thing on the planet.',
+  runtime: 1,
+  episode_num: 3,
+  series_id: planet_earth.id
+)
+
 
 Genre.destroy_all
 my_list = Genre.create!(name: 'My List')
