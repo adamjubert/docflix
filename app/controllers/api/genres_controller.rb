@@ -1,6 +1,6 @@
 class Api::GenresController < ApplicationController
   def index
-    @genres = Genre.all
+    @genres = Genre.all.includes(:series)
     render :index
   end
 

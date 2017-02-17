@@ -12,9 +12,15 @@
   .login-form-container {
     width: 100%;
   }
+  .auth-navbar {
+    padding-top: 4px;
+  }
   .navbar-header-title {
     font-size: 18px;
     margin-top: 8px;
+  }
+  .user-icon {
+    display: none;
   }
 
   /** Series List Items **/

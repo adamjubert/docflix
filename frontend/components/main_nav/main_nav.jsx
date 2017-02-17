@@ -21,27 +21,28 @@ class MainNav extends React.Component {
           <Link to='/' className='all-nav-header-link'>
             <h1 className='navbar-header-title'>DOCFLIX</h1>
           </Link>
-          <p className='all-nav-header-browse'>Browse</p>
+
+          <ul className='nav-dropdown-root'>
+            <p className='nav-browse'>Browse</p>
+            <i className="fa fa-caret-down browse-caret" aria-hidden="true"></i>
+            <div className='nav-dropdown-menu'>
+              <Link to="#" className='nav-dropdown-item'>Home</Link><br/>
+              <Link to="#" className='nav-dropdown-item'>My List</Link>
+            </div>
+          </ul>
         </div>
 
-        <div className='navbar-greeting'>
-          <nav id="primary_nav_wrap">
-            <ul>
-              <li>
-                <a href="#" className='nav-profile-link'>
-                  <div className='user-icon'></div>
-                  <h2 className='header-name'>{user}</h2>
-                  <i className="fa fa-caret-down" aria-hidden="true"></i>
+        <div className='nav-profile'>
+          <ul className='nav-dropdown-profile'>
+            <div className='user-icon'></div>
+            <h2 className='header-name'>{user}</h2>
+            <i className="fa fa-caret-down signout-caret" aria-hidden="true"></i>
 
-                </a>
-                <ul className="nav-dropdown-items">
-                  <li>
-                    <button className='header-button-signout' onClick={this.logoutUser.bind(this)}>Sign Out of Docflix</button>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
+            <div className='nav-dropdown-menu-signout'>
+              <button className='header-button-signout' onClick={this.logoutUser.bind(this)}>Sign Out of Docflix</button>
+            </div>
+          </ul>
+
         </div>
 
       </div>

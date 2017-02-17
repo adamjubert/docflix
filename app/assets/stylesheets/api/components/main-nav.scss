@@ -1,23 +1,7 @@
-/*
-main-top
-  navbar
-    navbar-header
-      navbar-header-link
-        navbar-header-title
-    navbar-greeting
-      (GreetingContainer)
-      header-group
-        header-name
-          header-button-signin  / header-button-signout
-
-*/
-
-
 .auth-navbar {
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
-
 
 .all-nav-container {
   display: flex;
@@ -33,21 +17,14 @@ main-top
   text-decoration: none;
 }
 
-.all-nav-header-browse {
-  color: $netflix-red;
-  margin-left: 30px;
-  margin-top: 8px;
-}
+
 
 .navbar-header-title {
   font-size: 36px;
   font-weight: 700;
   color: $netflix-red;
-}
-
-.navbar-greeting {
-  margin-top: 0;
-  padding-top: 0;
+  padding-top: 6px;
+  margin-left: 20px;
 }
 
 .header-group {
@@ -82,7 +59,7 @@ main-top
   color: white;
 }
 
-.header-button-signout {
+.header-button {
   background: black;
   font-weight: 600;
   color: white;
@@ -90,98 +67,179 @@ main-top
   cursor: pointer;
 }
 
-.header-button-signout:hover {
+.header-button:hover {
   text-decoration: underline;
 }
 
-.header-name {
-  font-size: 12px;
+.btn-browse {
+  text-align: left;
 }
+
 
 /************/
 
-#primary_nav_wrap
-{
-  color: white;
-  margin-right: 60px;
+
+
+
+.fa-caret-down {
+  margin-top: 8px;
 }
 
-#primary_nav_wrap ul
-{
-	list-style:none;
-	position:relative;
-	margin:0;
-	padding:0
-}
 
-/**/
-#primary_nav_wrap ul a
-{
-	color:#fff;
-	text-decoration:none;
-	font-size:14px;
-	line-height:32px;
-	padding:10px 15px;
+
+.nav-dropdown-root {
+  position: relative;
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: space-between;
+  margin-left: 20px;
 }
 
-#primary_nav_wrap ul a > * {
-  margin-right: 10px;
+.nav-browse {
+  color: $netflix-red;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 30px;
+  cursor: pointer;
 }
+.browse-caret {
+  color: $netflix-red;
+  padding-top: 10px;
+  margin-left: 6px;
+}
+
+.nav-dropdown-root:hover > div {
+  display: block;
+}
+.nav-dropdown-menu {
+  border: 1px solid #555;
+  border-top: 2px solid white;
+  width: 150px;
+  min-height: 40px;
+
+  display:none;
+  position:absolute;
+  top:100%;
+  left: 20px;
+  background:#000;
+  padding: 10px 4px;
+  text-align: left;
+}
+.nav-dropdown-item {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 8px;
+}
+.nav-dropdown-item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.nav-dropdown-signout {
+  border: 1px solid #555;
+  border-top: 2px solid white;
+  width: 150px;
+  min-height: 40px;
+
+  display:none;
+  position:absolute;
+  top:100%;
+  left: 20px;
+  background:#000;
+  padding: 10px 4px;
+  text-align: left;
+}
+
+/**************/
+
+.nav-profile {
+  padding-top: 4px;
+}
+
+.nav-dropdown-profile {
+  position: relative;
+  margin-right: 60px;
+  padding: 0;
+  display: flex;
+  cursor: pointer;
+
+}
+
+
+.nav-dropdown-signout {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-browse {
+  color: $netflix-red;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 20px;
+  margin-top: 14px;
+  cursor: pointer;
+}
+.browse-caret {
+  color: $netflix-red;
+  padding-top: 6px;
+  margin-left: 6px;
+}
+
+.nav-dropdown-profile:hover > div {
+  display: block;
+}
+.nav-dropdown-menu-signout {
+  border: 1px solid #555;
+  border-top: 2px solid white;
+  width: 150px;
+  min-height: 40px;
+
+  display:none;
+  position:absolute;
+  top:100%;
+  right: 1px;
+  background:#000;
+  padding: 10px 4px;
+  text-align: left;
+}
+
+.nav-dropdown-item:hover {
+  text-decoration: underline;
+}
+
 .user-icon {
   background: url('user-icon.png');
   height: 34px;
   width: 34px;
+  margin-right: 12px;
 }
 
-.fa-caret-down {
-  margin-top: 10px;
+.header-name {
+  font-size: 12px;
+  margin-right: 12px;
+  padding-top: 12px;
+  color: white;
 }
 
-
-#primary_nav_wrap ul li
-{
-	position:relative;
-	margin:0;
-	padding:0;
+.signout-caret {
+  color: #fff;
+  padding-top: 1px;
 }
 
-#primary_nav_wrap ul ul
-{
-  border: 1px solid #555;
-  border-top: 2px solid white;
-
-	display:none;
-	position:absolute;
-	top:100%;
-  right: -16px;
-	background:#000;
-	padding: 10px 4px;
-  text-align: center;
+.header-button-signout {
+  color: white;
+  background-color: inherit;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
 }
 
-#primary_nav_wrap ul ul li
-{
-  align-items: center;
-	float:none;
-	width:160px;
+.header-button-signout:hover {
+  cursor: pointer;
+  text-decoration: underline;
 
-}
-
-#primary_nav_wrap ul ul a
-{
-	line-height:120%;
-	padding:10px 15px
-}
-
-
-#primary_nav_wrap ul li:hover > ul
-{
-	display:block;
-  transition: 2s;
-}
-
-.nav-dropdown-items {
-  padding: 20px;
 }

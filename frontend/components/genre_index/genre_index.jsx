@@ -63,7 +63,7 @@ class GenreIndex extends React.Component {
     return(
       <div className='genre-index-main'>
         <div className='genre-index-container'>
-          {this.genresList()}
+          {this.genresList(this.props.genres)}
         </div>
       </div>
     );

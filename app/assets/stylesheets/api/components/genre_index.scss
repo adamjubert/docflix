@@ -11,7 +11,7 @@
   margin-bottom: 36px;
 }
 
-.genre-list-item > h3 {
+.genre-list-item  h3 {
   font-size: 16px;
   font-weight: 600;
   margin-left: 36px;
@@ -19,16 +19,16 @@
   color: #999;
 }
 
-.genre-list-item > h3:hover {
+.genre-list-item  h3:hover {
   color: white;
   cursor: pointer;
 }
 /***Series***/
 
 .series-list-item {
-  width: 18%;
-  max-width: 250px;
-  min-width: 200px;
+  width: 250px;
+  max-width: 220px;
+  min-width: 220px;
   height: 120px;
   min-height: 100px;
   max-height: 225px;
