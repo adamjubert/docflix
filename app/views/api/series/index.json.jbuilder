@@ -1,4 +1,4 @@
-# NB: I don't think this is being used
+# NB: ~pointless?~
 
 # @series.each do |serie|
 #   json.set! serie.id do

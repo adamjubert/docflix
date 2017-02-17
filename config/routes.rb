@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :series, only: [:index, :show]
     resources :genres, only: [:index, :show]
     resources :episodes, only: [:index, :show]
-    resources :reviews, only: [:index, :show, :create, :update, :destroy]
+    resources :reviews, only: [:show, :create, :update, :destroy]
   end
 
   root 'static_pages#root'

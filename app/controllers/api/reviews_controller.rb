@@ -1,8 +1,5 @@
 class Api::ReviewsController < ApplicationController
   before_action :require_logged_in, only: [:create]
-  def index
-    @reviews = Review.all
-  end
 
   def show
     @review = Review.find(params[:id])
