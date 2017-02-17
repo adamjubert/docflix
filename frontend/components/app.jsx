@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import NavWelcomeContainer from './nav_welcome/nav_welcome_container';
-import MainNavContainer from './main_nav/main_nav_container';
+import NavMainContainer from './nav_main/nav_main_container';
 import Footer from './footer/footer';
 
 const App = (props) => {
@@ -12,7 +12,7 @@ const App = (props) => {
     currentNavbar = <NavWelcomeContainer path={path}/>;
     navbarClass = 'auth-navbar mobile-white';
   } else {
-    currentNavbar = <MainNavContainer />;
+    currentNavbar = <NavMainContainer />;
     navbarClass = 'auth-navbar';
   }
 

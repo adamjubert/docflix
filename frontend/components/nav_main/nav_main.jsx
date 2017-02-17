@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 
-class MainNav extends React.Component {
+class NavMain extends React.Component {
 
   logoutUser() {
     this.props.logout();
@@ -50,4 +50,4 @@ class MainNav extends React.Component {
   }
 }
 
-export default withRouter(MainNav);
+export default withRouter(NavMain);

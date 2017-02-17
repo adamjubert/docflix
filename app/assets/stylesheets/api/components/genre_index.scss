@@ -11,17 +11,23 @@
   margin-bottom: 36px;
 }
 
-.genre-list-item  h3 {
-  font-size: 16px;
-  font-weight: 600;
+.genre-title {
   margin-left: 36px;
   margin-bottom: 16px;
+}
+.genre-title-item {
+  font-size: 22px;
+  font-weight: 600;
+  width: 100%;
   color: #999;
+  text-decoration: none;
+  transition: 0.2s;
 }
 
-.genre-list-item  h3:hover {
+.genre-title-item:hover {
   color: white;
   cursor: pointer;
+  transition: 0.2s;
 }
 /***Series***/
 

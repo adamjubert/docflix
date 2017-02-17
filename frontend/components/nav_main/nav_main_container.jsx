@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
-import MainNav from './main_nav';
+import NavMain from './nav_main';
 
 const mapStateToProps = ({ session }) => ({
   currentUser: session.currentUser
@@ -10,4 +10,4 @@ const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainNav);
+export default connect(mapStateToProps, mapDispatchToProps)(NavMain);

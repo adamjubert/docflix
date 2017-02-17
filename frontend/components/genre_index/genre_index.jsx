@@ -1,5 +1,7 @@
 import React from 'react';
 import SelectedSerieContainer from './selected_serie/selected_serie_container';
+import { Link } from 'react-router';
+
 
 class GenreIndex extends React.Component {
   constructor(props) {
@@ -43,12 +45,15 @@ class GenreIndex extends React.Component {
         <ul className='genre-list'>
           {this.props.genres.map((genre) => (
             <div className='genre-list-item'>
-              <h3 key={"genre-" + genre.id}
-                  className='genre-title'>{genre.name}</h3>
-                { this.seriesList(genre) }
-                { genre === this.state.clickedGenre ?
-                            <SelectedSerieContainer serieId={this.state.clickedSerie.id} /> :
-                              '' }
+              <div className='genre-title'>
+                <Link to="#"
+                      key={"genre-" + genre.id}
+                      className='genre-title-item'>{genre.name}</Link>
+              </div>
+              { this.seriesList(genre) }
+              { genre === this.state.clickedGenre ?
+                          <SelectedSerieContainer serieId={this.state.clickedSerie.id} /> :
+                            '' }
             </div>
           ))}
         </ul>
