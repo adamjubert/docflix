@@ -46,7 +46,7 @@ class GenreIndex extends React.Component {
       <div className='genre-list-container'>
         <ul className='genre-list'>
           {this.props.genres.map((genre) => (
-            <div className='genre-list-item'>
+            <div className='genre-list-item' >
               <div className='genre-title'>
                 <Link to="#"
                       key={"genre-" + genre.id}
@@ -68,7 +68,7 @@ class GenreIndex extends React.Component {
       return null;
     }
     return(
-      <div className='genre-index-main'>
+      <div className='genre-index-main' >
         <div className='genre-index-container'>
           {this.genresList(this.props.genres)}
         </div>
