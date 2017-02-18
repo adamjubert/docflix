@@ -72,9 +72,9 @@ class VideoModal extends React.Component {
           contentLabel="Example Modal"
         >
 
-          <i class="fa fa-arrow-circle-left white video-close"
+          <i className="fa fa-arrow-circle-left white video-close"
              aria-hidden="true"
-             onClick={this.closeModal}></i><p className='white video-close'>[Replace me!]</p>
+             onClick={this.closeModal}></i>
            <div className='temp-modal-title'>
              <h1 className='white'>Video will go here</h1>
              <img src={this.props.videoSource} height="100" width="100"></img>

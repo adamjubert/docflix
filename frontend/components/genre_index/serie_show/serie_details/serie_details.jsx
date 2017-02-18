@@ -19,7 +19,7 @@ class SerieDetails extends React.Component {
         <div className='serie-review-container'>
           <div className='serie-reviews-preview'>
             <h2 className='serie-title'>{serie.name}</h2>
-            <ReviewsPreview reviews={serie.reviews.slice(revLength - 3, revLength)}
+            <ReviewsPreview reviews={serie.reviews.slice(revLength - 2, revLength)}
                             styling={'review-preview-comment'}/>
             <ReviewModal serie={serie} reviewCount={serie.reviews.length} />
           </div>

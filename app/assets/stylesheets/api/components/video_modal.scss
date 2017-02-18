@@ -1,7 +1,12 @@
 .video-close {
+  font-size: 26px;
 }
 
 .video-close:hover {
 
   cursor: pointer;
+}
+
+.fa-arrow-circle-left:before {
+  font-size: 48px;
 }

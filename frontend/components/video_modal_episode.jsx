@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import ReviewsPreview from '../reviews_preview';
+
+//
+// //
+// //
+// const appElement = document.getElementById('root');
 
 const customStyles = {
   overlay : {
@@ -14,20 +18,20 @@ const customStyles = {
   },
   content : {
     position                   : 'absolute',
-    top                        : '16%',
-    left                       : '16%',
-    right                      : '16%',
-    bottom                     : '16%',
-    background                 : '',
-    border                     : '',
+    top                        : '40px',
+    left                       : '0px',
+    right                      : '0px',
+    bottom                     : '40px',
+    background                 : '#222',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
     outline                    : 'none',
-    padding                    : '0 20px'
+    padding                    : '20px'
+
   }
 };
 
-class ReviewModal extends React.Component {
+class VideoModalEpisode extends React.Component {
   componentWillMount() {
     Modal.setAppElement('body');
   }
@@ -58,13 +62,9 @@ class ReviewModal extends React.Component {
   }
 
   render() {
-    const reviews = this.props.serie.reviews;
     return (
-      <div>
-        <p onClick={this.openModal}
-           className='review-modal-link white'>
-           See all reviews ({this.props.reviewCount})
-        </p>
+      <li>
+        <img src={ this.props.thumbnail_url } width="100%" height="100%" onClick={ this.openModal }></img>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
@@ -73,26 +73,19 @@ class ReviewModal extends React.Component {
           contentLabel="Example Modal"
         >
 
-         <div className='review-modal-container'>
-           <i className="fa fa-times close-review-modal"
+          <i className="fa fa-arrow-circle-left white video-close"
              aria-hidden="true"
-             onClick={ this.closeModal }></i>
-           <div className='review-modal-top'>
-             <section>
-               <h2>{this.props.reviewCount} Member Reviews for {this.props.serie.name}</h2>
-               <button>Write a Review</button>
-             </section>
+             onClick={this.closeModal}></i>
+           <div className='temp-modal-title'>
+             <h1 className='white'>Video will go here</h1>
+             <img src={this.props.videoSource} height="100" width="100"></img>
            </div>
-           <div className='review-modal-bottom'>
-             <ReviewsPreview reviews={reviews} styling={'review-index-comment'}/> />
-           </div>
-         </div>
 
         </Modal>
-      </div>
+      </li>
     );
   }
 }
 
 
-export default ReviewModal;
+export default VideoModalEpisode;

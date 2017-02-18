@@ -1,4 +1,5 @@
 import React from 'react';
+import VideoModalEpisode from '../../../video_modal_episode.jsx';
 
 class SerieEpisodes extends React.Component {
   constructor(props) {
@@ -16,7 +17,9 @@ class SerieEpisodes extends React.Component {
               <li className='serie-episodes-list-item'
                 key={"episode-" + episode.id}>
                 <ul className='episode-contents'>
-                  <li><img src='#' width="100%" height="100%"></img></li>
+
+                  <VideoModalEpisode videoSource={ serie.thumbnail_url } thumbnail={ serie.thumbnail_url }/>
+
                   <li>
                     <ul className='episode-name-runtime'>
                       <li>{ episode.name }</li>

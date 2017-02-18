@@ -1,6 +1,7 @@
 import React from 'react';
 import SerieShowContainer from './serie_show/serie_show_container';
-import { Link } from 'react-router';
+import { Link, Router } from 'react-router';
+import { Route, IndexRoute, hashHistory, withRouter } from 'react-router';
 
 
 class GenreIndex extends React.Component {
@@ -41,6 +42,13 @@ class GenreIndex extends React.Component {
     );
   }
 
+  goToGenre(id) {
+    const path = `/browsegenre/${id}`;
+    return(
+      this.props.router.push(path)
+    );
+  }
+
   genresList() {
     return(
       <div className='genre-list-container'>
@@ -48,9 +56,10 @@ class GenreIndex extends React.Component {
           {this.props.genres.map((genre) => (
             <div className='genre-list-item' >
               <div className='genre-title'>
-                <Link to="#"
-                      key={"genre-" + genre.id}
-                      className='genre-title-item'>{genre.name}</Link>
+                <h3 key={"genre-" + genre.id}
+                    className='genre-title-item'
+                    onClick={this.goToGenre}
+                    >{genre.name}</h3>
               </div>
               { this.seriesList(genre) }
               { genre === this.state.clickedGenre ?
@@ -78,6 +87,6 @@ class GenreIndex extends React.Component {
 
 }
 
-export default GenreIndex;
+export default withRouter(GenreIndex);
 
 // <GenreList genres={ this.props.genres }/>

@@ -27,6 +27,9 @@
 .episode-contents img {
   height: 140px;
 }
+.episode-contents img:hover {
+  cursor: pointer;
+}
 
 .episode-contents li {
 }

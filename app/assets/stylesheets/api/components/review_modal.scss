@@ -9,21 +9,32 @@
 
 .ReactModal__Content--after-open {}
 
+.review-modal-top {
+  border-bottom: 1px solid grey;
+}
 
 
 .review-modal-top section h2 {
   color: white;
   font-size: 26px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 15px;
 }
 
 .close-review-modal {
   color: white;
-  text-align: right;
-  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 30px;
 }
 
 .close-review-modal:hover {
   cursor: pointer;
+}
+
+
+
+.fa-remove:before, .fa-close:before, .fa-times:before {
+    font-size: 36px;
 }

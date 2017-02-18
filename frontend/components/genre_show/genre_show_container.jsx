@@ -4,7 +4,7 @@ import GenreShow from './genre_show';
 
 const mapStateToProps = ({ genre }) => {
   return {
-    genres
+    genre
   };
 };
 
