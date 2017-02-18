@@ -17,7 +17,7 @@ planet_earth = Serie.create!(
   mpaa_rating: 'PG',
   description: Faker::Hipster.sentence(22),
   thumbnail: File.open("../docflix-media/thumbnails/planet-earth.png")
-  )
+)
 natures_great = Serie.create!(
   name: 'Nature\'s Great Events',
   year: 2014,
@@ -121,23 +121,27 @@ SeriesGenre.create!(series_id: animal_homes.id, genre_id: social.id)
 SeriesGenre.create!(series_id: killer_legends.id, genre_id: social.id)
 
 
-mike = User.create!(email: 'test1@gmail.com', password: 'testing', fname: 'Mike', lname: 'Smith')
-john = User.create!(email: 'test2@gmail.com', password: 'testing', fname: 'John', lname: 'Smith')
-suzie = User.create!(email: 'test3@gmail.com', password: 'testing', fname: 'Suzie', lname: 'Smith')
-jane = User.create!(email: 'test4@gmail.com', password: 'testing', fname: 'Jane', lname: 'Smith')
-beth = User.create!(email: 'test5@gmail.com', password: 'testing', fname: 'Beth', lname: 'Smith')
-bob = User.create!(email: 'test6@gmail.com', password: 'testing', fname: 'Bob', lname: 'Smith')
+
+# Fake users
+20.times do |i|
+  User.create!(
+    email: Faker::Internet.email,
+    password: 'testing',
+    fname: "Guest #{i}",
+    lname: "Smith"
+  )
+end
 
 Review.destroy_all
-Review.create!(stars: 5, comment: Faker::Hacker.say_something_smart, user_id: mike.id, series_id: planet_earth.id )
-Review.create!(stars: 2, comment: Faker::Hacker.say_something_smart, user_id: john.id, series_id: planet_earth.id )
-Review.create!(stars: 3, comment: Faker::Hacker.say_something_smart, user_id: suzie.id, series_id: planet_earth.id )
-Review.create!(stars: 1, comment: Faker::Hacker.say_something_smart, user_id: jane.id, series_id: planet_earth.id )
-Review.create!(stars: 5, comment: Faker::Hacker.say_something_smart, user_id: beth.id, series_id: planet_earth.id )
-Review.create!(stars: 4, comment: Faker::Hacker.say_something_smart, user_id: bob.id, series_id: planet_earth.id )
-Review.create!(stars: 1, comment: Faker::Hacker.say_something_smart, user_id: mike.id, series_id: natures_great.id )
-Review.create!(stars: 1, comment: Faker::Hacker.say_something_smart, user_id: john.id, series_id: natures_great.id )
-Review.create!(stars: 1, comment: Faker::Hacker.say_something_smart, user_id: suzie.id, series_id: natures_great.id )
-Review.create!(stars: 2, comment: Faker::Hacker.say_something_smart, user_id: jane.id, series_id: natures_great.id )
-Review.create!(stars: 1, comment: Faker::Hacker.say_something_smart, user_id: beth.id, series_id: natures_great.id )
-Review.create!(stars: 3, comment: Faker::Hacker.say_something_smart, user_id: bob.id, series_id: natures_great.id )
+
+# Fake Reviews
+Serie.all.each do |serie|
+  User.all.each do |user|
+    Review.create!(
+      stars: ( serie.name[0] == 'P' ? (4 + rand(5)) : (1 + rand(5)) ),
+      comment: Faker::Hipster.sentence(15, false, 20),
+      user_id: user.id,
+      series_id: serie.id
+    )
+  end
+end

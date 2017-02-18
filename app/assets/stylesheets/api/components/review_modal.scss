@@ -1,0 +1,29 @@
+.review-modal-container {
+
+}
+
+.ReactModal__Content {
+  border-top: 5px solid $netflix-red;
+  border-radius: none;
+}
+
+.ReactModal__Content--after-open {}
+
+
+
+.review-modal-top section h2 {
+  color: white;
+  font-size: 26px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.close-review-modal {
+  color: white;
+  text-align: right;
+  font-size: 20px;
+}
+
+.close-review-modal:hover {
+  cursor: pointer;
+}

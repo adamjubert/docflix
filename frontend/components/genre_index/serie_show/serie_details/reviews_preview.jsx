@@ -14,7 +14,7 @@ class ReviewsPreview extends React.Component {
         { reviews.map((review) => (
           <li key={"review-" + review.id}>
             <StarRating rating={review.stars}/>
-            <p className='review-preview-comment'>{review.comment}</p>
+            <p className={this.props.styling}>{review.comment}</p>
           </li>
         )) }
       </ul>
@@ -22,3 +22,5 @@ class ReviewsPreview extends React.Component {
   }
 }
 export default ReviewsPreview;
+
+//.review-preview-comment

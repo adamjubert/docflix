@@ -6,8 +6,9 @@
 6. Reviews
 7. My List
 Bonus: Video search
-Bonus: Continue watching
 Bonus: Review helpfulness
+Bonus: Admin video uploading
+Bonus: Continue watching
 Bonus: Profile updating (avatar)
 Bonus: Friend lists
 Bonus: Follow users

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
+import ReviewsPreview from '../reviews_preview';
 
 const customStyles = {
   overlay : {
@@ -17,12 +18,12 @@ const customStyles = {
     left                       : '16%',
     right                      : '16%',
     bottom                     : '16%',
-    background                 : '#222',
+    background                 : '',
+    border                     : '',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
     outline                    : 'none',
-    padding                    : '20px'
-
+    padding                    : '0 20px'
   }
 };
 
@@ -57,6 +58,7 @@ class ReviewModal extends React.Component {
   }
 
   render() {
+    const reviews = this.props.serie.reviews;
     return (
       <div>
         <p onClick={this.openModal}
@@ -71,9 +73,18 @@ class ReviewModal extends React.Component {
           contentLabel="Example Modal"
         >
 
-           <div className='temp-modal-title'>
-             <h1 className='white'>Reviews will go here</h1>
+         <div className='review-modal-container'>
+           <div className='review-modal-top'>
+             <p onClick={this.closeModal} className='close-review-modal'>x</p>
+             <section>
+               <h2>{this.props.reviewCount} Member Reviews for {this.props.serie.name}</h2>
+               <button>Write a Review</button>
+             </section>
            </div>
+           <div className='review-modal-bottom'>
+             <ReviewsPreview reviews={reviews} styling={'review-index-comment'}/> />
+           </div>
+         </div>
 
         </Modal>
       </div>
