@@ -11,12 +11,13 @@ class SerieDetails extends React.Component {
 
   render() {
     const serie = this.props.serie;
+    const revLength = serie.reviews.length;
     return(
       <div className='serie-expand-main'>
         <div className='serie-review-container'>
           <h2 className='serie-title'>{serie.name}</h2>
           <div className='serie-reviews-preview'>
-            <ReviewsPreview reviews={serie.reviews.slice(3)} />
+            <ReviewsPreview reviews={serie.reviews.slice(revLength - 3, revLength)} />
             <Link to="#" className='see-all-reviews'>See all reviews ({serie.reviews.length})</Link>
           </div>
           <div className='serie-reviews-create'>
