@@ -73,6 +73,16 @@
   color: white;
 }
 
+/***
+Puts a bottom border on the serie show footer links. Otherwise there's
+a weird pop-up transition on user click.
+NB: Don't move below foot-links!
+***/
+.bb {
+  border-bottom: 5px solid black;
+}
+/******/
+
 .foot-links ul {
   display: flex;
   justify-content: center;
@@ -88,7 +98,7 @@
   padding: 10px 0;
   margin: 10px 30px 0;
   letter-spacing: 2px;
-  border-bottom: 5px solid #E50914;
+
   transition: 0.1s
 }
 
