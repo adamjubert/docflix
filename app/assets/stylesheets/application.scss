@@ -34,3 +34,16 @@ body {
   // background: url('auth-princess.png');
   background: #222;
 }
+
+.white {
+  color: #fff;
+}
+
+.temp-modal-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+.temp-modal-title h1 {
+  font-size: 96px;
+}

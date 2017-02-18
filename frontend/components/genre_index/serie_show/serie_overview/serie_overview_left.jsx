@@ -18,7 +18,6 @@ class SerieOverviewLeft extends React.Component {
 
   render() {
     const serie = this.props.serie;
-    debugger
     return(
       <div className='serie-overview-left'>
         <section className='serie-overview-left-container'>

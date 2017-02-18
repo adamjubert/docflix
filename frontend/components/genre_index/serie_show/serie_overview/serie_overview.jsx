@@ -1,5 +1,6 @@
 import React from 'react';
 import SerieOverviewLeft from './serie_overview_left';
+import VideoModal from '../../../video_modal.jsx';
 
 class SerieOverview extends React.Component {
   constructor(props) {
@@ -13,7 +14,9 @@ class SerieOverview extends React.Component {
         <SerieOverviewLeft serie={serie} />
         <div className='serie-overview-right'>
           <section className='serie-overview-right-container'>
-            <div className='serie-overview-video'></div>
+            <div className='serie-overview-video'>
+              <VideoModal />
+            </div>
           </section>
         </div>
       </div>

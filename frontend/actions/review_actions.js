@@ -1,4 +1,3 @@
-
 import * as ReviewApiUtil from '../util/review_api_util';
 import { hashHistory } from 'react-router';
 
@@ -10,9 +9,9 @@ export const REMOVE_REVIEW = "REMOVE_REVIEW";
 //   ReviewApiUtil.fetchReviews().then(reviews => dispatch(receiveAllReviews(reviews)))
 // );
 //
-// export const fetchReview = id => dispatch => (
-//   ReviewApiUtil.fetchReview(id).then(review => dispatch(receiveReview(review)))
-// );
+export const fetchReview = id => dispatch => (
+  ReviewApiUtil.fetchReview(id).then(review => dispatch(receiveReview(review)))
+);
 
 export const createReview = review => dispatch => (
   ReviewApiUtil.createReview(review).then(review => dispatch(receiveReview(review)))

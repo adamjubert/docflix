@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 import StarRating from '../../../star_rating';
 import ReviewsPreview from './reviews_preview';
+import ReviewForm from '../../../review_form/review_form';
 
 class SerieDetails extends React.Component {
   constructor(props) {
@@ -15,14 +16,14 @@ class SerieDetails extends React.Component {
     return(
       <div className='serie-expand-main'>
         <div className='serie-review-container'>
-          <h2 className='serie-title'>{serie.name}</h2>
           <div className='serie-reviews-preview'>
+            <h2 className='serie-title'>{serie.name}</h2>
             <ReviewsPreview reviews={serie.reviews.slice(revLength - 3, revLength)} />
             <Link to="#" className='see-all-reviews'>See all reviews ({serie.reviews.length})</Link>
           </div>
-          <div className='serie-reviews-create'>
-
-          </div>
+        </div>
+        <div className='serie-reviews-create'>
+          <ReviewForm />
         </div>
       </div>
     );
