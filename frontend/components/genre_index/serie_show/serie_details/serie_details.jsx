@@ -9,8 +9,8 @@ class SerieDetails extends React.Component {
     const serie = this.props.serie;
     return(
       <div className='serie-expand-main'>
-        <div className='serie-reviews-container'>
-          <h2>{serie.name}</h2>
+        <div className='serie-review-container'>
+          <h2 className='serie-title'>{serie.name}</h2>
           <div className='serie-reviews-preview'>
             <ul>
               { serie.reviews.map((review) => (

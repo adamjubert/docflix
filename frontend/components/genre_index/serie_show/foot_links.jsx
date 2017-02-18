@@ -8,7 +8,7 @@ class FootLinks extends React.Component {
   render() {
     const activeTab = 'selected';
     return (
-      <div className='tab-footer'>
+      <div className='foot-links'>
         <ul>
           <li onClick={this.props.onTabChosen.bind(this, 0)}
               className={ activeTab }

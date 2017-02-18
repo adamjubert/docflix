@@ -11,7 +11,7 @@ class SerieOverview extends React.Component {
       <div className='serie-expand-main'>
         <div className='serie-overview-left'>
           <section className='serie-overview-left-container'>
-            <h2>{serie.name}</h2>
+            <h2 className='serie-title'>{serie.name}</h2>
             <ul className='serie-overview-list'>
               <li>{serie.avg_review} Stars</li>
               <li>{serie.year}</li>

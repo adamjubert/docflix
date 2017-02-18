@@ -8,9 +8,9 @@ class SerieEpisodes extends React.Component {
   render() {
     const serie = this.props.serie;
     return(
-      <div className='serie-expand-main'>
-        <div className='serie-episodes-container'>
-          <h2>{serie.name}</h2>
+      <div className='serie-episodes-main'>
+        <div className='serie-container'>
+          <h2 className='serie-title'>{serie.name}</h2>
           <ul className='serie-episodes-list'>
             {serie.episodes.map((episode) => (
               <li className='serie-episodes-list-item'
@@ -23,7 +23,7 @@ class SerieEpisodes extends React.Component {
                       <li>{ episode.runtime }m</li>
                     </ul>
                   </li>
-                  <li>{ episode.description }</li>
+                  <li className='episode-description'>{ episode.description }</li>
                 </ul>
             </li>
           ))}

@@ -1,0 +1,51 @@
+.serie-episodes-main {
+  width: 100%;
+  margin-left: 8%;;
+}
+
+.serie-container {
+
+}
+
+
+.serie-episodes-list {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.serie-episodes-list-item {
+  width: 270px;
+  margin-right: 30px;
+}
+
+.episode-contents {
+  width: 100%;
+  margin-right: 30px;
+}
+
+.episode-contents img {
+  height: 140px;
+}
+
+.episode-contents li {
+}
+
+.episode-description {
+  font-size: 13px;
+  width: 250px;
+  height: 77px;
+  margin-top: 2px;
+  margin-right: 20px;
+  overflow-y: hidden;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.episode-name-runtime {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  margin-top: 10px;
+}
