@@ -1,3 +1,28 @@
 .serie-review-container {
-  margin-left: 8%;;
+  margin-left: 8%;
+  max-width: 40%
+}
+
+.review-preview-list {
+  margin-top: 16px;
+}
+
+.review-preview-list li {
+  margin-bottom: 12px;
+}
+
+.review-preview-comment {
+  color: grey;
+  font-size: 14px;
+}
+
+.see-all-reviews {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.see-all-reviews:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }

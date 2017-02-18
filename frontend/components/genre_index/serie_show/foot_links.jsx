@@ -9,6 +9,7 @@ class FootLinks extends React.Component {
       links.map((link, index) => (
         <li onClick={this.props.onTabChosen.bind(this, index)}
             className={ index === this.props.selectedPane ? 'bb active-foot-link' : 'bb foot-link' }
+            key={link}
             >{link}</li>
         ))
     );
@@ -29,23 +30,3 @@ class FootLinks extends React.Component {
 }
 
 export default FootLinks;
-
-// render() {
-//   const activeTab = 'active-foot-link';
-//   return (
-//     <div className='foot-links'>
-//       <ul>
-//         <li onClick={this.props.onTabChosen.bind(this, 0)}
-//             className={ activeTab }
-//             >Overview</li>
-//         <li onClick={this.props.onTabChosen.bind(this, 1)}
-//             className={ activeTab }
-//             >Episodes</li>
-//         <li onClick={this.props.onTabChosen.bind(this, 2)}
-//             className={ activeTab }
-//             >Details</li>
-//       </ul>
-//     </div>
-//
-//   );
-// }

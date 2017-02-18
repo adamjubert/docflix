@@ -11,6 +11,7 @@ class SerieShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {selectedPane: 0};
+
   }
 
   componentDidMount() {
@@ -42,7 +43,6 @@ class SerieShow extends React.Component {
 
   render() {
     if (!this.props.serie.id) return null;
-
     const serie = this.props.serie;
     return(
       <div className='serie-expand'>

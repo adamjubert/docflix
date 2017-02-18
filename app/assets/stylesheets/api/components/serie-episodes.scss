@@ -41,6 +41,8 @@
   font-weight: 300;
   letter-spacing: 1px;
   position: relative;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .episode-name-runtime {
