@@ -2,11 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 
-//
-// //
-// //
-// const appElement = document.getElementById('root');
-
 const customStyles = {
   overlay : {
     position          : 'fixed',
@@ -18,10 +13,10 @@ const customStyles = {
   },
   content : {
     position                   : 'absolute',
-    top                        : '40px',
-    left                       : '0px',
-    right                      : '0px',
-    bottom                     : '40px',
+    top                        : '16%',
+    left                       : '16%',
+    right                      : '16%',
+    bottom                     : '16%',
     background                 : '#222',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
@@ -31,7 +26,7 @@ const customStyles = {
   }
 };
 
-class VideoModal extends React.Component {
+class ReviewModal extends React.Component {
   componentWillMount() {
     Modal.setAppElement('body');
   }
@@ -63,7 +58,11 @@ class VideoModal extends React.Component {
 
   render() {
     return (
-      <div onClick={this.openModal} className='video-modal-container'>
+      <div>
+        <p onClick={this.openModal}
+           className='review-modal-link white'>
+           See all reviews ({this.props.reviewCount})
+        </p>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
@@ -72,12 +71,8 @@ class VideoModal extends React.Component {
           contentLabel="Example Modal"
         >
 
-          <i class="fa fa-arrow-circle-left white video-close"
-             aria-hidden="true"
-             onClick={this.closeModal}></i><p className='white video-close'>[Replace me!]</p>
            <div className='temp-modal-title'>
-             <h1 className='white'>Video will go here</h1>
-             <img src={this.props.videoSource} height="100" width="100"></img>
+             <h1 className='white'>Reviews will go here</h1>
            </div>
 
         </Modal>
@@ -87,4 +82,4 @@ class VideoModal extends React.Component {
 }
 
 
-export default VideoModal;
+export default ReviewModal;
