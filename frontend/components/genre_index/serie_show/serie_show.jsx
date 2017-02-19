@@ -48,7 +48,8 @@ class SerieShow extends React.Component {
       <div className='serie-expand'>
         <div className='serie-expand-content'>
           { this.selectPane(this.state.selectedPane) }
-          <FootLinks selectedPane={this.state.selectedPane}
+          <FootLinks episodeCount={serie.episodes.length}
+                     selectedPane={this.state.selectedPane}
                      onTabChosen={this.selectTab.bind(this)} />
         </div>
       </div>

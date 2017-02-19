@@ -144,7 +144,7 @@ Review.destroy_all
 Serie.all.each do |serie|
   User.all.each do |user|
     Review.create!(
-      stars: ( serie.name[0] == 'P' ? (4 + rand(5)) : (1 + rand(5)) ),
+      stars: ( serie.name[0] == 'P' || serie.name[0] == 'A' ? (4 + rand(5)) : (1 + rand(5)) ),
       comment: Faker::Hipster.sentence(15, false, 20),
       user_id: user.id,
       series_id: serie.id

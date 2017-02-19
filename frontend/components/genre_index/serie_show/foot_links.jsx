@@ -4,7 +4,13 @@ class FootLinks extends React.Component {
 
   footerLinks() {
     const activeTab = 'active-foot-link';
-    const links = ['Overview', 'Episodes', 'Details'];
+    let links;
+    if (this.props.episodeCount > 1) {
+      links = ['Overview', 'Episodes', 'Details'];
+    } else {
+      links = ['Overview', 'Details'];
+    }
+
     return(
       links.map((link, index) => (
         <li onClick={this.props.onTabChosen.bind(this, index)}

@@ -8,7 +8,6 @@ class SerieEpisodes extends React.Component {
 
   render() {
     const serie = this.props.serie;
-    debugger
     return(
       <div className='serie-episodes-main'>
         <div className='serie-container'>
