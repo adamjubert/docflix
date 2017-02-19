@@ -8,13 +8,13 @@ class FootLinks extends React.Component {
     if (this.props.episodeCount > 1) {
       links = ['Overview', 'Episodes', 'Details'];
     } else {
-      links = ['Overview', 'Details'];
+      links = ['Overview', '', 'Details'];
     }
 
     return(
       links.map((link, index) => (
         <li onClick={this.props.onTabChosen.bind(this, index)}
-            className={ index === this.props.selectedPane ? 'bb active-foot-link' : 'bb foot-link' }
+            className={ index === this.props.selectedPane ? 'bb active-foot-link' : 'foot-link bb' }
             key={link}
             >{link}</li>
         ))

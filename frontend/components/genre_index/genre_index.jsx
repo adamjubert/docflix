@@ -10,6 +10,8 @@ class GenreIndex extends React.Component {
     this.state = { fetching: true, clickedSerie: null, clickedGenre: null };
   }
 
+
+
   componentDidMount() {
     this.props.fetchGenres().then(() => this.setState({fetching: false}));
   }
@@ -43,11 +45,11 @@ class GenreIndex extends React.Component {
   }
 
   goToGenre(id) {
-    const path = `/browse/genre/${id}`;
-    return(
-      this.props.router.push(path)
-    );
-  }
+      const path = `browse/genre/${id}`;
+      return(
+        () => this.props.router.push(path)
+      );
+    }
 
   genresList() {
     return(
@@ -58,7 +60,7 @@ class GenreIndex extends React.Component {
               <div className='genre-title'>
                 <h3 key={"genre-" + genre.id}
                     className='genre-title-item'
-                    onClick={this.goToGenre}
+                    onClick={this.goToGenre(genre.id)}
                     >{genre.name}</h3>
               </div>
               { this.seriesList(genre) }

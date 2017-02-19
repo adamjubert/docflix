@@ -32,7 +32,7 @@ const Root = ({ store }) => {
           <Route path='/login' component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path='/signup' component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path='/browse' component={ Browse } onEnter={_redirectIfNotLoggedIn }>
-            <Route path='/genre/:id' component={ GenreShowContainer } onEnter={ _redirectIfNotLoggedIn } />
+            <Route path='genre/:id' component={ GenreShowContainer } onEnter={ _redirectIfNotLoggedIn } />
           </Route>
 
         </Route>

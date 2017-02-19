@@ -33,15 +33,15 @@ class Episode < ActiveRecord::Base
   has_attached_file :video, processors: [:transcoder]
   validates_attachment_content_type :video, content_type: ["video/mp4"]
 
-  def self.destroy_nonseeds
-    destroy_these_ids = []
-    destroy_these_videos = Episode.select(:id).where(seeded: false)
-
-    destroy_these_videos.each do |video|
-      destroy_these_ids << video.id
-    end
-
-    Episode.destroy(destroy_these_ids)
-  end
+  # def self.destroy_nonseeds
+  #   destroy_these_ids = []
+  #   destroy_these_videos = Episode.select(:id).where(seeded: false)
+  #
+  #   destroy_these_videos.each do |video|
+  #     destroy_these_ids << video.id
+  #   end
+  #
+  #   Episode.destroy(destroy_these_ids)
+  # end
 
 end

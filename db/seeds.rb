@@ -12,19 +12,31 @@ User.create!(email: 'guest@docflix.tech', password: 'testing', fname: 'Guest', l
 Serie.destroy_all
 planet_earth = Serie.create!(
   name: 'Planet Earth',
-  year: 2014,
+  year: 2006,
   author: 'Discovery Channel',
   mpaa_rating: 'PG',
-  description: Faker::Hipster.sentence(22),
-  thumbnail: File.open("../docflix-media/series/thumbnails/planet-earth.png")
+  description: 'This landmark series transports nature lovers from the Himalayan Mountains to the depths of the ocean and everywhere in between.',
+  thumbnail: File.open("../docflix-media/series/planet-earth/logo.png")
 )
+
+death_valley = Serie.create!(
+  name: 'Death Valley National Park',
+  year: 2016,
+  author: '4K Relaxation Channel',
+  mpaa_rating: 'G',
+  description: 'Enjoy this truly remarkable National Park that attracts millions of tourists. Take delight in a unique phenomenon, when Death Valley is transformed and when it comes to life, when thousands of plants color the intermountain basin.',
+  thumbnail: File.open("../docflix-media/series/death-valley/logo.png")
+)
+
+
+### FAKE SEEDS BELOW ###
 natures_great = Serie.create!(
   name: 'Nature\'s Great Events',
   year: 2014,
   author: 'Discovery Channel',
   mpaa_rating: 'PG',
   description: Faker::Hipster.sentence(18),
-  thumbnail: File.open("../docflix-media/series/thumbnails/natures-great-events.png")
+  thumbnail: File.open("../docflix-media/default_series_thumb.png")
 )
 vice = Serie.create!(
   name: 'Vice on HBO',
@@ -69,48 +81,104 @@ birds = Serie.create!(name: 'Birds of Paradise', year: 2014,
   author: 'Discovery Channel', mpaa_rating: 'PG',
   description: Faker::Hipster.sentence(18))
 
-# Episode.destroy_nonseeds
 Episode.destroy_all
-pe1 = Episode.create!(
-  name: 'Gifts from the Earth',
-  description: 'By examining the earth\'s mineral and energy sources, scientists analyze how the theory of plate tectonics hasrevolutionized the search for earth\'s treasures that lie hidden in locations such as the Red Sea and Antarctic ice cap.',
-  runtime: 5,
+Episode.create!(
+  name: 'From Pole to Pole',
+  description: 'Take a journey around the globe and see the effect of gradual climatic change and seasonal transitions en route.',
+  runtime: 2,
   episode_num: 1,
   series_id: planet_earth.id,
-  thumbnail: File.open("../docflix-media/episodes/thumbnails/pe01.png"),
-  video: File.open("../docflix-media/episodes/videos/01planet.mp4")
+  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/01pole-to-pole.png'),
+  video: File.open('../docflix-media/series/planet-earth/episodes/01pole-to-pole.mp4')
 )
-pe2 = Episode.create!(
-  name: 'Forest',
-  description: 'Flora and fauna thrive in diverse forests.',
-  runtime: 2,
+Episode.create!(
+  name: 'Mountains',
+  description: 'The Andes have the most volatile weather and guanacos are shown enduring a flash blizzard, along with an exceptional group sighting of the normally solitary puma. The Alpine summits are always snow-covered, apart from that of the Matterhorn, which is too sheer to allow it to settle.',
+  runtime: 1,
   episode_num: 2,
   series_id: planet_earth.id,
-  thumbnail: File.open("../docflix-media/episodes/thumbnails/default.png")
+  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/02mountains.png'),
+  video: File.open('../docflix-media/series/planet-earth/episodes/02mountains.mp4')
 )
-pe3 = Episode.create!(
-  name: 'Mountains',
-  description: 'Examining forces that shaped the land and its mountain chains.',
-  runtime: 1,
+Episode.create!(
+  name: 'Islands',
+  description: 'Remote islands offer sanctuary for some of the planet\'s strangest and rarest creatures. ',
+  runtime: 2,
   episode_num: 3,
   series_id: planet_earth.id,
-  thumbnail: File.open("../docflix-media/episodes/thumbnails/default.png")
+  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/03islands.png'),
+  video: File.open('../docflix-media/series/planet-earth/episodes/03islands.mp4')
 )
-pe4 = Episode.create!(
-  name: 'Seasonal Forests',
-  description: 'The trees of the Taiga forest; giant sequoia, the largest living thing on the planet.',
+Episode.create!(
+  name: 'Birds',
+  description: 'In the Gulf on the coast of Bahrain, 100,000 Socotra cormorants are settling down to nest. In the intense heat, the only nutrition to be had comes from the wind blowing in from the ocean, making the barren wasteland a fertile place to raise their young.',
   runtime: 1,
-  episode_num: 3,
+  episode_num: 4,
   series_id: planet_earth.id,
-  thumbnail: File.open("../docflix-media/episodes/thumbnails/default.png")
+  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/04birds.png'),
+  video: File.open('../docflix-media/series/planet-earth/episodes/04birds.mp4')
+)
+Episode.create!(
+  name: 'Ice Worlds',
+  description: 'Antarctica contains 90% of the world\'s ice, and stays largely deserted until the spring, when visitors arrive to harvest its waters. Snow petrels take their place on nunataks and begin to court, but are preyed on by south polar skuas.',
+  runtime: 2,
+  episode_num: 5,
+  series_id: planet_earth.id,
+  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/05arctic.png'),
+  video: File.open('../docflix-media/series/planet-earth/episodes/05arctic.mp4')
+)
+Episode.create!(
+  name: 'Deserts',
+  description: 'Camels, lions, kangaroos, and a host of other animals live in the harsh environment that covers one-third of the land on Earth: the deserts. ',
+  runtime: 2,
+  episode_num: 6,
+  series_id: planet_earth.id,
+  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/06deserts.png'),
+  video: File.open('../docflix-media/series/planet-earth/episodes/06deserts.mp4')
+)
+Episode.create!(
+  name: 'Eagles',
+  description: ' In the harsh Alpine winter, Golden eagles must fight to gain access to food.',
+  runtime: 2,
+  episode_num: 7,
+  series_id: planet_earth.id,
+  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/07eagles.png'),
+  video: File.open('../docflix-media/series/planet-earth/episodes/07eagles.mp4')
+)
+Episode.create!(
+  name: 'Iguanas',
+  description: 'In order to survive, Iguanas have adapted to tackle the rough seas in this harsh but wildlife rich environment.',
+  runtime: 1,
+  episode_num: 8,
+  series_id: planet_earth.id,
+  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/08iguanas.png'),
+  video: File.open('../docflix-media/series/planet-earth/episodes/08iguanas.mp4')
+)
+Episode.create!(
+  name: 'Snakes',
+  description: 'For racer snakes, the emergence of marine iguana hatchlings is a feeding bonanza.',
+  runtime: 2,
+  episode_num: 9,
+  series_id: planet_earth.id,
+  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/09snakes.png'),
+  video: File.open('../docflix-media/series/planet-earth/episodes/09snakes.mp4')
+)
+Episode.create!(
+  name: death_valley.name,
+  description: death_valley.description,
+  runtime: 2,
+  episode_num: 1,
+  series_id: death_valley.id,
+  thumbnail: File.open('../docflix-media/series/death-valley/ep-logo.png'),
+  video: File.open('../docflix-media/series/death-valley/video.mp4')
 )
 
 
 Genre.destroy_all
-my_list = Genre.create!(name: 'My List')
+Genre.create!(name: 'My List')
 nature = Genre.create!(name: 'Nature')
 social = Genre.create!(name: 'Social & Cultural')
-
+#
 SeriesGenre.destroy_all
 SeriesGenre.create!(series_id: planet_earth.id, genre_id: nature.id)
 SeriesGenre.create!(series_id: birds.id, genre_id: nature.id)
@@ -125,6 +193,7 @@ SeriesGenre.create!(series_id: ants_secret.id, genre_id: nature.id)
 SeriesGenre.create!(series_id: animal_homes.id, genre_id: nature.id)
 SeriesGenre.create!(series_id: animal_homes.id, genre_id: social.id)
 SeriesGenre.create!(series_id: killer_legends.id, genre_id: social.id)
+SeriesGenre.create!(series_id: death_valley.id, genre_id: nature.id)
 
 
 
