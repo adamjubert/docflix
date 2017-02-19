@@ -6,9 +6,9 @@ class FeaturedVid extends React.Component {
   render() {
     return (
       <div className='featured-vid'>
-        <div className='featured-vid-testpic'>
-
-        </div>
+        <iframe src="https://www.youtube.com/embed/bo-4_r94ljY?autoplay=1"
+          width="100%" height="100%" frameBorder="0"
+          allowFullscreen></iframe>
       </div>
     );
   }
@@ -16,3 +16,6 @@ class FeaturedVid extends React.Component {
 }
 
 export default FeaturedVid;
+// <video width="100%" height="100%" autoplay  >
+// <source src='https://www.youtube.com/embed/bo-4_r94ljY?ecver=2' type="video/mp4" />
+// </video>

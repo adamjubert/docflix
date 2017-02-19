@@ -26,7 +26,7 @@ const customStyles = {
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
     outline                    : 'none',
-    padding                    : '20px'
+    padding                    : ''
 
   }
 };
@@ -73,13 +73,9 @@ class VideoModal extends React.Component {
           contentLabel="Example Modal"
         >
 
-          <i className="fa fa-arrow-circle-left white video-close"
-             aria-hidden="true"
-             onClick={this.closeModal}></i>
-           <div className='temp-modal-title'>
-             <h1 className='white'>Video will go here</h1>
-             <img src={this.props.videoSource} height="100" width="100"></img>
-           </div>
+        <video width="100%" height="100%" controls autoplay  >
+          <source src={this.props.videoSource} type="video/mp4" />
+        </video>
 
         </Modal>
       </div>

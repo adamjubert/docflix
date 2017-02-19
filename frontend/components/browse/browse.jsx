@@ -9,6 +9,7 @@ class Browse extends React.Component {
   }
 
   render() {
+    debugger
     return (
       <div className='browse-main'>
         <FeaturedVid />
