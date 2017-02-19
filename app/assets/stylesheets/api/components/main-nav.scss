@@ -124,6 +124,7 @@
   background:#000;
   padding: 10px 4px;
   text-align: left;
+
 }
 .nav-dropdown-item {
   color: white;
@@ -135,6 +136,7 @@
 .nav-dropdown-item:hover {
   text-decoration: underline;
   cursor: pointer;
+
 }
 
 .nav-dropdown-signout {
@@ -142,7 +144,6 @@
   border-top: 2px solid white;
   width: 150px;
   min-height: 40px;
-
   display:none;
   position:absolute;
   top:100%;
@@ -150,6 +151,7 @@
   background:#000;
   padding: 10px 4px;
   text-align: left;
+
 }
 
 /**************/
@@ -191,6 +193,8 @@
 
 .nav-dropdown-profile:hover > div {
   display: block;
+  z-index: 100;
+
 }
 .nav-dropdown-menu-signout {
   border: 1px solid #555;
@@ -209,6 +213,7 @@
 
 .nav-dropdown-item:hover {
   text-decoration: underline;
+
 }
 
 .user-icon {

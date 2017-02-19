@@ -1,7 +1,18 @@
 import React from 'react';
+import VideoModalBasic from '../video_modal_basic';
 
 
 class FeaturedVid extends React.Component {
+
+  openModal() {
+    const x = new VideoModalBasic({videoSource: 'http://s3.amazonaws.com/docflix-dev/episodes/videos/000/000/141/original/video.mp4?1487540566'});
+
+    return(
+      x
+
+    );
+  }
+
 
   render() {
     return (
@@ -17,3 +28,9 @@ class FeaturedVid extends React.Component {
 }
 
 export default FeaturedVid;
+
+// openModal() {
+//   return(
+//     () => <VideoModalBasic videoSource='http://s3.amazonaws.com/docflix-dev/episodes/videos/000/000/141/original/video.mp4?1487540566'>
+//   }
+// }
