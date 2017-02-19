@@ -1,4 +1,10 @@
 .featured-vid {
   width: 100%;
   height: 80%;
+
+}
+
+.featured-vid video {
+  max-height: 500px;
+  zoom: 150%;
 }

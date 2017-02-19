@@ -110,13 +110,13 @@
 
 .nav-dropdown-root:hover > div {
   display: block;
+  z-index: 100;
 }
 .nav-dropdown-menu {
   border: 1px solid #555;
   border-top: 2px solid white;
   width: 150px;
   min-height: 40px;
-
   display:none;
   position:absolute;
   top:100%;

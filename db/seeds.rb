@@ -332,23 +332,27 @@ Episode.create!(
   video: File.open('../docflix-media/series/vice/episodes/04.mp4')
 )
 
-terra = Serie.create!(
-  name: 'Terra',
-  year: 2012,
-  author: 'OMEGA',
+########################################
+############  FOOD, INC  ############
+########################################
+
+food_inc = Serie.create!(
+  name: 'Food, Inc.',
+  year: 2011,
+  author: 'Robert Kenner',
   mpaa_rating: 'PG',
-  description: 'Animals are the refugees we often forget. This documentary examines the human relationship with other species on Earth. With a global population of 7 billion people, let’s have the courage to change the way we share our planet. ',
-  thumbnail: File.open("../docflix-media/series/terra/logo.png")
+  description: 'Director Robert Kenner\'s provocative, Oscar-nominated documentary looks at the food industry\'s harmful effects on human health and the environment',
+  thumbnail: File.open("../docflix-media/series/food-inc/logo.png")
 )
-SeriesGenre.create!(series_id: terra.id, genre_id: nature.id)
+SeriesGenre.create!(series_id: food_inc.id, genre_id: social.id)
 Episode.create!(
-  name: terra.name,
-  description: terra.description,
-  runtime: 2,
+  name: food_inc.name,
+  description: food_inc.description,
+  runtime: 3,
   episode_num: 1,
-  series_id: terra.id,
-  thumbnail: File.open('../docflix-media/series/terra/ep-logo.png'),
-  video: File.open('../docflix-media/series/terra/video.mp4')
+  series_id: food_inc.id,
+  thumbnail: File.open('../docflix-media/series/food-inc/ep-logo.png'),
+  video: File.open('../docflix-media/series/food-inc/video.mp4')
 )
 
 
