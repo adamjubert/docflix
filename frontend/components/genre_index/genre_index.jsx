@@ -43,7 +43,7 @@ class GenreIndex extends React.Component {
   }
 
   goToGenre(id) {
-    const path = `/browsegenre/${id}`;
+    const path = `/browse/genre/${id}`;
     return(
       this.props.router.push(path)
     );

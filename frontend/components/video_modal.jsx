@@ -22,7 +22,8 @@ const customStyles = {
     left                       : '0px',
     right                      : '0px',
     bottom                     : '40px',
-    background                 : '#222',
+    background                 : '#000',
+    border                     : 'none',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
     outline                    : 'none',
@@ -73,7 +74,7 @@ class VideoModal extends React.Component {
           contentLabel="Example Modal"
         >
 
-        <video width="100%" height="100%" controls autoplay  >
+        <video width="100%" height="100%" controls autoPlay  >
           <source src={this.props.videoSource} type="video/mp4" />
         </video>
 

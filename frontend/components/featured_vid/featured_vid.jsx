@@ -6,9 +6,10 @@ class FeaturedVid extends React.Component {
   render() {
     return (
       <div className='featured-vid'>
-        <iframe src="https://www.youtube.com/embed/bo-4_r94ljY?autoplay=1"
-          width="100%" height="100%" frameBorder="0"
-          allowFullscreen></iframe>
+        <video width="100%" height="100%" autoPlay loop muted >
+          <source src='http://s3.amazonaws.com/docflix-dev/episodes/videos/000/000/085/original/01planet.mp4?1487464576'
+                  type="video/mp4" />
+        </video>
       </div>
     );
   }
@@ -16,6 +17,3 @@ class FeaturedVid extends React.Component {
 }
 
 export default FeaturedVid;
-// <video width="100%" height="100%" autoplay  >
-// <source src='https://www.youtube.com/embed/bo-4_r94ljY?ecver=2' type="video/mp4" />
-// </video>

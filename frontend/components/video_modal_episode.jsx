@@ -73,7 +73,7 @@ class VideoModalEpisode extends React.Component {
           contentLabel="Example Modal"
         >
 
-        <video width="100%" height="100%" controls autoplay  >
+        <video width="100%" height="100%" controls autoPlay  >
           <source src={this.props.videoSource} type="video/mp4" />
         </video>
 
