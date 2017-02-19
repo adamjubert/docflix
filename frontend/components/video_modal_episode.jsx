@@ -22,7 +22,7 @@ const customStyles = {
     left                       : '0px',
     right                      : '0px',
     bottom                     : '40px',
-    background                 : '#222',
+    background                 : '#000',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
     outline                    : 'none',
