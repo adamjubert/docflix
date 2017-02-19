@@ -16,7 +16,7 @@ planet_earth = Serie.create!(
   author: 'Discovery Channel',
   mpaa_rating: 'PG',
   description: Faker::Hipster.sentence(22),
-  thumbnail: File.open("../docflix-media/thumbnails/planet-earth.png")
+  thumbnail: File.open("../docflix-media/series/thumbnails/planet-earth.png")
 )
 natures_great = Serie.create!(
   name: 'Nature\'s Great Events',
@@ -24,7 +24,7 @@ natures_great = Serie.create!(
   author: 'Discovery Channel',
   mpaa_rating: 'PG',
   description: Faker::Hipster.sentence(18),
-  thumbnail: File.open("../docflix-media/thumbnails/natures-great-events.png")
+  thumbnail: File.open("../docflix-media/series/thumbnails/natures-great-events.png")
 )
 vice = Serie.create!(
   name: 'Vice on HBO',
@@ -69,34 +69,40 @@ birds = Serie.create!(name: 'Birds of Paradise', year: 2014,
   author: 'Discovery Channel', mpaa_rating: 'PG',
   description: Faker::Hipster.sentence(18))
 
+# Episode.destroy_nonseeds
 Episode.destroy_all
 pe1 = Episode.create!(
   name: 'Gifts from the Earth',
   description: 'By examining the earth\'s mineral and energy sources, scientists analyze how the theory of plate tectonics hasrevolutionized the search for earth\'s treasures that lie hidden in locations such as the Red Sea and Antarctic ice cap.',
   runtime: 5,
   episode_num: 1,
-  series_id: planet_earth.id
+  series_id: planet_earth.id,
+  thumbnail: File.open("../docflix-media/episodes/thumbnails/pe01.png"),
+  video: File.open("../docflix-media/episodes/videos/01planet.mp4")
 )
 pe2 = Episode.create!(
   name: 'Forest',
   description: 'Flora and fauna thrive in diverse forests.',
   runtime: 2,
   episode_num: 2,
-  series_id: planet_earth.id
+  series_id: planet_earth.id,
+  thumbnail: File.open("../docflix-media/episodes/thumbnails/default.png")
 )
 pe3 = Episode.create!(
   name: 'Mountains',
   description: 'Examining forces that shaped the land and its mountain chains.',
   runtime: 1,
   episode_num: 3,
-  series_id: planet_earth.id
+  series_id: planet_earth.id,
+  thumbnail: File.open("../docflix-media/episodes/thumbnails/default.png")
 )
 pe4 = Episode.create!(
   name: 'Seasonal Forests',
   description: 'The trees of the Taiga forest; giant sequoia, the largest living thing on the planet.',
   runtime: 1,
   episode_num: 3,
-  series_id: planet_earth.id
+  series_id: planet_earth.id,
+  thumbnail: File.open("../docflix-media/episodes/thumbnails/default.png")
 )
 
 

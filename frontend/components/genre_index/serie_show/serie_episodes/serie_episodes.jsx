@@ -8,6 +8,7 @@ class SerieEpisodes extends React.Component {
 
   render() {
     const serie = this.props.serie;
+    debugger
     return(
       <div className='serie-episodes-main'>
         <div className='serie-container'>
@@ -17,8 +18,7 @@ class SerieEpisodes extends React.Component {
               <li className='serie-episodes-list-item'
                 key={"episode-" + episode.id}>
                 <ul className='episode-contents'>
-
-                  <VideoModalEpisode videoSource={ serie.thumbnail_url } thumbnail={ serie.thumbnail_url }/>
+                  <VideoModalEpisode videoSource={ episode.video_url } thumbnail={ episode.thumbnail_url }/>
 
                   <li>
                     <ul className='episode-name-runtime'>

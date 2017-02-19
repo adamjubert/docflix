@@ -31,29 +31,26 @@
 }
 /***Series***/
 
-.series-list-item {
-  width: 250px;
-  max-width: 220px;
-  min-width: 220px;
-  height: 120px;
-  min-height: 100px;
-  max-height: 225px;
-  border: 1px solid grey;
-  transition: all .5s ease-in-out;
-  // background: grey;
-  border: 1px solid black;
-  text-align: center;
-}
-
 .series-list {
   display: flex;
   justify-content: flex-start;
   margin-left: 36px;
 }
 
+.series-list-item {
+  margin-right: 5px;
+  width: 220px;
+  max-width: 220px;
+  min-width: 220px;
+  height: 120px;
+  min-height: 100px;
+  max-height: 225px;
+  transition: all .5s ease-in-out;
+}
+
 .series-list-item:hover {
   width: 260px;
   transform: scale(1.4);
   cursor: pointer;
-  z-index: 100;
+  z-index: 10;
 }
