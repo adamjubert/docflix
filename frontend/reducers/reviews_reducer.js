@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_REVIEWS,
+import { RECEIVE_REVIEWS,
          RECEIVE_REVIEW,
          REMOVE_REVIEW } from '../actions/review_actions';
 import merge from 'lodash/merge';
@@ -6,8 +6,9 @@ import merge from 'lodash/merge';
 const ReviewsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   switch (action.type) {
+    case RECEIVE_REVIEWS:
+      return action.reviews;
     case RECEIVE_REVIEW:
-      debugger
       return merge({}, oldState, {[action.review.id]: action.review});
     case REMOVE_REVIEW:
       let newState = merge({}, oldState);

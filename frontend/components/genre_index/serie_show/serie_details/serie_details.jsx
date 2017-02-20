@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import StarRating from '../../../star_rating';
-import ReviewsPreview from './reviews_preview';
+import ReviewsPreviewContainer from './reviews_preview/reviews_preview_container';
 import ReviewFormContainer from './review_form/review_form_container';
 import ReviewModal from './review_modal/review_modal';
 
@@ -12,7 +12,6 @@ class SerieDetails extends React.Component {
   }
 
   componentWillReceiveProps() {
-    debugger
   }
 
   render() {
@@ -23,13 +22,14 @@ class SerieDetails extends React.Component {
         <div className='serie-review-container'>
           <div className='serie-reviews-preview'>
             <h2 className='serie-title'>{serie.name}</h2>
-            <ReviewsPreview reviews={serie.reviews.slice(0, 2)}
+            <ReviewsPreviewContainer serieId={serie.id}
                             styling={'review-preview-comment'}/>
             <ReviewModal serie={serie} reviewCount={serie.reviews.length} />
           </div>
         </div>
         <div className='serie-reviews-create'>
-          <ReviewFormContainer serie={serie}/>
+              <ReviewFormContainer />
+
         </div>
       </div>
     );

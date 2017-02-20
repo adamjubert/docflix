@@ -1,3 +1,10 @@
+export const fetchReviews = (id) => (
+  $.ajax({
+    method: 'GET',
+    url: `api/series/${id}/reviews`
+  })
+);
+
 export const fetchReview = id=> (
   $.ajax({
     url: `api/reviews/${id}`,

@@ -11,7 +11,6 @@ class ReviewForm extends React.Component {
 
   componentDidMount() {
     if (this.props.params) {
-      debugger
       this.props.fetchReview(this.props.params.reviewId);
     }
   }
@@ -61,8 +60,9 @@ class ReviewForm extends React.Component {
           <label>
             <textarea
               value={this.state.comment}
-              onChange={this.update('comment')}>
-              Write your review here.
+              onChange={this.update('comment')}
+              defaultValue='Write your review here.'>
+
             </textarea>
           </label>
           <input type="submit" value={btnText} className='btn-review' />

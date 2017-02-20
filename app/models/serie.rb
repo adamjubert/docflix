@@ -28,7 +28,10 @@ class Serie < ActiveRecord::Base
     foreign_key: :series_id
   has_many :reviews,
     class_name: 'Review',
-    foreign_key: :series_id 
+    foreign_key: :series_id
+  has_many :likes,
+    class_name: 'Like',
+    foreign_key: :serie_id 
 
   has_attached_file :thumbnail, default_url: "old_netflix_logo.png"
   validates_attachment_content_type :thumbnail, content_type: /\Aimage\/.*\z/

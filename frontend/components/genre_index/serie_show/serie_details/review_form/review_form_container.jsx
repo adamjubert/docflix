@@ -6,7 +6,7 @@ const mapStateToProps = (state, ownProps) => {
   let review = { stars: 0, comment: "" };
   let formType = 'new';
   let user_id = state.session.currentUser.id;
-  let series_id = ownProps.serie.id;
+  let series_id = state.serie.id;
   return { review, formType, user_id, series_id };
 };
 
