@@ -4,17 +4,15 @@ import { fetchReview, createReview, updateReview } from '../../actions/review_ac
 
 const mapStateToProps = (state, ownProps) => {
   let review = { comment: "" };
-  if(ownProps.params) {
-    review = state.reviews[ownProps.params.reviewId];
-  }
-  let formType = ownProps.formType || "edit";
-  return { review, formType };
+  let formType = 'new';
+  let user_id = state.session.currentUser.id;
+  let series_id = ownProps.serie.id;
+  return { review, formType, user_id, series_id };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  const action = ownProps.formType === "new" ? createReview : updateReview;
+  const action =  createReview;
   return {
-    fetchReview: id => dispatch(fetchReview(id)),
     action: review => dispatch(action(review))
   };
 };
@@ -23,3 +21,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(ReviewForm);
+
+// fetchReview: id => dispatch(fetchReview(id)),

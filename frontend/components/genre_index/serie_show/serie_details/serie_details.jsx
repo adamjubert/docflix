@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 import StarRating from '../../../star_rating';
 import ReviewsPreview from './reviews_preview';
-import ReviewForm from '../../../review_form/review_form';
+import ReviewFormContainer from '../../../review_form/review_form_container';
 import ReviewModal from './review_modal/review_modal';
 
 class SerieDetails extends React.Component {
@@ -19,13 +19,13 @@ class SerieDetails extends React.Component {
         <div className='serie-review-container'>
           <div className='serie-reviews-preview'>
             <h2 className='serie-title'>{serie.name}</h2>
-            <ReviewsPreview reviews={serie.reviews.slice(revLength - 2, revLength)}
+            <ReviewsPreview reviews={serie.reviews.slice(0, 2)}
                             styling={'review-preview-comment'}/>
             <ReviewModal serie={serie} reviewCount={serie.reviews.length} />
           </div>
         </div>
         <div className='serie-reviews-create'>
-          <ReviewForm />
+          <ReviewFormContainer serie={serie}/>
         </div>
       </div>
     );

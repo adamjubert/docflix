@@ -1,3 +1,3 @@
 #NB: ~pointless?~
 
-json.array! @reviews, :id, :stars, :user_id
+json.array! @reviews, :id, :stars, :user_id, :series_id
