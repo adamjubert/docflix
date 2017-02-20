@@ -8,12 +8,12 @@ class ReviewsPreview extends React.Component {
     this.state = this.props;
   }
 
-  componentWillUpdate() {
+  componentWillReceiveProps() {
     debugger
   }
 
   render() {
-    const reviews = this.state.reviews;
+    const reviews = this.props.reviews;
     return(
       <ul className='review-preview-list'>
         { reviews.map((review) => (

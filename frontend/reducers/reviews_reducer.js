@@ -7,6 +7,7 @@ const ReviewsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_REVIEW:
+      debugger
       return merge({}, oldState, {[action.review.id]: action.review});
     case REMOVE_REVIEW:
       let newState = merge({}, oldState);
