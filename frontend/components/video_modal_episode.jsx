@@ -23,6 +23,7 @@ const customStyles = {
     right                      : '0px',
     bottom                     : '40px',
     background                 : '#000',
+    border                     : 'none',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
     outline                    : 'none',
