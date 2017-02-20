@@ -5,10 +5,15 @@ import StarRating from '../../../star_rating';
 class ReviewsPreview extends React.Component {
   constructor(props) {
     super(props);
+    this.state = this.props;
+  }
+
+  componentWillUpdate() {
+    debugger
   }
 
   render() {
-    const reviews = this.props.reviews;
+    const reviews = this.state.reviews;
     return(
       <ul className='review-preview-list'>
         { reviews.map((review) => (

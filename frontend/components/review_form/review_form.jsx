@@ -1,5 +1,6 @@
 import React from 'react';
-import StarRatingEdit from '../star_rating_edit';
+import StarRatingComponent from 'react-star-rating-component';
+
 
 class ReviewForm extends React.Component {
   constructor(props) {
@@ -19,7 +20,6 @@ class ReviewForm extends React.Component {
   }
 
   update(field) {
-    debugger
     return (e) => {
       this.setState({[field]: e.target.value});
     };
@@ -35,25 +35,32 @@ class ReviewForm extends React.Component {
      });
   }
 
+  onStarClick(nextValue, prevValue, name) {
+      this.setState({stars: nextValue});
+  }
+
   render () {
     const text = "Create Review";
     return (
       <div>
         <h3>{text}</h3>
-        <form onSubmit={this.handleSubmit}>
-          <label>Stars
-            <input
-              type="text"
-              value={this.state.stars}
-              onChange={this.update('stars')} />
-          </label>
-          <label>
-            <StarRatingEdit onClick={this.update('stars')} />
-          </label>
+        <form onSubmit={this.handleSubmit} className='review-form'>
+          <div className='review-stars'>
+            <label>Rate this title:</label>
+            <StarRatingComponent
+                name="rate1"
+                starCount={5}
+                starColor={'red'}
+                value={this.state.stars}
+                onStarClick={this.onStarClick.bind(this)}
+            />
+          </div>
           <label>
             <textarea
               value={this.state.comment}
-              onChange={this.update('comment')} />
+              onChange={this.update('comment')}>
+              Write your review here.
+            </textarea>
           </label>
           <input type="submit" value={text} />
         </form>
@@ -75,4 +82,11 @@ export default ReviewForm;
 //   <textarea
 //     value={this.state.body}
 //     onChange={this.update('body')} />
+// </label>
+
+// <label>Stars
+//   <input
+//     type="text"
+//     value={this.state.stars}
+//     onChange={this.update('stars')} />
 // </label>
