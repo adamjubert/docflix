@@ -11,6 +11,7 @@ class ReviewForm extends React.Component {
 
   componentDidMount() {
     if (this.props.params) {
+      debugger
       this.props.fetchReview(this.props.params.reviewId);
     }
   }
@@ -40,10 +41,12 @@ class ReviewForm extends React.Component {
   }
 
   render () {
-    const text = "Create Review";
+    const headText = "Write a Review";
+    const btnText = "Submit";
+
     return (
       <div>
-        <h3>{text}</h3>
+        <h3>{headText}</h3>
         <form onSubmit={this.handleSubmit} className='review-form'>
           <div className='review-stars'>
             <label>Rate this title:</label>
@@ -62,7 +65,7 @@ class ReviewForm extends React.Component {
               Write your review here.
             </textarea>
           </label>
-          <input type="submit" value={text} />
+          <input type="submit" value={btnText} className='btn-review' />
         </form>
       </div>
     );

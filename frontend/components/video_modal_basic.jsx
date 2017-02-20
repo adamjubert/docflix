@@ -34,7 +34,6 @@ class VideoModalBasic extends React.Component {
 
   constructor(props) {
     super(props);
-    debugger
     this.state = {
       modalIsOpen: true
     };
@@ -58,7 +57,6 @@ class VideoModalBasic extends React.Component {
   }
 
   render() {
-    debugger
     this.openModal().bind(this);
     return (
       <Modal

@@ -2,11 +2,32 @@
   display: block;
 }
 .review-form label textarea {
-  width: 50%;
-  height: 100px;
+  width: 70%;
+  height: 150px;
+  max-height: 200px;
+  max-width: 80%;
 }
 
 
 .review-stars {
   display: block;
+}
+
+.btn-review {
+  margin-top: 10px;
+  color: white;
+  background-color: #B9090B;
+  border: none;
+  padding: 6px 14px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.btn-review:hover {
+  cursor: pointer;
+  background: $netflix-red;
+}
+
+.cancel {
+  background-color: grey;
 }

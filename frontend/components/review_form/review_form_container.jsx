@@ -3,7 +3,6 @@ import ReviewForm from './review_form';
 import { fetchReview, createReview, updateReview } from '../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   let review = { stars: 0, comment: "" };
   let formType = 'new';
   let user_id = state.session.currentUser.id;
