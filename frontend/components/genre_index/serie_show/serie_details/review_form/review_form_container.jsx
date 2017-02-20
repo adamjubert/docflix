@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ReviewForm from './review_form';
-import { fetchReview, createReview, updateReview } from '../../actions/review_actions';
+import { fetchReview, createReview, updateReview } from '../../../../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let review = { stars: 0, comment: "" };
