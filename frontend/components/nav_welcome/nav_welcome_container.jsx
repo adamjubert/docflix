@@ -20,7 +20,7 @@ class SignedOutNav extends React.Component {
       <div className='all-nav-container'>
         <div className='all-nav-header'>
           <Link to='/' className='all-nav-header-link'>
-            <h1 className='navbar-header-title'>DOCFLIX</h1>
+            <img src={window.logo} />
           </Link>
         </div>
         <div className='navbar-greeting'>
