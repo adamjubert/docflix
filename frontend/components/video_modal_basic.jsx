@@ -35,7 +35,7 @@ class VideoModalBasic extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalIsOpen: true
+      modalIsOpen: false
     };
 
     this.openModal = this.openModal.bind(this);
@@ -57,20 +57,25 @@ class VideoModalBasic extends React.Component {
   }
 
   render() {
-    this.openModal().bind(this);
     return (
-      <Modal
-          isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
-          style={customStyles}
-          contentLabel="Example Modal"
-        >
-          <video width="100%" height="100%" controls autoPlay  >
-            <source src={this.props.videoSource} type="video/mp4" />
-          </video>
+      <div>
+        <video width="100%" height="100%" autoPlay loop muted onClick={ this.openModal } >
+          <source src={this.props.videoSource}
+                  type="video/mp4" />
+        </video>
+        <Modal
+            isOpen={this.state.modalIsOpen}
+            onAfterOpen={this.afterOpenModal}
+            onRequestClose={this.closeModal}
+            style={customStyles}
+            contentLabel="Example Modal"
+          >
+            <video width="100%" height="100%" controls autoPlay  >
+              <source src={this.props.videoSource} type="video/mp4" />
+            </video>
 
         </Modal>
+      </div>
     );
   }
 }

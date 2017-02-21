@@ -12,8 +12,15 @@ const mapStateToProps = (state, ownProps) => {
   let user_id = state.session.currentUser.id;
   let series_id = state.serie.id;
 
-  debugger
-  return { review, formType, user_id, series_id };
+  let errors = (state.reviews.errors) ? state.reviews.errors : [];
+
+  return {
+    review,
+    formType,
+    user_id,
+    series_id,
+    errors
+  };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {

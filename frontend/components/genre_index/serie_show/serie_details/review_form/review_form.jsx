@@ -30,9 +30,9 @@ class ReviewForm extends React.Component {
       () => this.setState({stars: 0, comment: ''}));
   }
 
+
   handleSubmit(e) {
     e.preventDefault();
-    debugger
 
     let id = this.props.userReview ? this.props.userReview.id : null;
     this.props.action({
