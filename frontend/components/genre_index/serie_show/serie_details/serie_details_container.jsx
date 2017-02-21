@@ -3,14 +3,14 @@ import SerieDetails from './serie_details';
 import { fetchReviews, fetchReview, createReview, updateReview } from '../../../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  let currentUserReview;
+  let userReview;
   return {
     reviews: Object.keys(state.reviews).map((id) => {
       let review = state.reviews[id];
-      if (review.user_id === state.session.currentUser.id) { currentUserReview = review; }
+      if (review.user_id === state.session.currentUser.id) { userReview = review; }
       return (review);
     }),
-    currentUserReview
+    userReview
    };
 };
 

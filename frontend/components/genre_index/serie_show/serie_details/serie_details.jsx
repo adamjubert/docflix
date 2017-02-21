@@ -27,12 +27,12 @@ class SerieDetails extends React.Component {
             <h2 className='serie-title'>{serie.name}</h2>
             <ReviewsPreview reviews={reviews.slice(reviews.length - 2, reviews.length)}
                             styling={'review-preview-comment'}/>
-                          <ReviewModal serieName={serie.name} reviews={reviews} userReview={this.props.currentUserReview} />
+                          <ReviewModal serieName={serie.name} reviews={reviews} userReview={this.props.userReview} />
           </div>
         </div>
         <div className='serie-reviews-create'>
               <ReviewFormContainer
-                userReview={this.props.currentUserReview} />
+                userReview={this.props.userReview} />
 
         </div>
       </div>

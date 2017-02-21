@@ -14,6 +14,7 @@
 class Review < ActiveRecord::Base
   validates :stars, :comment, presence: true
   validates :stars, numericality: { greater_than: 0, less_than: 6 }
+  validates :comment, length: { minimum: 10, maximum: 800 }
   validates_uniqueness_of :user_id, scope: [:series_id]
   belongs_to :user
   belongs_to :serie,

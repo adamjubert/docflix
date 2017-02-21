@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import ReviewForm from './review_form';
+import ModalForm from './modal_form';
 import {
   fetchReview,
   createReview,
@@ -40,6 +40,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ReviewForm);
+)(ModalForm);
 
 // fetchReview: id => dispatch(fetchReview(id)),

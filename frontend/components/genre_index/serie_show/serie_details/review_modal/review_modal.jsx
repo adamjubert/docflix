@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import ReviewsPreview from '../reviews_preview/reviews_preview';
-import ReviewFormContainer from '../review_form/review_form_container';
+import ModalFormContainer from './modal_form_container';
 
 const customStyles = {
   overlay : {
@@ -81,8 +81,7 @@ class ReviewModal extends React.Component {
            <div className='review-modal-top'>
              <section>
                <h2>{reviews.length} Member Reviews for {this.props.serieName}</h2>
-               <ReviewFormContainer
-                 userReview={this.props.userReview}/>
+
              </section>
            </div>
            <div className='review-modal-bottom'>
@@ -98,3 +97,6 @@ class ReviewModal extends React.Component {
 
 
 export default ReviewModal;
+
+
+//  <ModalFormContainer userReview={this.props.userReview}/>
