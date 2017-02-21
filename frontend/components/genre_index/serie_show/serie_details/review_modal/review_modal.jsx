@@ -81,7 +81,8 @@ class ReviewModal extends React.Component {
            <div className='review-modal-top'>
              <section>
                <h2>{reviews.length} Member Reviews for {this.props.serieName}</h2>
-               <ReviewFormContainer userReview={this.props.userReview}/>
+               <ReviewFormContainer
+                 userReview={this.props.userReview}/>
              </section>
            </div>
            <div className='review-modal-bottom'>

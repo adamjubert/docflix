@@ -33,7 +33,7 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
+    this.props.clearErrors();
     let id = this.props.userReview ? this.props.userReview.id : null;
     this.props.action({
       id,
@@ -42,6 +42,18 @@ class ReviewForm extends React.Component {
       user_id: this.props.user_id,
       series_id: this.props.series_id
      });
+  }
+
+  errorHandler() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   onStarClick(nextValue, prevValue, name) {
@@ -78,6 +90,7 @@ class ReviewForm extends React.Component {
 
             </textarea>
           </label>
+          <div className='auth-errors'>{this.errorHandler()}</div>
           <input type="submit" value={btnText} className='btn-review' />
           { deleteBtn }
         </form>

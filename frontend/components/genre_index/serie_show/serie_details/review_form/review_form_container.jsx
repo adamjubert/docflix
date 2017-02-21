@@ -1,6 +1,12 @@
 import { connect } from 'react-redux';
 import ReviewForm from './review_form';
-import { fetchReview, createReview, updateReview, deleteReview } from '../../../../../actions/review_actions';
+import {
+  fetchReview,
+  createReview,
+  updateReview,
+  deleteReview,
+  receiveReviewErrors
+} from '../../../../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let userReview = ownProps.userReview;
@@ -12,8 +18,8 @@ const mapStateToProps = (state, ownProps) => {
   let user_id = state.session.currentUser.id;
   let series_id = state.serie.id;
 
-  let errors = (state.reviews.errors) ? state.reviews.errors : [];
-
+  let errors = (state.errors) ? state.errors : [];
+  debugger
   return {
     review,
     formType,
@@ -27,7 +33,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   const action = ownProps.userReview ?  updateReview : createReview;
   return {
     action: review => dispatch(action(review)),
-    deleteReview: id => dispatch(deleteReview(id))
+    deleteReview: id => dispatch(deleteReview(id)),
+    clearErrors: () => dispatch(receiveReviewErrors([]))
   };
 };
 

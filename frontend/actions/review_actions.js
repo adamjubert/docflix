@@ -15,8 +15,8 @@ export const fetchReview = id => dispatch => (
 );
 
 export const createReview = review => dispatch => (
-  ReviewApiUtil.createReview(review).then(review => dispatch(receiveReview(review)),
-      err => dispatch(receiveReviewErrors(err.responseJSON)))
+  ReviewApiUtil.createReview(review).then(review => dispatch(receiveReview(review)))
+    .fail(err => dispatch(receiveReviewErrors(err.responseJSON)))
 );
 
 export const updateReview = review => dispatch => (
