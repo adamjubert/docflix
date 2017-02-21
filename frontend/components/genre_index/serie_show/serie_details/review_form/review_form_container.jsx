@@ -4,16 +4,17 @@ import { fetchReview, createReview, updateReview } from '../../../../../actions/
 
 const mapStateToProps = (state, ownProps) => {
   let userReview = ownProps.userReview;
-  let review = { stars: 0, comment: "" };
+  let review = { id: null, stars: 0, comment: "" };
   if(userReview) { review = userReview; }
   let formType = userReview ? 'edit' : 'new';
   let user_id = state.session.currentUser.id;
   let series_id = state.serie.id;
+  debugger
   return { review, formType, user_id, series_id };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  const action =  createReview;
+  const action = ownProps.userReview ?  updateReview : createReview;
   return {
     action: review => dispatch(action(review))
   };

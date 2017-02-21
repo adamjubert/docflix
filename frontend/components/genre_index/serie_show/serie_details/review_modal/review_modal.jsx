@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import ReviewsPreview from '../reviews_preview/reviews_preview';
+import ReviewFormContainer from '../review_form/review_form_container';
 
 const customStyles = {
   overlay : {
@@ -58,12 +59,13 @@ class ReviewModal extends React.Component {
   }
 
   render() {
-    const reviews = this.props.serie.reviews;
+    const reviews = this.props.reviews;
+    debugger
     return (
       <div>
         <p onClick={this.openModal}
            className='review-modal-link white'>
-           See all reviews ({this.props.reviewCount})
+           See all reviews ({reviews.length})
         </p>
         <Modal
           isOpen={this.state.modalIsOpen}
@@ -79,12 +81,12 @@ class ReviewModal extends React.Component {
              onClick={ this.closeModal }></i>
            <div className='review-modal-top'>
              <section>
-               <h2>{this.props.reviewCount} Member Reviews for {this.props.serie.name}</h2>
-               <button>Write a Review</button>
+               <h2>{reviews.length} Member Reviews for {this.props.serieName}</h2>
+               <ReviewFormContainer userReview={this.props.userReview}/>
              </section>
            </div>
            <div className='review-modal-bottom'>
-             <ReviewsPreview reviews={reviews} styling={'review-index-comment'}/> />
+             <ReviewsPreview userReview={this.props.userReview} reviews={reviews.reverse()} styling={'review-index-comment'}/> />
            </div>
          </div>
 

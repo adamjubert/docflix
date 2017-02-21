@@ -17,7 +17,7 @@ class ReviewsPreview extends React.Component {
 
     return(
       <ul className='review-preview-list'>
-        { reviews.map((review) => (
+        { reviews.reverse().map((review) => (
           <li key={"review-" + review.id}>
             <StarRating rating={review.stars}/>
             <p className={this.props.styling}>{review.comment}</p>

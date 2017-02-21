@@ -18,15 +18,16 @@ class SerieDetails extends React.Component {
   render() {
     const serie = this.props.serie;
     const revLength = serie.reviews.length;
+    const reviews = this.props.reviews;
 
     return(
       <div className='serie-expand-main'>
         <div className='serie-review-container'>
           <div className='serie-reviews-preview'>
             <h2 className='serie-title'>{serie.name}</h2>
-            <ReviewsPreview reviews={this.props.reviews}
+            <ReviewsPreview reviews={reviews.slice(reviews.length - 2, reviews.length)}
                             styling={'review-preview-comment'}/>
-            <ReviewModal serie={serie} reviewCount={serie.reviews.length} />
+                          <ReviewModal serieName={serie.name} reviews={reviews} userReview={this.props.currentUserReview} />
           </div>
         </div>
         <div className='serie-reviews-create'>

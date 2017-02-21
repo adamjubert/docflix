@@ -25,9 +25,17 @@ class ReviewForm extends React.Component {
     };
   }
 
+  deleteReview(e) {
+    e.preventDefault();
+    debugger
+    this.props.deleteReview();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
+    let id = this.props.userReview ? this.props.userReview.id : null;
     this.props.action({
+      id,
       stars: parseInt(this.state.stars),
       comment: this.state.comment,
       user_id: this.props.user_id,
@@ -40,8 +48,15 @@ class ReviewForm extends React.Component {
   }
 
   render () {
-    const headText = "Write a Review";
-    const btnText = "Submit";
+    const headText = this.props.formType === 'new' ? "Write a Review" : "Edit your Review";
+    const btnText = this.props.formType === 'new' ? "Submit" : "Update";
+    let deleteBtn;
+    if (this.props.formType !== 'new') deleteBtn =
+      <input type="submit"
+             value="Delete"
+             className='btn-review'
+             onClick={this.deleteReview.bind(this)}></input> ;
+
 
     return (
       <div>
@@ -66,6 +81,7 @@ class ReviewForm extends React.Component {
             </textarea>
           </label>
           <input type="submit" value={btnText} className='btn-review' />
+          { deleteBtn }
         </form>
       </div>
     );
