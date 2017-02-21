@@ -4,7 +4,7 @@ import React from 'react';
 import SerieShowContainer from './serie_show_container';
 import SerieOverview from './serie_overview/serie_overview';
 import SerieEpisodes from './serie_episodes/serie_episodes';
-import SerieDetails from './serie_details/serie_details';
+import SerieDetailsContainer from './serie_details/serie_details_container';
 import FootLinks from './foot_links';
 
 class SerieShow extends React.Component {
@@ -29,7 +29,7 @@ class SerieShow extends React.Component {
     const panes = [
       <SerieOverview serie={this.props.serie}/>,
       <SerieEpisodes serie={this.props.serie}/>,
-      <SerieDetails serie={this.props.serie}/>
+      <SerieDetailsContainer serie={this.props.serie}/>
     ];
     return(panes[num]);
   }

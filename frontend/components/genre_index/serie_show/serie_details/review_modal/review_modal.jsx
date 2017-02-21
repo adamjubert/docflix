@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import ReviewsPreviewContainer from '../reviews_preview/reviews_preview_container';
+import ReviewsPreview from '../reviews_preview/reviews_preview';
 
 const customStyles = {
   overlay : {
@@ -84,7 +84,7 @@ class ReviewModal extends React.Component {
              </section>
            </div>
            <div className='review-modal-bottom'>
-             <ReviewsPreviewContainer reviews={reviews} styling={'review-index-comment'}/> />
+             <ReviewsPreview reviews={reviews} styling={'review-index-comment'}/> />
            </div>
          </div>
 

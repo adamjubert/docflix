@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import StarRating from '../../../star_rating';
-import ReviewsPreviewContainer from './reviews_preview/reviews_preview_container';
+import ReviewsPreview from './reviews_preview/reviews_preview';
 import ReviewFormContainer from './review_form/review_form_container';
 import ReviewModal from './review_modal/review_modal';
 
@@ -11,24 +11,27 @@ class SerieDetails extends React.Component {
     super(props);
   }
 
-  componentWillReceiveProps() {
+  componentDidMount() {
+    this.props.fetchReviews(this.props.serie.id);
   }
 
   render() {
     const serie = this.props.serie;
     const revLength = serie.reviews.length;
+
     return(
       <div className='serie-expand-main'>
         <div className='serie-review-container'>
           <div className='serie-reviews-preview'>
             <h2 className='serie-title'>{serie.name}</h2>
-            <ReviewsPreviewContainer serieId={serie.id}
+            <ReviewsPreview reviews={this.props.reviews}
                             styling={'review-preview-comment'}/>
             <ReviewModal serie={serie} reviewCount={serie.reviews.length} />
           </div>
         </div>
         <div className='serie-reviews-create'>
-              <ReviewFormContainer />
+              <ReviewFormContainer
+                userReview={this.props.currentUserReview} />
 
         </div>
       </div>

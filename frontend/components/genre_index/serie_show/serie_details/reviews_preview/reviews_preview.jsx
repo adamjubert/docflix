@@ -7,15 +7,11 @@ class ReviewsPreview extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    this.props.fetchReviews(this.props.serieId);
-  }
 
   render() {
     const reviews = this.props.reviews;
 
-
-    if (reviews[0] === undefined) {
+    if (reviews.length === 0) {
       return( <div>'loading'</div>);
     }
 
