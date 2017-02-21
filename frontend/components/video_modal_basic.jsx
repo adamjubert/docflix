@@ -59,10 +59,6 @@ class VideoModalBasic extends React.Component {
   render() {
     return (
       <div>
-        <video width="100%" height="100%" autoPlay loop muted onClick={ this.openModal } >
-          <source src={this.props.videoSource}
-                  type="video/mp4" />
-        </video>
         <Modal
             isOpen={this.state.modalIsOpen}
             onAfterOpen={this.afterOpenModal}
