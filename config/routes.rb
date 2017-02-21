@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :genres, only: [:index, :show]
     resources :episodes, only: [:index, :show]
     resources :reviews, only: [:show, :create, :update, :destroy]
-    resources :likes, only: [:index, :create, :destroy]
+    resources :likes, only: [:index, :show, :create, :destroy]
   end
 
   root 'static_pages#root'

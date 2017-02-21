@@ -12,6 +12,7 @@
 
 class Like < ActiveRecord::Base
   validates :user_id, :serie_id, presence: true
+  validates_uniqueness_of :serie_id, scope: [:user_id]
   belongs_to :user
   belongs_to :serie,
     class_name: 'Serie',
