@@ -14,7 +14,7 @@ class ReviewsPreview extends React.Component {
     if (reviews.length === 0) {
       return( <div>'loading'</div>);
     }
-
+    
     return(
       <ul className='review-preview-list'>
         { reviews.reverse().map((review) => (

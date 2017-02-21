@@ -60,7 +60,6 @@ class ReviewModal extends React.Component {
 
   render() {
     const reviews = this.props.reviews;
-    debugger
     return (
       <div>
         <p onClick={this.openModal}

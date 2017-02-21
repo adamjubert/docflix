@@ -16,5 +16,4 @@ const SerieReducer = (state = {}, action) => {
 export default SerieReducer;
 
 // case RECEIVE_REVIEW:
-//   debugger
 //  return Object.assign({}, state, { reviews: state.reviews.push(action.review) });
