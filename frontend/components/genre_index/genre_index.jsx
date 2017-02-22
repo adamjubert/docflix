@@ -2,9 +2,6 @@ import React from 'react';
 import SerieShowContainer from './serie_show/serie_show_container';
 import { Link, Router } from 'react-router';
 import { Route, IndexRoute, hashHistory, withRouter } from 'react-router';
-import MyList from './my_list';
-import SeriesSlider from './slider';
-
 
 class GenreIndex extends React.Component {
   constructor(props) {
@@ -38,12 +35,14 @@ class GenreIndex extends React.Component {
       <div className='series-list-container'>
         <ul className='series-list'>
           { genre.series.map((serie) => (
-            <li className='series-list-item'
-                key={"serie-" + serie.id}
-                onClick={this.showSerie(serie, genre)}>
+            <div>
+              <li className='series-list-item'
+                  key={"serie-" + serie.id}
+                  onClick={this.showSerie(serie, genre)}>
 
-                <img src={serie.thumbnail_url} width="100%" height="100%"></img>
-            </li>
+                  <img src={serie.thumbnail_url} width="100%" height="100%"></img>
+              </li>
+            </div>
 
           )) }
         </ul>

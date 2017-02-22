@@ -1,12 +1,12 @@
-# # This file should contain all the record creation needed to seed the database with its default values.
-# # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+# # # This file should contain all the record creation needed to seed the database with its default values.
+# # # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+# # #
+# # # Examples:
+# # #
+# # #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+# # #   Mayor.create(name: 'Emanuel', city: cities.first)
 # #
-# # Examples:
 # #
-# #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-# #   Mayor.create(name: 'Emanuel', city: cities.first)
-#
-#
 User.destroy_all
 User.create!(email: 'guest@docflix.tech', password: 'testing', fname: 'Guest', lname: 'Smith')
 #
@@ -14,16 +14,16 @@ Serie.destroy_all
 Episode.destroy_all
 #
 Genre.destroy_all
-# nature =        Genre.create!(name: 'Nature')
+nature =        Genre.create!(name: 'Nature')
 social =        Genre.create!(name: 'Social & Cultural')
-# historical =    Genre.create!(name: 'Historical')
-# crime =         Genre.create!(name: 'Crime')
+historical =    Genre.create!(name: 'Historical')
+crime =         Genre.create!(name: 'Crime')
 travel =        Genre.create!(name: 'Travel')
-# sports =        Genre.create!(name: 'Sports')
-#
-#
+sports =        Genre.create!(name: 'Sports')
+# #
+# #
 SeriesGenre.destroy_all
-#
+# #
 # ########################################
 # ############  PLANET EARTH  ############
 # ########################################
@@ -646,7 +646,7 @@ SeriesGenre.destroy_all
 #   thumbnail: File.open('../docflix-media/series/call-myanmar/ep-logo.png'),
 #   video: File.open('../docflix-media/series/call-myanmar/video.mp4')
 # )
-#
+
 
 ###NB: Seed for first Heroku push
 ########################################
@@ -659,7 +659,7 @@ call_myanmar = Serie.create!(
   author: ' ',
   mpaa_rating: 'PG',
   description: 'Shot clandestinely over a 2-year period by best-selling novelist and filmmaker, Robert H. Lieberman, this film provides a rare look at the second-most isolated country on the planet. It lifts the curtain to expose the everyday life in a country that has been held in the iron grip of a brutal military regime for 48 years.',
-  thumbnail: File.open("https://s3.amazonaws.com/docflix-public/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-public/logo.png")
 )
 SeriesGenre.create!(series_id: call_myanmar.id, genre_id: social.id)
 SeriesGenre.create!(series_id: call_myanmar.id, genre_id: travel.id)
@@ -669,8 +669,8 @@ Episode.create!(
   runtime: 3,
   episode_num: 1,
   series_id: call_myanmar.id,
-  thumbnail: File.open('https://s3.amazonaws.com/docflix-public/ep-logo.png'),
-  video: File.open('https://s3.amazonaws.com/docflix-public/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-public/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-public/video.mp4')
 )
 
 # ########################################
@@ -793,7 +793,7 @@ Episode.create!(
 #   video: File.open('../docflix-media/series/fair-chase/video.mp4')
 # )
 #
-#
+# #
 # Fake users
 20.times do |i|
   User.create!(

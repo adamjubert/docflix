@@ -2,9 +2,11 @@ import { connect } from 'react-redux';
 import { fetchGenre } from '../../actions/genre_actions';
 import GenreShow from './genre_show';
 
-const mapStateToProps = ({ genre }) => {
+const mapStateToProps = (state, ownProps) => {
+  debugger
   return {
-    genre
+    genre: state.genres,
+    id: ownProps.params.id
   };
 };
 
