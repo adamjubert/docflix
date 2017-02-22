@@ -3,12 +3,16 @@
   margin-top: 16px;
 }
 
+.my-list:hover {
+  cursor: pointer;
+}
+
 .my-list i {
   color: white;
   font-size: 40px;
 }
 
-.my-list-btn:hover {
+.my-list:hover i {
   cursor: pointer;
   transform: scale(1.1);
   background-color: black;

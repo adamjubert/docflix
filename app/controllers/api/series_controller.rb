@@ -1,8 +1,8 @@
 class Api::SeriesController < ApplicationController
-  # def index
-  #   @series = Serie.all
-  #   render :index
-  # end
+  def index
+    @series = current_user.liked_series
+    render 'api/series/index'
+  end
 
   def show
     @serie = Serie.find(params[:id])

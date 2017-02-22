@@ -12,9 +12,9 @@ class ReviewsPreview extends React.Component {
     const reviews = this.props.reviews;
 
     if (reviews.length === 0) {
-      return( <div>'loading'</div>);
+      return( <div>This show has not been reviewed yet!</div>);
     }
-    
+    debugger
     return(
       <ul className='review-preview-list'>
         { reviews.reverse().map((review) => (

@@ -28,7 +28,10 @@ class User < ActiveRecord::Base
 	before_validation :ensure_session_token_uniqueness
 
 	has_many :reviews
-	has_many :likes 
+	has_many :likes
+	has_many :liked_series,
+		through: :likes,
+		source: :serie 
 
 	def password=(password)
     @password = password

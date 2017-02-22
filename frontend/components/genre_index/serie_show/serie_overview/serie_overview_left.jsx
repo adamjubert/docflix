@@ -19,13 +19,14 @@ class SerieOverviewLeft extends React.Component {
   addButton() {
 
     return(
-      <div className='my-list'>
+      <div className='my-list'
+        onClick={() => this.props.createLike({
+           user_id: this.props.currentUser.id,
+           serie_id: this.props.serie.id
+         })}>
         <i className="fa fa-plus-circle my-list-btn"
            aria-hidden="true"
-           onClick={() => this.props.createLike({
-            user_id: this.props.currentUser.id,
-            serie_id: this.props.serie.id
-          })}></i><p>MY LIST</p>
+           ></i><p>MY LIST</p>
       </div>
     );
   }
@@ -39,12 +40,12 @@ class SerieOverviewLeft extends React.Component {
       }
     }
 
-    debugger
     return(
-      <div className='my-list'>
+      <div className='my-list'
+            onClick={() => this.props.deleteLike(likeToDelete)}>
         <i className="fa fa-check-circle my-list-btn"
            aria-hidden="true"
-           onClick={() => this.props.deleteLike(likeToDelete)}></i><p>MY LIST</p>
+           ></i><p>MY LIST</p>
       </div>
     );
   }
@@ -55,10 +56,10 @@ class SerieOverviewLeft extends React.Component {
     const likes = this.props.likes;
     for (var i = 0; i < likes.length; i++) {
       if (likes[i].serie_id === this.props.serie.id) {
-        return true
+        return true;
       }
     }
-    return false
+    return false;
   }
 
   render() {
