@@ -1,24 +1,31 @@
-// import { RECEIVE_SERIES } from '../actions/serie_actions';
+import {  RECEIVE_SERIES } from '../actions/serie_actions';
+import { RECEIVE_LIKE, REMOVE_LIKE } from '../actions/like_actions';
+import merge from 'lodash/merge';
 // import { RECEIVE_REVIEW } from '../actions/review_actions';
-// import merge from 'lodash/merge';
-//
-// const initialState = {
-//   id: 0,
-//   name: '',
-//   description: '',
-//   mpaa_rating: '',
-//   year: 0,
-//   episodes: [],
-//   reviews: []
-// };
-// const SeriesReducer = (state = initialState, action) => {
-//   Object.freeze(state);
-//   switch(action.type) {
-//     case RECEIVE_SERIES:
-//       return action.series;
-//     default:
-//       return state;
-//   }
-// };
-//
-// export default SeriesReducer;
+
+
+
+const SeriesReducer = (state = {}, action) => {
+  Object.freeze(state);
+  let newState;
+  switch(action.type) {
+    case RECEIVE_SERIES:
+      return action.series;
+    case RECEIVE_LIKE:
+      newState = state.concat(action.like.serie);
+      return newState;
+    case REMOVE_LIKE:
+      newState = [...state];
+      for (var i = 0; i < newState.length; i++) {
+        if (newState[i].id === action.like.serie_id) { newState.splice(i, 1); }
+      }
+      return newState;
+    default:
+      return state;
+  }
+};
+
+export default SeriesReducer;
+
+// case RECEIVE_REVIEW:
+//  return Object.assign({}, state, { reviews: state.reviews.push(action.review) });

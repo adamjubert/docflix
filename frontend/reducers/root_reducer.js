@@ -11,7 +11,7 @@ const RootReducer = combineReducers({
   session: SessionReducer,
   genres: GenresReducer,
   serie: SerieReducer,
-  // series: SeriesReducer,
+  series: SeriesReducer,
   likes: LikesReducer,
   reviews: ReviewsReducer,
   errors: ErrorsReducer

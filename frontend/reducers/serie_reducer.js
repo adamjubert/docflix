@@ -1,5 +1,6 @@
 import { RECEIVE_SERIE } from '../actions/serie_actions';
-import { RECEIVE_REVIEW } from '../actions/review_actions';
+// import { RECEIVE_REVIEW } from '../actions/review_actions';
+
 
 
 const SerieReducer = (state = {}, action) => {
@@ -7,7 +8,6 @@ const SerieReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_SERIE:
       return action.serie;
-
     default:
       return state;
   }

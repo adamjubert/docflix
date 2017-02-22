@@ -12,6 +12,7 @@ class SerieShow extends React.Component {
     super(props);
     this.state = {selectedPane: 0};
 
+
   }
 
   componentDidMount() {

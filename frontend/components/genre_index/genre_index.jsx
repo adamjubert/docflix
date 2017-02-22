@@ -16,11 +16,14 @@ class GenreIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchGenres().then(() => this.setState({fetching: false}));
+    this.props.fetchSeries().then(() => this.setState({fetching: false}));
+
   }
 
   // NB: if slowdown, this is the issue. Ask Meagan for help
   showSerie(serie, genre) {
     return () => {
+
       this.setState({
         clickedSerie: serie,
         clickedGenre: genre
@@ -57,7 +60,6 @@ class GenreIndex extends React.Component {
 
   genresList() {
     let genres = this.props.genres;
-
     return(
       <div className='genre-list-container'>
         <ul className='genre-list'>
@@ -70,7 +72,7 @@ class GenreIndex extends React.Component {
                     >{genre.name}</h3>
               </div>
               { this.seriesList(genre) }
-              { genre === this.state.clickedGenre ?
+              { this.state.clickedGenre && genre.id === this.state.clickedGenre.id ?
                           <SerieShowContainer serieId={this.state.clickedSerie.id} /> :
                             '' }
             </div>
