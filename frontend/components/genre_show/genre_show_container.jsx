@@ -3,7 +3,6 @@ import { fetchGenre } from '../../actions/genre_actions';
 import GenreShow from './genre_show';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return {
     genre: state.genres,
     id: ownProps.params.id

@@ -26,8 +26,8 @@ class NavMain extends React.Component {
             <p className='nav-browse'>Browse</p>
             <i className="fa fa-caret-down browse-caret" aria-hidden="true"></i>
             <div className='nav-dropdown-menu'>
-              <Link to="#" className='nav-dropdown-item'>Home</Link><br/>
-              <Link to="#" className='nav-dropdown-item'>My List</Link>
+              <Link to="browse/" className='nav-dropdown-item'>Home</Link><br/>
+              <Link to="browse/genre/0" className='nav-dropdown-item'>My List</Link>
             </div>
           </ul>
         </div>

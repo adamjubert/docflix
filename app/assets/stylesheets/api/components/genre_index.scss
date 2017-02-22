@@ -41,8 +41,8 @@
 .series-list-item {
   margin-right: 5px;
   width: 320px;
-  max-width: 300px;
-  min-width: 320px;
+  max-width: 320px;
+  min-width: 300px;
   height: 180px;
   min-height: 100px;
   max-height: 225px;
@@ -50,7 +50,6 @@
 }
 
 .series-list-item:hover {
-  width: 260px;
   transform: scale(1.25);
   cursor: pointer;
   z-index: 10;

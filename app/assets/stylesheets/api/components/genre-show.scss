@@ -1,0 +1,12 @@
+.genre-show-main ul {
+  display: flex;
+}
+
+.genre-show-main ul li {
+  width: 300px;
+  height: 200px;
+}
+
+.genre-show-main ul li:hover {
+  cursor: pointer;
+}

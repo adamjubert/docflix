@@ -2,6 +2,7 @@ json.id @genre.id
 json.name @genre.name
 json.series @genre.series do |serie|
   json.extract! serie, :id, :name, :description, :year, :mpaa_rating, :avg_review, :author
+  json.thumbnail_url serie.thumbnail.url
   json.episodes do
     json.array! serie.episodes do |episode|
       json.extract! episode, :id, :name, :description, :runtime
