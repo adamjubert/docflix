@@ -7,9 +7,4 @@
 7. My List
 Bonus: Video search
 Bonus: Review helpfulness
-Bonus: Admin video uploading
 Bonus: Continue watching
-Bonus: Profile updating (avatar)
-Bonus: Friend lists
-Bonus: Follow users
-Bonus: Video recommendations (user-to-user)

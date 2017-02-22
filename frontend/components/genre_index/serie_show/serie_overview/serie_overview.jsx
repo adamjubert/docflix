@@ -1,5 +1,5 @@
 import React from 'react';
-import SerieOverviewLeft from './serie_overview_left';
+import SerieOverviewLeftContainer from './serie_overview_left_container';
 import VideoModal from '../../../video_modal.jsx';
 
 class SerieOverview extends React.Component {
@@ -14,7 +14,7 @@ class SerieOverview extends React.Component {
     const thumbUrl = (ep1 === undefined) ? '' : ep1.thumbnail_url;
     return(
       <div className='serie-expand-main'>
-        <SerieOverviewLeft serie={serie} />
+        <SerieOverviewLeftContainer serie={serie} />
         <div className='serie-overview-right'>
           <section className='serie-overview-right-container'>
             <div className='serie-overview-video'>

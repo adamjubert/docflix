@@ -16,6 +16,7 @@ class SerieShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchSerie(this.props.serieId);
+    this.props.fetchLikes();
   }
 
   componentWillReceiveProps(newProps) {

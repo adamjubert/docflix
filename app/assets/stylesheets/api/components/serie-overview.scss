@@ -1,0 +1,21 @@
+.my-list {
+  display: flex;
+  margin-top: 16px;
+}
+
+.my-list i {
+  color: white;
+  font-size: 40px;
+}
+
+.my-list-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: black;
+}
+
+.my-list p {
+  color: white;
+  font-weight: 500;
+  margin-left: 10px;
+}

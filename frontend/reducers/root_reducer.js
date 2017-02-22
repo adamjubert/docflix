@@ -5,12 +5,14 @@ import SerieReducer from './serie_reducer';
 import SeriesReducer from './series_reducer';
 import ReviewsReducer from './reviews_reducer';
 import ErrorsReducer from './errors_reducer';
+import LikesReducer from './likes_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
   genres: GenresReducer,
   serie: SerieReducer,
   // series: SeriesReducer,
+  likes: LikesReducer,
   reviews: ReviewsReducer,
   errors: ErrorsReducer
 });

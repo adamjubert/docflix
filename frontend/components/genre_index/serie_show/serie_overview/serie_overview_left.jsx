@@ -16,6 +16,51 @@ class SerieOverviewLeft extends React.Component {
     );
   }
 
+  addButton() {
+
+    return(
+      <div className='my-list'>
+        <i className="fa fa-plus-circle my-list-btn"
+           aria-hidden="true"
+           onClick={() => this.props.createLike({
+            user_id: this.props.currentUser.id,
+            serie_id: this.props.serie.id
+          })}></i><p>MY LIST</p>
+      </div>
+    );
+  }
+
+  deleteButton() {
+    let likeToDelete;
+    let likes = this.props.likes;
+    for (var i = 0; i < likes.length; i++) {
+      if (likes[i].serie_id === this.props.serie.id && likes[i].user_id === this.props.currentUser.id) {
+        likeToDelete = likes[i].id;
+      }
+    }
+
+    debugger
+    return(
+      <div className='my-list'>
+        <i className="fa fa-check-circle my-list-btn"
+           aria-hidden="true"
+           onClick={() => this.props.deleteLike(likeToDelete)}></i><p>MY LIST</p>
+      </div>
+    );
+  }
+
+  userLikesSerie() {
+    // iterate through likes, check serie id against current series id
+    // this.props.likes.forEach((like) => ( like.serie_id === this.props.serie.id ? {return true} : console.log('no')))
+    const likes = this.props.likes;
+    for (var i = 0; i < likes.length; i++) {
+      if (likes[i].serie_id === this.props.serie.id) {
+        return true
+      }
+    }
+    return false
+  }
+
   render() {
     const serie = this.props.serie;
     return(
@@ -28,6 +73,7 @@ class SerieOverviewLeft extends React.Component {
             <li className='mpaa-rating'>TV-{serie.mpaa_rating}</li>
           </ul>
           <p>{this.props.serie.description}</p>
+          { this.userLikesSerie() ? this.deleteButton() : this.addButton() }
         </section>
       </div>
     );

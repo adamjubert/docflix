@@ -2,6 +2,7 @@ import React from 'react';
 import SerieShowContainer from './serie_show/serie_show_container';
 import { Link, Router } from 'react-router';
 import { Route, IndexRoute, hashHistory, withRouter } from 'react-router';
+import MyList from './my_list';
 
 
 class GenreIndex extends React.Component {
@@ -52,13 +53,16 @@ class GenreIndex extends React.Component {
     }
 
   genresList() {
+    let genres = this.props.genres;
+
     return(
       <div className='genre-list-container'>
         <ul className='genre-list'>
+          <MyList likes={this.props.likes} />
           {this.props.genres.map((genre) => (
-            <div className='genre-list-item' >
+            <div key={"genre-" + genre.id} className='genre-list-item' >
               <div className='genre-title'>
-                <h3 key={"genre-" + genre.id}
+                <h3
                     className='genre-title-item'
                     onClick={this.goToGenre(genre.id)}
                     >{genre.name}</h3>
@@ -81,7 +85,7 @@ class GenreIndex extends React.Component {
     return(
       <div className='genre-index-main' >
         <div className='genre-index-container'>
-          {this.genresList(this.props.genres)}
+          {this.genresList()}
         </div>
       </div>
     );
