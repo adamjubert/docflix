@@ -65,7 +65,12 @@ class VideoModalEpisode extends React.Component {
   render() {
     return (
       <li>
-        <img src={ this.props.thumbnail } width="100%" onClick={ this.openModal }></img>
+        <div className='play-btn-container'>
+          <img src={ this.props.thumbnail }
+               width="100%"
+               onClick={ this.openModal } />
+          <i className="fa fa-play-circle" aria-hidden="true"></i>
+        </div>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
