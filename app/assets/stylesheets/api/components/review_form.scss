@@ -1,3 +1,5 @@
+
+
 .review-form label {
   display: block;
 }
@@ -6,12 +8,19 @@
   height: 150px;
   max-height: 200px;
   max-width: 80%;
+  background: #000;
+  border: 2px solid darkgrey;
+  color: darkgray;
+  font-size: 16px;
 }
 
 
 .review-stars {
   display: block;
+  margin-bottom: 8px;
 }
+
+
 
 .btn-review {
   margin-top: 10px;

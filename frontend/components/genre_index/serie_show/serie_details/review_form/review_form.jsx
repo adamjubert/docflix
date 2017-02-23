@@ -61,7 +61,7 @@ class ReviewForm extends React.Component {
   }
 
   render () {
-    const headText = this.props.formType === 'new' ? "Write a Review" : "Edit your Review";
+    const headText = this.props.formType === 'new' ? "Rate this title:" : "Edit your Review:";
     const btnText = this.props.formType === 'new' ? "Submit" : "Update";
     let deleteBtn;
     if (this.props.formType !== 'new') deleteBtn =
@@ -70,11 +70,11 @@ class ReviewForm extends React.Component {
              className='btn-review'
              onClick={() => this.deleteReview()}></input> ;
     return (
-      <div>
+      <div className='review-form-container'>
         <h3>{headText}</h3>
         <form onSubmit={this.handleSubmit} className='review-form'>
           <div className='review-stars'>
-            <label>Rate this title:</label>
+            <label></label>
             <StarRatingComponent
                 name="rate1"
                 starCount={5}
