@@ -5,6 +5,6 @@
 5. See video details and play video
 6. Reviews
 7. My List
+Bonus: Genre show page
 Bonus: Video search
 Bonus: Review helpfulness
-Bonus: Continue watching
