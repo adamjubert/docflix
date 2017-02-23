@@ -70,10 +70,36 @@ class GenreIndex extends React.Component {
             initialSlideWidth={500}
             initialSlideHeight={300}
             height={'100%'}
-            width={'100%'}
+            width={'95%'}
             cellSpacing={10}
+            decorators={[{
+                     component: React.createClass({
+                       render() {
+                         return (
 
-            >
+                           <button
+                             className="slider-button"
+                             onClick={this.props.previousSlide}>
+                             <i className="fa fa-angle-left" aria-hidden="true" />
+                           </button>
+                         );
+                       }
+                     }),
+                     position: 'CenterLeft'
+                   },{
+                     component: React.createClass({
+                       render() {
+                         return (
+                           <button
+                             className="slider-button"
+                             onClick={this.props.previousSlide}>
+                             <i className="fa fa-angle-right" aria-hidden="true" />
+                           </button>
+                         );
+                       },
+                     }),
+                     position: 'CenterRight'
+                   }]}>
           { genre.series.map((serie) => (
 
               <div className='series-list-item'

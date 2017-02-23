@@ -55,7 +55,44 @@
   z-index: 100;
 }
 
+.series-list-item img {
+ height: 100%;
+
+}
+
 .slider {
   margin-left: 5%;
   width: 95%;
+}
+
+.slider-button {
+  height: 100%;
+  color: white;
+
+  border: none;
+  font-size: 40px;
+  background-color: rgba(0,0,0,0.4);
+  width: 40px;
+  outline-style: none;
+  transition: 0.2s;
+}
+
+.slider-button:hover {
+  font-weight: 700;
+  font-size: 54px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.slider-button:active {
+  outline-style: none;
+}
+
+.slider-decorator-0 {
+  height: 100%;
+}
+
+
+.slider-decorator-1 {
+  height: 100%;
 }
