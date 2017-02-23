@@ -1,17 +1,23 @@
 .serie-episodes-main {
   width: 100%;
-  margin-left: 8%;;
 }
 
 .serie-container {
 
 }
 
+.serie-title-container {
+  margin-left: 8%;
+}
 
 .serie-episodes-list {
   display: flex;
   justify-content: flex-start;
   margin-top: 20px;
+}
+
+.serie-episodes-list > .slider {
+  margin-left: 0;
 }
 
 .serie-episodes-list-item {
@@ -29,6 +35,9 @@
 }
 .episode-contents img:hover {
   cursor: pointer;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+  box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
 }
 
 .episode-contents li {
@@ -53,4 +62,11 @@
   justify-content: space-between;
   font-weight: 500;
   margin-top: 10px;
+}
+
+.ep-button-l {
+  margin-right: 40px;
+}
+.ep-button-r {
+
 }

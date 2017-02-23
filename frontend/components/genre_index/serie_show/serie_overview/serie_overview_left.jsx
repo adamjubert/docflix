@@ -72,7 +72,7 @@ class SerieOverviewLeft extends React.Component {
           <ul className='serie-overview-list'>
             <li><StarRating rating={ this.avgStars() }/></li>
             <li>{serie.year}</li>
-            <li className='mpaa-rating'>TV-{serie.mpaa_rating}</li>
+            <li className='mpaa-rating'>{serie.mpaa_rating}</li>
           </ul>
           <p>{this.props.serie.description}</p>
           { this.userLikesSerie() ? this.deleteButton() : this.addButton() }

@@ -14,7 +14,7 @@
 
 .genre-title {
   margin-bottom: 16px;
-  margin-left: 5%
+  margin-left: 3.4%
 }
 .genre-title-item {
   font-size: 24px;
@@ -63,8 +63,7 @@
 }
 
 .slider {
-  margin-left: 5%;
-  width: 95%;
+  width: 100%;
 }
 
 .slider-button {
@@ -72,9 +71,9 @@
   color: white;
 
   border: none;
-  font-size: 40px;
+  font-size: 48px;
   background-color: rgba(0,0,0,0.4);
-  width: 40px;
+  width: 60px;
   outline-style: none;
   transition: 0.2s;
 }
@@ -82,7 +81,7 @@
 
 .slider-button:hover {
   font-weight: 700;
-  font-size: 60px;
+  font-size: 68px;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -106,4 +105,8 @@
 
 .slider-slide:hover {
   z-index: 150;
+}
+
+.slider-list {
+  margin-left: 3.1% !important;
 }

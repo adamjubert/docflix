@@ -45,9 +45,9 @@ class GenreIndex extends React.Component {
 
    if (width > 1600 && count !== 5){
      this.setState({ count: 5 });
-   }else if(width < 1420 && width > 1040 && count !== 4){
+   }else if(width < 1420 && width >= 1140 && count !== 4){
      this.setState({ count: 4 });
-   }else if(width < 1140 && width > 720 && count !== 3){
+   }else if(width < 1140 && width >= 820 && count !== 3){
      this.setState({ count: 3 });
    }else if(width < 820 && width > 480 && count !== 2){
      this.setState({ count: 2 });
@@ -61,7 +61,7 @@ class GenreIndex extends React.Component {
   seriesList(genre) {
     return(
       <div >
-        <ul>
+        <ul className='slider-list-main'>
           <Carousel
             slidesToShow={this.state.count}
             slidesToScroll={'auto'}
@@ -71,7 +71,7 @@ class GenreIndex extends React.Component {
             initialSlideWidth={500}
             initialSlideHeight={300}
             height={'100%'}
-            width={'95%'}
+            width={'100%'}
             cellSpacing={10}
             decorators={[{
                      component: React.createClass({
@@ -93,7 +93,7 @@ class GenreIndex extends React.Component {
                          return (
                            <button
                              className="slider-button"
-                             onClick={this.props.previousSlide}>
+                             onClick={this.props.nextSlide}>
                              <i className="fa fa-angle-right" aria-hidden="true" />
                            </button>
                          );
