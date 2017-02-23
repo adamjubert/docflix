@@ -65,10 +65,10 @@ class GenreIndex extends React.Component {
           {this.props.genres.map((genre) => (
             <div key={"genre-" + genre.id} className='genre-list-item' >
               <div className='genre-title'>
-                <h3
+                <a
                     className='genre-title-item'
                     onClick={this.goToGenre(genre.id)}
-                    >{genre.name}</h3>
+                    >{genre.name}</a>
               </div>
               { this.seriesList(genre) }
               { this.state.clickedGenre && genre.id === this.state.clickedGenre.id ?
