@@ -1,5 +1,7 @@
 import React from 'react';
 import VideoModalEpisode from '../../../video_modal_episode.jsx';
+import Carousel from 'nuka-carousel';
+
 
 class SerieEpisodes extends React.Component {
   constructor(props) {
@@ -13,6 +15,8 @@ class SerieEpisodes extends React.Component {
         <div className='serie-container'>
           <h2 className='serie-title'>{serie.name}</h2>
           <ul className='serie-episodes-list'>
+
+
             {serie.episodes.map((episode) => (
               <li className='serie-episodes-list-item'
                 key={"episode-" + episode.id}>
@@ -29,6 +33,7 @@ class SerieEpisodes extends React.Component {
                 </ul>
             </li>
           ))}
+
           </ul>
 
         </div>
@@ -38,3 +43,47 @@ class SerieEpisodes extends React.Component {
 }
 
 export default SerieEpisodes;
+
+
+
+<Carousel
+  slidesToShow={5}
+  slidesToScroll={1}
+  dragging={false}
+  swiping={false}
+  wrapAround = {true}
+  initialSlideWidth={500}
+  initialSlideHeight={300}
+  height={'100%'}
+  width={'95%'}
+  cellSpacing={200}
+  decorators={[{
+           component: React.createClass({
+             render() {
+               return (
+
+                 <button
+                   className="slider-button"
+                   onClick={this.props.previousSlide}>
+                   <i className="fa fa-angle-left" aria-hidden="true" />
+                 </button>
+               );
+             }
+           }),
+           position: 'CenterLeft'
+         },{
+           component: React.createClass({
+             render() {
+               return (
+                 <button
+                   className="slider-button"
+                   onClick={this.props.previousSlide}>
+                   <i className="fa fa-angle-right" aria-hidden="true" />
+                 </button>
+               );
+             },
+           }),
+           position: 'CenterRight'
+         }]}>
+
+         </Carousel>

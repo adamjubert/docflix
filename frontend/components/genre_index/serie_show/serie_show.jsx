@@ -10,20 +10,20 @@ import FootLinks from './foot_links';
 class SerieShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {selectedPane: 0};
+    this.state = {selectedPane: 0, fetching: true };
 
 
   }
 
   componentDidMount() {
-    this.props.fetchSerie(this.props.serieId);
-    this.props.fetchLikes();
+    this.props.fetchSerie(this.props.serieId).then(() => (this.setState({fetching: false})));
+    this.props.fetchLikes().then(() => (this.setState({fetching: false})));
   }
 
   componentWillReceiveProps(newProps) {
     if (newProps.serieId !== this.props.serieId) {
-      this.props.fetchSerie(newProps.serieId);
-      this.setState({selectedPane: 0});
+      this.props.fetchSerie(newProps.serieId).then(() => (this.setState({fetching: false})));
+      this.setState({selectedPane: 0, fetching: true});
     }
   }
 
@@ -44,8 +44,19 @@ class SerieShow extends React.Component {
 
 
   render() {
-    if (!this.props.serie.id) return null;
+    if (this.state.fetching) return(
+      <div className='serie-expand'>
+        <div className='serie-expand-content'>
+          <div className='serie-expand-loading'>loading...</div>
+            <FootLinks episodeCount='0'
+                       selectedPane={this.state.selectedPane}
+                       onTabChosen={this.selectTab.bind(this)} />
+        </div>
+      </div>
+    );
+
     const serie = this.props.serie;
+
     return(
       <div className='serie-expand'>
         <div className='serie-expand-content'>

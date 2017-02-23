@@ -2,11 +2,21 @@
   font-family: 'Helvetica-Neue';
 }
 /**** Selected Series ******/
+
+.serie-expand {
+  z-index: 1000;
+}
+
 .serie-expand-main {
   height: 300px;
   background: #000;
   display: flex;
   justify-content: space-between;
+}
+
+.serie-expand-loading {
+  color: black;
+  height: 300px;
 }
 
 .serie-overview-left {

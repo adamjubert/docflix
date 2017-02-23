@@ -32,7 +32,8 @@
 
 body {
   background: #222;
-  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .white {
@@ -42,6 +43,8 @@ body {
 .splash-body {
   // background: linear-gradient(to right, #000, transparent), no-repeat center url('splash-bg');
   background: no-repeat center url('splash-bg');
+  height: 85vh;
+
 }
 
 .auth-body {

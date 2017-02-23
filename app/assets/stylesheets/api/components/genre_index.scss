@@ -1,4 +1,4 @@
-.genre-index-main {
+ .genre-index-main {
   color: white;
   margin-top: 40px;
   position: relative;
@@ -59,6 +59,7 @@
 .series-list-item img {
  height: 100%;
  z-index: 110;
+ max-height: 150px;
 }
 
 .slider {
@@ -101,4 +102,8 @@
 
 .slider-frame {
   overflow: visible !important;
+}
+
+.slider-slide:hover {
+  z-index: 150;
 }

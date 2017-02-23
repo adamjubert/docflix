@@ -26,11 +26,13 @@ const App = (props) => {
   }
 
   return(
-    <div className={bodyClass}>
-      <div className={navbarClass}>
-        { currentNavbar }
+    <div >
+      <div className={bodyClass}>
+        <div className={navbarClass}>
+          { currentNavbar }
+        </div>
+        { props.children }
       </div>
-      { props.children }
       < Footer />
     </div>
   );

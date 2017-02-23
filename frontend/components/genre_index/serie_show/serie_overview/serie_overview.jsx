@@ -9,6 +9,7 @@ class SerieOverview extends React.Component {
 
   render() {
     const serie = this.props.serie;
+    debugger
     const ep1 = serie.episodes[0];
     const videoUrl = (ep1 === undefined) ? '' : ep1.video_url;
     const thumbUrl = (ep1 === undefined) ? '' : ep1.thumbnail_url;
