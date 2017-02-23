@@ -69,7 +69,6 @@ class ReviewForm extends React.Component {
              value="Delete"
              className='btn-review'
              onClick={() => this.deleteReview()}></input> ;
-             debugger
     return (
       <div>
         <h3>{headText}</h3>

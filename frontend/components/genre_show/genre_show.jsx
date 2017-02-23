@@ -38,7 +38,6 @@ class GenreShow extends React.Component {
    let series = this.props.genre.series;
 
    const items = series.map((serie, idx) => {
-     debugger
      return (
        <div>
           <img src={serie.thumbnail_url} ></img>

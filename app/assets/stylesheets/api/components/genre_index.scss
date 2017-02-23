@@ -47,6 +47,7 @@
   // min-height: 100px;
   // max-height: 225px;
   transition: all .5s ease-in-out;
+  z-index: 10;
 }
 
 .series-list-item:hover {
@@ -57,7 +58,7 @@
 
 .series-list-item img {
  height: 100%;
-
+ z-index: 110;
 }
 
 .slider {
@@ -77,9 +78,10 @@
   transition: 0.2s;
 }
 
+
 .slider-button:hover {
   font-weight: 700;
-  font-size: 54px;
+  font-size: 60px;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -95,4 +97,8 @@
 
 .slider-decorator-1 {
   height: 100%;
+}
+
+.slider-frame {
+  overflow: visible !important;
 }

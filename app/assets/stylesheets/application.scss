@@ -40,7 +40,8 @@ body {
 }
 
 .splash-body {
-  background: linear-gradient(to right, #000, transparent), no-repeat center url('main-bg');
+  // background: linear-gradient(to right, #000, transparent), no-repeat center url('splash-bg');
+  background: no-repeat center url('splash-bg');
 }
 
 .auth-body {
