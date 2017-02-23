@@ -2,13 +2,15 @@ import React from 'react';
 import SerieShowContainer from './serie_show/serie_show_container';
 import { Link, Router } from 'react-router';
 import { Route, IndexRoute, hashHistory, withRouter } from 'react-router';
-import Slider from 'react-slick';
+import Carousel from 'nuka-carousel';
 
 
 class GenreIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { fetching: true, clickedSerie: null, clickedGenre: null };
+    this.state = { fetching: true, clickedSerie: null, clickedGenre: null, count: 5 };
+    this.handleResize = this.handleResize.bind(this);
+
   }
 
 
@@ -16,9 +18,15 @@ class GenreIndex extends React.Component {
   componentDidMount() {
     this.props.fetchGenres().then(() => this.setState({fetching: false}));
     this.props.fetchSeries().then(() => this.setState({fetching: false}));
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize);
   }
 
-  // NB: if slowdown, this is the issue. Ask Meagan for help
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  // NB: if slowdown, this could be the issue
   showSerie(serie, genre) {
     return () => {
 
@@ -30,20 +38,52 @@ class GenreIndex extends React.Component {
   }
 
 
+  handleResize(){
+   const count = this.state.count;
+   const width = $(window).width();
+
+   if (width > 1600 && count !== 5){
+     this.setState({ count: 5 });
+   }else if(width < 1420 && width > 1040 && count !== 4){
+     this.setState({ count: 4 });
+   }else if(width < 1140 && width > 720 && count !== 3){
+     this.setState({ count: 3 });
+   }else if(width < 820 && width > 480 && count !== 2){
+     this.setState({ count: 2 });
+   }else if(width <= 480 && count !== 1){
+     this.setState({ count: 1 });
+   }
+ }
+
+
 
   seriesList(genre) {
     return(
-      <div className='series-list-container'>
-        <ul className='series-list'>
+      <div >
+        <ul>
+          <Carousel
+            slidesToShow={this.state.count}
+            slidesToScroll={'auto'}
+            dragging={false}
+            swiping={false}
+            wrapAround = {true}
+            initialSlideWidth={500}
+            initialSlideHeight={300}
+            height={'100%'}
+            width={'100%'}
+            cellSpacing={10}
+
+            >
           { genre.series.map((serie) => (
-            <div>
-              <li className='series-list-item'
+
+              <div className='series-list-item'
                   key={"serie-" + serie.id}
                   onClick={this.showSerie(serie, genre)}>
                   <img src={serie.thumbnail_url} width="100%" height="100%"></img>
-              </li>
-            </div>
+              </div>
+
           )) }
+        </Carousel>
         </ul>
       </div>
     );
@@ -69,7 +109,9 @@ class GenreIndex extends React.Component {
                     onClick={this.goToGenre(genre.id)}
                     >{genre.name}</a>
               </div>
-              { this.seriesList(genre) }
+
+                { this.seriesList(genre) }
+
               { this.state.clickedGenre && genre.id === this.state.clickedGenre.id ?
                           <SerieShowContainer serieId={this.state.clickedSerie.id} /> :
                             '' }

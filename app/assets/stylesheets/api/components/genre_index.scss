@@ -9,15 +9,15 @@
 }
 
 .genre-list-item {
-  margin-bottom: 36px;
+  margin-bottom: 75px;
 }
 
 .genre-title {
-  margin-left: 36px;
   margin-bottom: 16px;
+  margin-left: 5%
 }
 .genre-title-item {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
   width: 100%;
   color: #999;
@@ -40,17 +40,22 @@
 
 .series-list-item {
   margin-right: 5px;
-  width: 320px;
-  max-width: 320px;
-  min-width: 300px;
-  height: 180px;
-  min-height: 100px;
-  max-height: 225px;
+  // width: 320px;
+  // max-width: 320px;
+  // min-width: 300px;
+  // height: 180px;
+  // min-height: 100px;
+  // max-height: 225px;
   transition: all .5s ease-in-out;
 }
 
 .series-list-item:hover {
   transform: scale(1.25);
   cursor: pointer;
-  z-index: 10;
+  z-index: 100;
+}
+
+.slider {
+  margin-left: 5%;
+  width: 95%;
 }
