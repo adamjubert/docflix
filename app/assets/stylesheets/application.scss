@@ -31,7 +31,6 @@
 }
 
 body {
-  // background: url('auth-princess.png');
   background: #222;
   height: 100%;
 }
@@ -40,15 +39,16 @@ body {
   color: #fff;
 }
 
+.splash-body {
+  background: linear-gradient(to right, #000, transparent), no-repeat center url('main-bg');
+}
 
-// .main-top {
-//   min-height: 100%;
-//   position: relative;
-// }
-//
-// .footer-main {
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//
-// }
+.auth-body {
+  background: url('auth-princess') ;
+  min-height: 800px;
+  height: 100%;
+}
+
+.signed-in-body {
+  background: #141414;
+}

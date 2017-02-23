@@ -1,4 +1,6 @@
 import React from 'react';
+import Slider from 'react-slick';
+
 
 class GenreShow extends React.Component {
   constructor(props) {
@@ -12,7 +14,6 @@ class GenreShow extends React.Component {
 
   showSerie(serie) {
     return () => {
-
       this.setState({
         clickedSerie: serie,
       });
@@ -24,21 +25,32 @@ class GenreShow extends React.Component {
     if (this.state.fetching) {
       return null;
     }
-    const numOfRows = Math.floor(this.props.genre / 5);
-    let series = this.props.genre.series;
-    return (
-      <div className='genre-show-main'>
-        <ul>
-          { series.map((serie) =>
-            <li onClick={this.showSerie(serie)}
-                key={"genre-serie-" + serie.id}>
-                <img src={serie.thumbnail_url} width="100%" height="100%"></img>
-            </li>
-          )}
-          </ul>
-      </div>
-    );
+
+    let settings = {
+     dots: true,
+     arrows: true,
+     infinite: false,
+     speed: 500,
+     slidesToShow: 4,
+     slidesToScroll: 2,
+   };
+
+   let series = this.props.genre.series;
+
+   const items = series.map((serie, idx) => {
+     debugger
+     return (
+       <div>
+          <img src={serie.thumbnail_url} ></img>
+       </div>
+     );
+   });
+   return (
+     <Slider {...settings}>
+       {items}
+     </Slider>
+   );
   }
 }
 
-export default GenreShow
+export default GenreShow;

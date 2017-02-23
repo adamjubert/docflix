@@ -6,7 +6,7 @@ class Splash extends React.Component {
   render() {
     return (
       <div className='splash-main'>
-        <h1>See what's next.</h1>
+        <h1>Discover new stories.</h1>
         <h2>Watch anywhere. Cancel anytime.</h2>
         <ul className='splash-buttons'>
           <Link to='/signup' className='splash-btn-signup'>Join free for a month</Link>

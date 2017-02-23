@@ -2,6 +2,8 @@ import React from 'react';
 import SerieShowContainer from './serie_show/serie_show_container';
 import { Link, Router } from 'react-router';
 import { Route, IndexRoute, hashHistory, withRouter } from 'react-router';
+import Slider from 'react-slick';
+
 
 class GenreIndex extends React.Component {
   constructor(props) {
@@ -39,11 +41,9 @@ class GenreIndex extends React.Component {
               <li className='series-list-item'
                   key={"serie-" + serie.id}
                   onClick={this.showSerie(serie, genre)}>
-
                   <img src={serie.thumbnail_url} width="100%" height="100%"></img>
               </li>
             </div>
-
           )) }
         </ul>
       </div>

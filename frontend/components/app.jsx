@@ -16,8 +16,17 @@ const App = (props) => {
     navbarClass = 'auth-navbar';
   }
 
+  let bodyClass;
+  if (path === '/') {
+    bodyClass = 'splash-body';
+  } else if (path === '/login' || path === '/signup') {
+    bodyClass = 'auth-body';
+  } else {
+    bodyClass = 'signed-in-body';
+  }
+
   return(
-    <div className='main-top'>
+    <div className={bodyClass}>
       <div className={navbarClass}>
         { currentNavbar }
       </div>

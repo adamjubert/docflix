@@ -6,14 +6,14 @@
 }
 
 .splash-main h1 {
-  margin: 14px 0;
+  margin: 16px 0;
   font-size: 48px;
   font-weight: 600;
 
 }
 
 .splash-main h2 {
-  margin: 14px 0;
+  margin: 16px 0;
   text-transform: uppercase;
 }
 
@@ -25,6 +25,16 @@
   background-color: $netflix-red;
   color: white;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 12px 26px;
   margin-top: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  border-radius: 2px;
+}
+
+.splash-btn-signup:hover {
+  background: #e50914;
+  cursor: pointer;
 }
