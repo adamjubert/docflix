@@ -411,11 +411,11 @@ Episode.create!(
 ########################################
 
 happy = Serie.create!(
-  name: 'PlantPure Nation',
-  year: 2015,
+  name: 'Happy',
+  year: 2012,
   author: 'Nelson Campbell',
   mpaa_rating: 'PG',
-  description: 'Three people try to start a pilot program to document the health benefits of a plant-based diet.',
+  description: 'Filmmaker Roko Belic travels to more than a dozen countries, searching for the meaning of happiness..',
   thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/happy/logo.png")
 )
 SeriesGenre.create!(series_id: happy.id, genre_id: social.id)
@@ -870,7 +870,7 @@ ct_fletcher = Serie.create!(
   year: 2016,
   author: ' ',
   mpaa_rating: 'PG',
-  description: 'The untold story of six-time world champion power lifter, CT Fletcher. Deemed one of the most influential and motivated fitness trainers, CT FLETCHER: MY MAGNIFICENT OBSESSION explores the pain, struggle, and hardships that he has endured throughout his life. Leaving an abusive childhood home, the film dives further into Fletcher’s personal and professional life - demonstrating the power motivation can have on the human spirit. Featuring appearances from Stone Cold Steve Austin, Bill Goldberg, and Kevin “Da Hulk” Washington, Fletcher’s life shows us how to push through our obstacles to achieve dreams of greatness.',
+  description: 'The untold story of six-time world champion power lifter, CT Fletcher. This documentary explores the pain, struggle, and hardships that he has endured throughout his life. Leaving an abusive childhood home, the film dives further into Fletcher’s personal and professional life - demonstrating the power motivation can have on the human spirit. ',
   thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/ct-fletcher/logo.png")
 )
 SeriesGenre.create!(series_id: ct_fletcher.id, genre_id: sports.id)
@@ -932,7 +932,9 @@ comments = [
   'It was really interesting to watch',
   'One of my favorite directors',
   'I feel like this documentary really made an impact on me',
-  'I\'m speechless after watching this one.'
+  'I\'m speechless after watching this one.',
+  'Really interesting cinematography',
+  'Wow! I haven\'t been this interested in a documentary in a really long time.'
 ]
 
 # Fake Reviews
