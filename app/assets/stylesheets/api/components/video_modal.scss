@@ -1,0 +1,29 @@
+/***/
+.o-play-btn-container {
+  margin-bottom: 1px;
+  position: relative;
+}
+
+.o-play-btn-container i {
+  position: absolute;
+  font-size: 108px;
+  right: 200px;
+  bottom: 100px;
+  transition: 0.2s;
+  display: none;
+}
+
+.o-play-btn-container:hover i {
+  transition: 0.2s;
+  display: block;
+}
+
+.o-play-btn-container i:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.o-play-btn-container:hover {
+  cursor: pointer;
+  transition: 0.2s;
+}

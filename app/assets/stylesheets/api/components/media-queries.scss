@@ -1,3 +1,9 @@
+@media (min-width: 1400px) {
+  .series-list-item img {
+    max-height: 175px;
+  }
+}
+
 @media (min-width: 1200px) {
   .splash-main h1 {
     font-size: 68px;
@@ -9,9 +15,7 @@
     margin-bottom: 20px;
     letter-spacing: 1px;
   }
-  .series-list-item img {
-    max-height: 175px;
-  }
+
 }
 
 @media (max-width: 900px) {

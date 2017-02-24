@@ -29,9 +29,9 @@ class SerieEpisodes extends React.Component {
 
    if (width >= 1900 && count !== 7){
      this.setState({ count: 7 });
-   }else if(width < 1900 && width >= 1420 && count !== 6){
+   }else if(width < 1900 && width >= 1520 && count !== 6){
      this.setState({ count: 6 });
-   }else if(width < 1420 && width >= 1200 && count !== 5){
+   }else if(width < 1520 && width >= 1200 && count !== 5){
      this.setState({ count: 5 });
    }else if(width < 1200 && width >= 720 && count !== 4){
      this.setState({ count: 4 });

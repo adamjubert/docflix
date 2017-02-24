@@ -18,6 +18,7 @@
 
 .serie-episodes-list > .slider {
   margin-left: 0;
+  padding-bottom: 1px; // without it, the series show page loses 1 px on the Episodes tab
 }
 
 .serie-episodes-list-item {
@@ -38,13 +39,19 @@
 }
 
 /***/
+.play-btn-container {
+  margin-bottom: 1px;
+  position: relative;
+}
+
 .play-btn-container i {
   position: absolute;
-  top: 45px;
-  right: -38px;
-  font-size: 54px;
+  top: 35px;
+  left: 105px;
+  font-size: 74px;
   display: none;
   transition: 0.2s;
+
 }
 
 .play-btn-container:hover i {
@@ -60,8 +67,6 @@
 .play-btn-container:hover {
   cursor: pointer;
   transition: 0.2s;
-
-
 }
 /***/
 
@@ -95,7 +100,15 @@
 
 .ep-button-l {
   margin-right: 40px;
+
 }
-.ep-button-r {
+.ep-button-l, .ep-button-r {
+  width: 45px;
+  font-size: 44px;
+
+}
+
+.ep-button-l:hover, .ep-button-r:hover {
+  font-size: 56px;
 
 }
