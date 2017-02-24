@@ -913,16 +913,7 @@ Episode.create!(
 
 
 
-#
-# Fake users
-17.times do |i|
-  User.create!(
-    email: "guest#{i}@docflix.tech",
-    password: 'testing',
-    fname: "Guest #{i}",
-    lname: "Smith"
-  )
-end
+
 
 Review.destroy_all
 
@@ -934,14 +925,26 @@ comments = [
   'I feel like this documentary really made an impact on me',
   'I\'m speechless after watching this one.',
   'Really interesting cinematography',
-  'Wow! I haven\'t been this interested in a documentary in a really long time.'
+  'Wow! I haven\'t been this interested in a documentary in a really long time.',
+  'I thought this documentary was pretty good. Not the best ever, but it definitely kept my attention.',
 ]
+
+#
+# Fake users
+comments.length.times do |i|
+  User.create!(
+    email: "guest#{i}@docflix.tech",
+    password: 'testing',
+    fname: "Guest #{i}",
+    lname: "Smith"
+  )
+end
 
 # Fake Reviews
 Serie.all.each do |serie|
   User.all.each do |user|
     Review.create!(
-      stars: ( serie.name[0] == 'P' || serie.name[0] == 'D' ? (4 + rand(1)) : (1 + rand(4)) ),
+      stars: ( serie.name[0] == 'P' || serie.name[0] == 'T' ? (4 + rand(2)) : (2 + rand(4)) ),
       comment: comments.sample,
       user_id: user.id,
       series_id: serie.id
