@@ -42,13 +42,13 @@ body {
 
 .splash-body {
   // background: linear-gradient(to right, #000, transparent), no-repeat center url('splash-bg');
-  background: no-repeat center url('splash-bg');
+  background: no-repeat center url('https://s3.amazonaws.com/docflix-prod/img/splash-bg.png');
   height: 100vh;
 
 }
 
 .auth-body {
-  background: url('auth-princess') ;
+  background: url('https://s3.amazonaws.com/docflix-prod/img/auth-princess.png') ;
   min-height: 800px;
   height: 100%;
 }
