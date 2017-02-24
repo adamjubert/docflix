@@ -135,7 +135,6 @@ class GenreIndex extends React.Component {
               <div className='genre-title'>
                 <a
                     className='genre-title-item'
-                    onClick={this.goToGenre(genre.id)}
                     >{genre.name}</a>
               </div>
 
