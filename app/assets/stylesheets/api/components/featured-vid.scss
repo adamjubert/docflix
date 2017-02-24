@@ -1,14 +1,15 @@
 .featured-vid {
-  width: 100%;
-  height: 80%;
-
+  // width: 100%;
+   // height: 80%;
+   background-size: cover;
 }
 
 .featured-vid video {
-  max-height: 500px;
-  zoom: 150%;
+  // max-height: 500px;
+
+  background: linear-gradient(to right, #000, rgba(0,0,0,0.5));
+  // zoom: 150%;
 }
 
 .featured-vid:hover {
-  cursor: pointer;
 }

@@ -31,7 +31,7 @@
 }
 
 body {
-  background: #222;
+  background: #141414;
   width: 100%;
   overflow-x: hidden;
 }
@@ -43,7 +43,7 @@ body {
 .splash-body {
   // background: linear-gradient(to right, #000, transparent), no-repeat center url('splash-bg');
   background: no-repeat center url('splash-bg');
-  height: 85vh;
+  height: 100vh;
 
 }
 
@@ -53,6 +53,6 @@ body {
   height: 100%;
 }
 
-.signed-in-body {
-  background: #141414;
-}
+// .signed-in-body {
+//
+// }

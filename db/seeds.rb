@@ -17,7 +17,6 @@ Genre.destroy_all
 nature =        Genre.create!(name: 'Nature')
 social =        Genre.create!(name: 'Social & Cultural')
 historical =    Genre.create!(name: 'Historical')
-crime =         Genre.create!(name: 'Crime')
 travel =        Genre.create!(name: 'Travel')
 sports =        Genre.create!(name: 'Sports')
 # #
