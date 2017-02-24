@@ -43,7 +43,9 @@ class GenreIndex extends React.Component {
    const count = this.state.count;
    const width = $(window).width();
 
-   if (width > 1600 && count !== 5){
+   if (width >= 1800 && count !== 6){
+     this.setState({ count: 6 });
+   }else if(width < 1800 && width >= 1420 && count !== 5){
      this.setState({ count: 5 });
    }else if(width < 1420 && width >= 1140 && count !== 4){
      this.setState({ count: 4 });
