@@ -58,11 +58,16 @@ class FeaturedVidModal extends React.Component {
 
   render() {
     return (
-      <div className='featured-vid'>
-        <video autoPlay loop muted onClick={ this.openModal } >
-          <source src={ this.props.videoSource }
+      <div className='featured-vid' >
+        <video width="100%" height="100%" autoPlay loop muted >
+          <source src={this.props.videoSource}
                   type="video/mp4" />
         </video>
+        <div className='featured-vid-text'>
+          <h1>Death Valley in HD</h1>
+          <h2>Docflix Featured Documentary</h2>
+          <button onClick={ this.openModal }><i className="fa fa-play" aria-hidden="true"></i> Play Now</button>
+        </div>
         <Modal
             isOpen={this.state.modalIsOpen}
             onAfterOpen={this.afterOpenModal}
@@ -70,7 +75,7 @@ class FeaturedVidModal extends React.Component {
             style={customStyles}
             contentLabel="Example Modal"
           >
-            <video  controls autoPlay  >
+            <video width="100%" height="100%" controls autoPlay  >
               <source src={this.props.videoSource} type="video/mp4" />
             </video>
 

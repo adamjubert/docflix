@@ -937,28 +937,37 @@ Episode.create!(
 
 
 
+
 #
-# #
-# # Fake users
-# 20.times do |i|
-#   User.create!(
-#     email: "guest#{i}@docflix.tech",
-#     password: 'testing',
-#     fname: "Guest #{i}",
-#     lname: "Smith"
-#   )
-# end
-#
-# Review.destroy_all
-#
-# # Fake Reviews
-# Serie.all.each do |serie|
-#   User.all.each do |user|
-#     Review.create!(
-#       stars: ( serie.name[0] == 'P' || serie.name[0] == 'D' ? (4 + rand(1)) : (1 + rand(4)) ),
-#       comment: Faker::Hipster.sentence(15, false, 20),
-#       user_id: user.id,
-#       series_id: serie.id
-#     )
-#   end
-# end
+# Fake users
+17.times do |i|
+  User.create!(
+    email: "guest#{i}@docflix.tech",
+    password: 'testing',
+    fname: "Guest #{i}",
+    lname: "Smith"
+  )
+end
+
+Review.destroy_all
+
+# Fake comments
+comments = [
+  'I love this series so much!',
+  'It was really interesting to watch',
+  'One of my favorite directors',
+  'I feel like this documentary really made an impact on me',
+  'I\'m speechless after watching this one.'
+]
+
+# Fake Reviews
+Serie.all.each do |serie|
+  User.all.each do |user|
+    Review.create!(
+      stars: ( serie.name[0] == 'P' || serie.name[0] == 'D' ? (4 + rand(1)) : (1 + rand(4)) ),
+      comment: comments.sample,
+      user_id: user.id,
+      series_id: serie.id
+    )
+  end
+end
