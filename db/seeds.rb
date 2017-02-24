@@ -26,14 +26,14 @@ SeriesGenre.destroy_all
 ########################################
 ############  PLANET EARTH  ############
 ########################################
-
+("https://s3.amazonaws.com/docflix-public/logo.png")
 planet_earth = Serie.create!(
   name: 'Planet Earth',
   year: 2006,
   author: 'BBC',
   mpaa_rating: 'PG',
   description: 'This landmark series transports nature lovers from the Himalayan Mountains to the depths of the ocean and everywhere in between.',
-  thumbnail: File.open("../docflix-media/series/planet-earth/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/planet-earth/logo.png")
 )
 SeriesGenre.create!(series_id: planet_earth.id, genre_id: nature.id)
 
@@ -44,8 +44,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: planet_earth.id,
-  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/01pole-to-pole.png'),
-  video: File.open('../docflix-media/series/planet-earth/episodes/01pole-to-pole.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/01pole-to-pole.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/01pole-to-pole.mp4')
 )
 Episode.create!(
   name: 'Mountains',
@@ -53,8 +53,8 @@ Episode.create!(
   runtime: 1,
   episode_num: 2,
   series_id: planet_earth.id,
-  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/02mountains.png'),
-  video: File.open('../docflix-media/series/planet-earth/episodes/02mountains.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/02mountains.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/02mountains.mp4')
 )
 Episode.create!(
   name: 'Islands',
@@ -62,8 +62,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 3,
   series_id: planet_earth.id,
-  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/03islands.png'),
-  video: File.open('../docflix-media/series/planet-earth/episodes/03islands.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/03islands.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/03islands.mp4')
 )
 Episode.create!(
   name: 'Birds',
@@ -71,8 +71,8 @@ Episode.create!(
   runtime: 1,
   episode_num: 4,
   series_id: planet_earth.id,
-  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/04birds.png'),
-  video: File.open('../docflix-media/series/planet-earth/episodes/04birds.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/04birds.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/04birds.mp4')
 )
 Episode.create!(
   name: 'Ice Worlds',
@@ -80,8 +80,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 5,
   series_id: planet_earth.id,
-  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/05arctic.png'),
-  video: File.open('../docflix-media/series/planet-earth/episodes/05arctic.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/05arctic.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/05arctic.mp4')
 )
 Episode.create!(
   name: 'Deserts',
@@ -89,8 +89,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 6,
   series_id: planet_earth.id,
-  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/06deserts.png'),
-  video: File.open('../docflix-media/series/planet-earth/episodes/06deserts.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/06deserts.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/06deserts.mp4')
 )
 Episode.create!(
   name: 'Eagles',
@@ -98,8 +98,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 7,
   series_id: planet_earth.id,
-  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/07eagles.png'),
-  video: File.open('../docflix-media/series/planet-earth/episodes/07eagles.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/07eagles.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/07eagles.mp4')
 )
 Episode.create!(
   name: 'Iguanas',
@@ -107,8 +107,8 @@ Episode.create!(
   runtime: 1,
   episode_num: 8,
   series_id: planet_earth.id,
-  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/08iguanas.png'),
-  video: File.open('../docflix-media/series/planet-earth/episodes/08iguanas.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/08iguanas.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/08iguanas.mp4')
 )
 Episode.create!(
   name: 'Snakes',
@@ -116,8 +116,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 9,
   series_id: planet_earth.id,
-  thumbnail: File.open('../docflix-media/series/planet-earth/episodes/09snakes.png'),
-  video: File.open('../docflix-media/series/planet-earth/episodes/09snakes.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/09snakes.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/planet-earth/episodes/09snakes.mp4')
 )
 
 
@@ -130,7 +130,7 @@ latin_america = Serie.create!(
   author: 'Discovery Channel',
   mpaa_rating: 'PG',
   description: 'Discovery Channel embarks on a thrilling exploration of the breath-taking South American continent. Witness the extraordinary stories of animals and people in this land of extremes',
-  thumbnail: File.open("../docflix-media/series/latin-america/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/latin-america/logo.png")
 )
 SeriesGenre.create!(series_id: latin_america.id, genre_id: nature.id)
 Episode.create!(
@@ -139,20 +139,20 @@ Episode.create!(
   runtime: 1,
   episode_num: 1,
   series_id: latin_america.id,
-  thumbnail: File.open('../docflix-media/series/latin-america/ep-logo.png'),
-  video: File.open('../docflix-media/series/latin-america/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/latin-america/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/latin-america/video.mp4')
 )
 
 ########################################
 ############  DEATH VALLEY  ############
 ########################################
 death_valley = Serie.create!(
-  name: 'Death Valley National Park',
+  name: 'Death Valley National Park in HD',
   year: 2016,
   author: '4K Relaxation Channel',
   mpaa_rating: 'G',
   description: 'Enjoy this truly remarkable National Park that attracts millions of tourists. Take delight in a unique phenomenon, when Death Valley is transformed and when it comes to life, when thousands of plants color the intermountain basin.',
-  thumbnail: File.open("../docflix-media/series/death-valley/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/death-valley/logo.png")
 )
 SeriesGenre.create!(series_id: death_valley.id, genre_id: nature.id)
 Episode.create!(
@@ -161,8 +161,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: death_valley.id,
-  thumbnail: File.open('../docflix-media/series/death-valley/ep-logo.png'),
-  video: File.open('../docflix-media/series/death-valley/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/death-valley/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/death-valley/video.mp4')
 )
 
 
@@ -175,7 +175,7 @@ frozen_planet = Serie.create!(
   author: 'BBC',
   mpaa_rating: 'PG',
   description: 'The Arctic and Antarctic remain the greatest wildernesses on Earth. The scale and beauty of the scenery and the sheer power of the elements are unmatched anywhere else on our planet. And these vast, frigid landscapes are surprising rich with life. ',
-  thumbnail: File.open("../docflix-media/series/frozen-planet/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/frozen-planet/logo.png")
 )
 SeriesGenre.create!(series_id: frozen_planet.id, genre_id: nature.id)
 Episode.create!(
@@ -184,8 +184,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: frozen_planet.id,
-  thumbnail: File.open('../docflix-media/series/frozen-planet/ep-logo.png'),
-  video: File.open('../docflix-media/series/frozen-planet/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/frozen-planet/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/frozen-planet/video.mp4')
 )
 
 
@@ -199,7 +199,7 @@ amazing_homes = Serie.create!(
   author: 'BBC',
   mpaa_rating: 'G',
   description: 'We begin with a museum collection of nests and branch out to scenes in the wild all over the world, where birds arrive at diverse nesting grounds to collect, compete for, reject, steal and begin to build with carefully selected materials, crafting homes for the all-important task of protecting their eggs and raising their young.',
-  thumbnail: File.open("../docflix-media/series/amazing-homes/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/amazing-homes/logo.png")
 )
 SeriesGenre.create!(series_id: amazing_homes.id, genre_id: nature.id)
 Episode.create!(
@@ -208,8 +208,8 @@ Episode.create!(
   runtime: 1,
   episode_num: 1,
   series_id: amazing_homes.id,
-  thumbnail: File.open('../docflix-media/series/amazing-homes/ep-logo.png'),
-  video: File.open('../docflix-media/series/amazing-homes/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/amazing-homes/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/amazing-homes/video.mp4')
 )
 
 
@@ -222,7 +222,7 @@ wild_china = Serie.create!(
   author: 'BBC',
   mpaa_rating: 'PG',
   description: 'The capital of Tibet is Lhasa, but the country is better known for the mountain range on it\'s southern border: The Himalayas.',
-  thumbnail: File.open("../docflix-media/series/wild-china/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/wild-china/logo.png")
 )
 SeriesGenre.create!(series_id: wild_china.id, genre_id: nature.id)
 Episode.create!(
@@ -231,8 +231,8 @@ Episode.create!(
   runtime: 3,
   episode_num: 1,
   series_id: wild_china.id,
-  thumbnail: File.open('../docflix-media/series/wild-china/ep-logo.png'),
-  video: File.open('../docflix-media/series/wild-china/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/wild-china/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/wild-china/video.mp4')
 )
 
 ########################################
@@ -244,7 +244,7 @@ ocean_giants = Serie.create!(
   author: '3D Media',
   mpaa_rating: 'PG',
   description: 'Whales and dolphins remain a constant source of fascination to us. But how much do we really know about them? Whales and dolphins, known as cetaceans, may appear to be totally alien to us -- but with their mental ability, group communication and the recent discovery that dolphins have individual names, they are closer to us than we ever imagined. ',
-  thumbnail: File.open("../docflix-media/series/ocean-giants/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/ocean-giants/logo.png")
 )
 SeriesGenre.create!(series_id: ocean_giants.id, genre_id: nature.id)
 Episode.create!(
@@ -253,8 +253,8 @@ Episode.create!(
   runtime: 1,
   episode_num: 1,
   series_id: ocean_giants.id,
-  thumbnail: File.open('../docflix-media/series/ocean-giants/ep-logo.png'),
-  video: File.open('../docflix-media/series/ocean-giants/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/ocean-giants/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/ocean-giants/video.mp4')
 )
 
 ########################################
@@ -266,7 +266,7 @@ terra = Serie.create!(
   author: 'OMEGA',
   mpaa_rating: 'PG',
   description: 'Animals are the refugees we often forget. This documentary examines the human relationship with other species on Earth. With a global population of 7 billion people, let’s have the courage to change the way we share our planet. ',
-  thumbnail: File.open("../docflix-media/series/terra/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/terra/logo.png")
 )
 SeriesGenre.create!(series_id: terra.id, genre_id: nature.id)
 Episode.create!(
@@ -275,8 +275,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: terra.id,
-  thumbnail: File.open('../docflix-media/series/terra/ep-logo.png'),
-  video: File.open('../docflix-media/series/terra/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/terra/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/terra/video.mp4')
 )
 
 
@@ -293,7 +293,7 @@ vice = Serie.create!(
   author: 'VICE News',
   mpaa_rating: 'MA',
   description: 'VICE News is an international vnews channel created by and for a connected generation. Our documentaries and original news series bring you an unvarnished look at some of the most important events of our time, and shine a light on underreported stories around the globe.',
-  thumbnail: File.open("../docflix-media/series/vice/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/vice/logo.png")
 )
 SeriesGenre.create!(series_id: vice.id, genre_id: social.id)
 
@@ -304,8 +304,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: vice.id,
-  thumbnail: File.open('../docflix-media/series/vice/episodes/01.png'),
-  video: File.open('../docflix-media/series/vice/episodes/01.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/vice/episodes/01.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/vice/episodes/01.mp4')
 )
 Episode.create!(
   name: 'Fixing the System',
@@ -313,8 +313,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: vice.id,
-  thumbnail: File.open('../docflix-media/series/vice/episodes/02.png'),
-  video: File.open('../docflix-media/series/vice/episodes/02.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/vice/episodes/02.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/vice/episodes/02.mp4')
 )
 Episode.create!(
   name: 'A House Divided',
@@ -322,8 +322,8 @@ Episode.create!(
   runtime: 1,
   episode_num: 1,
   series_id: vice.id,
-  thumbnail: File.open('../docflix-media/series/vice/episodes/03.png'),
-  video: File.open('../docflix-media/series/vice/episodes/03.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/vice/episodes/03.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/vice/episodes/03.mp4')
 )
 Episode.create!(
   name: 'Killing Cancer',
@@ -331,8 +331,8 @@ Episode.create!(
   runtime: 1,
   episode_num: 1,
   series_id: vice.id,
-  thumbnail: File.open('../docflix-media/series/vice/episodes/04.png'),
-  video: File.open('../docflix-media/series/vice/episodes/04.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/vice/episodes/04.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/vice/episodes/04.mp4')
 )
 
 ########################################
@@ -345,7 +345,7 @@ food_inc = Serie.create!(
   author: 'Robert Kenner',
   mpaa_rating: 'PG',
   description: 'Director Robert Kenner\'s provocative, Oscar-nominated documentary looks at the food industry\'s harmful effects on human health and the environment',
-  thumbnail: File.open("../docflix-media/series/food-inc/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/food-inc/logo.png")
 )
 SeriesGenre.create!(series_id: food_inc.id, genre_id: social.id)
 Episode.create!(
@@ -354,8 +354,8 @@ Episode.create!(
   runtime: 3,
   episode_num: 1,
   series_id: food_inc.id,
-  thumbnail: File.open('../docflix-media/series/food-inc/ep-logo.png'),
-  video: File.open('../docflix-media/series/food-inc/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/food-inc/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/food-inc/video.mp4')
 )
 
 ########################################
@@ -368,7 +368,7 @@ hungry_change = Serie.create!(
   author: 'Permacology Productions',
   mpaa_rating: 'PG',
   description: 'Filmmakers James Colquhoun, Laurentine Ten Bosch and Carlo Ledesma expose the diet industry\'s deceptive strategies designed to keep people from losing and keeping off weight.',
-  thumbnail: File.open("../docflix-media/series/hungry-change/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/hungry-change/logo.png")
 )
 SeriesGenre.create!(series_id: hungry_change.id, genre_id: social.id)
 Episode.create!(
@@ -377,8 +377,8 @@ Episode.create!(
   runtime: 1,
   episode_num: 1,
   series_id: hungry_change.id,
-  thumbnail: File.open('../docflix-media/series/hungry-change/ep-logo.png'),
-  video: File.open('../docflix-media/series/hungry-change/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/hungry-change/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/hungry-change/video.mp4')
 )
 
 
@@ -392,7 +392,7 @@ plantpure = Serie.create!(
   author: 'Nelson Campbell',
   mpaa_rating: 'PG',
   description: 'Three people try to start a pilot program to document the health benefits of a plant-based diet.',
-  thumbnail: File.open("../docflix-media/series/plantpure/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/plantpure/logo.png")
 )
 SeriesGenre.create!(series_id: plantpure.id, genre_id: social.id)
 Episode.create!(
@@ -401,8 +401,8 @@ Episode.create!(
   runtime: 3,
   episode_num: 1,
   series_id: plantpure.id,
-  thumbnail: File.open('../docflix-media/series/plantpure/ep-logo.png'),
-  video: File.open('../docflix-media/series/plantpure/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/plantpure/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/plantpure/video.mp4')
 )
 
 
@@ -416,7 +416,7 @@ happy = Serie.create!(
   author: 'Nelson Campbell',
   mpaa_rating: 'PG',
   description: 'Three people try to start a pilot program to document the health benefits of a plant-based diet.',
-  thumbnail: File.open("../docflix-media/series/happy/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/happy/logo.png")
 )
 SeriesGenre.create!(series_id: happy.id, genre_id: social.id)
 Episode.create!(
@@ -425,8 +425,8 @@ Episode.create!(
   runtime: 3,
   episode_num: 1,
   series_id: happy.id,
-  thumbnail: File.open('../docflix-media/series/happy/ep-logo.png'),
-  video: File.open('../docflix-media/series/happy/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/happy/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/happy/video.mp4')
 )
 
 
@@ -441,7 +441,7 @@ untold_history = Serie.create!(
   author: 'Oliver Stone',
   mpaa_rating: 'PG',
   description: 'This documentary offers an alternative take on modern American history, focusing on underreported events that shaped the nation\'s character.',
-  thumbnail: File.open("../docflix-media/series/untold-history/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/untold-history/logo.png")
 )
 SeriesGenre.create!(series_id: untold_history.id, genre_id: historical.id)
 Episode.create!(
@@ -450,8 +450,8 @@ Episode.create!(
   runtime: 3,
   episode_num: 1,
   series_id: untold_history.id,
-  thumbnail: File.open('../docflix-media/series/untold-history/ep-logo.png'),
-  video: File.open('../docflix-media/series/untold-history/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/untold-history/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/untold-history/video.mp4')
 )
 
 
@@ -465,7 +465,7 @@ the_sixties = Serie.create!(
   author: 'CNN',
   mpaa_rating: 'PG',
   description: 'With the Vietnam War, the British Invasion, Woodstock, the Civil Rights Movement, and JFK\'s assassination, the 1960s represent, perhaps, the most consequential decade in U.S. history. It was a period of monumental social and political change, altering virtually every aspect of American life for future generations',
-  thumbnail: File.open("../docflix-media/series/the-sixties/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/the-sixties/logo.png")
 )
 SeriesGenre.create!(series_id: the_sixties.id, genre_id: social.id)
 SeriesGenre.create!(series_id: the_sixties.id, genre_id: historical.id)
@@ -475,8 +475,8 @@ Episode.create!(
   runtime: 1,
   episode_num: 1,
   series_id: the_sixties.id,
-  thumbnail: File.open('../docflix-media/series/the-sixties/ep-logo.png'),
-  video: File.open('../docflix-media/series/the-sixties/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/the-sixties/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/the-sixties/video.mp4')
 )
 
 ########################################
@@ -489,7 +489,7 @@ titanic_final = Serie.create!(
   author: 'CNN',
   mpaa_rating: 'PG',
   description: 'A century ago, the "unsinkable" Titanic plunged to the bottom of the North Atlantic Ocean. With each passing year, the myth surrounding the ship has grown, as have arguments over why and how she met her demise. However, a recent study blows all other theories out of the water. Follow Titanic detective Tim Maltin as he shares the results of his 20-year investigation.',
-  thumbnail: File.open("../docflix-media/series/titanic-final/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/titanic-final/logo.png")
 )
 SeriesGenre.create!(series_id: titanic_final.id, genre_id: historical.id)
 Episode.create!(
@@ -498,8 +498,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: titanic_final.id,
-  thumbnail: File.open('../docflix-media/series/titanic-final/ep-logo.png'),
-  video: File.open('../docflix-media/series/titanic-final/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/titanic-final/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/titanic-final/video.mp4')
 )
 
 ########################################
@@ -512,7 +512,7 @@ hindenburg_untold = Serie.create!(
   author: 'John Shrapnel',
   mpaa_rating: 'PG',
   description: 'Who or what brought history\'s most famous airship burning to the ground? Relive the tragedy that shocked the world and sent one man on a tireless mission to answer that question. Through detailed reconstruction of the events, eyewitness testimony, the memories of living survivors, and the interpretation of modern day experts, we recount this disaster and the investigation that followed.',
-  thumbnail: File.open("../docflix-media/series/hindenburg-untold/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/hindenburg-untold/logo.png")
 )
 SeriesGenre.create!(series_id: hindenburg_untold.id, genre_id: historical.id)
 Episode.create!(
@@ -521,8 +521,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: hindenburg_untold.id,
-  thumbnail: File.open('../docflix-media/series/hindenburg-untold/ep-logo.png'),
-  video: File.open('../docflix-media/series/hindenburg-untold/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/hindenburg-untold/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/hindenburg-untold/video.mp4')
 )
 
 
@@ -536,7 +536,7 @@ greenwich_village = Serie.create!(
   author: 'CNN',
   mpaa_rating: 'PG',
   description: 'Interviews with Pete Seeger, Kris Kristofferson, Judy Collins, Arlo Guthrie and others show how the music coming out of New York\'s Greenwich Village challenged the status quo and promoted social change during the 1960s and \'70s',
-  thumbnail: File.open("../docflix-media/series/greenwich-village/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/greenwich-village/logo.png")
 )
 SeriesGenre.create!(series_id: greenwich_village.id, genre_id: social.id)
 SeriesGenre.create!(series_id: greenwich_village.id, genre_id: historical.id)
@@ -546,8 +546,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: greenwich_village.id,
-  thumbnail: File.open('../docflix-media/series/greenwich-village/ep-logo.png'),
-  video: File.open('../docflix-media/series/greenwich-village/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/greenwich-village/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/greenwich-village/video.mp4')
 )
 ########################################
 ############ Golden Raft ############
@@ -559,7 +559,7 @@ secrets_golden = Serie.create!(
   author: 'Smithsonian',
   mpaa_rating: 'PG',
   description: 'A ten-inch golden statue discovered in a cave near Bogota may be the key to the greatest treasure never found: El Dorado. For centuries, rumors of a "Lost City of Gold" attracted explorers and fortune hunters to the Colombian Andes in search of riches. Now, after 500 years of futility and bloodshed, investigators try to finish the job, using the found statue, a beautiful model of a golden raft, as their guide.',
-  thumbnail: File.open("../docflix-media/series/secrets-golden/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/secrets-golden/logo.png")
 )
 SeriesGenre.create!(series_id: secrets_golden.id, genre_id: social.id)
 SeriesGenre.create!(series_id: secrets_golden.id, genre_id: historical.id)
@@ -569,8 +569,8 @@ Episode.create!(
   runtime: 3,
   episode_num: 1,
   series_id: secrets_golden.id,
-  thumbnail: File.open('../docflix-media/series/secrets-golden/ep-logo.png'),
-  video: File.open('../docflix-media/series/secrets-golden/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/secrets-golden/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/secrets-golden/video.mp4')
 )
 
 ########################################
@@ -583,7 +583,7 @@ unbranded_doc = Serie.create!(
   author: ' ',
   mpaa_rating: 'PG13',
   description: 'Four young Texans hatch an outrageous plot to adopt, train, and ride wild mustangs 3,000 miles from the Mexican border to Canada through the wildest terrain of the American West.',
-  thumbnail: File.open("../docflix-media/series/unbranded-doc/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/unbranded-doc/logo.png")
 )
 SeriesGenre.create!(series_id: unbranded_doc.id, genre_id: social.id)
 SeriesGenre.create!(series_id: unbranded_doc.id, genre_id: travel.id)
@@ -593,8 +593,8 @@ Episode.create!(
   runtime: 3,
   episode_num: 1,
   series_id: unbranded_doc.id,
-  thumbnail: File.open('../docflix-media/series/unbranded-doc/ep-logo.png'),
-  video: File.open('../docflix-media/series/unbranded-doc/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/unbranded-doc/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/unbranded-doc/video.mp4')
 )
 
 
@@ -608,7 +608,7 @@ touching_void = Serie.create!(
   author: ' ',
   mpaa_rating: 'MA',
   description: 'Touching the Void is a 2003 docudrama survival film about Joe Simpson\'s and Simon Yates\' disastrous and near-fatal climb of Siula Grande in the Cordillera Huayhuash in the Peruvian Andes in 1985. It is based on Simpson\'s 1988 book of the same name.',
-  thumbnail: File.open("../docflix-media/series/touching-void/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/touching-void/logo.png")
 )
 SeriesGenre.create!(series_id: touching_void.id, genre_id: historical.id)
 SeriesGenre.create!(series_id: touching_void.id, genre_id: travel.id)
@@ -618,8 +618,8 @@ Episode.create!(
   runtime: 3,
   episode_num: 1,
   series_id: touching_void.id,
-  thumbnail: File.open('../docflix-media/series/touching-void/ep-logo.png'),
-  video: File.open('../docflix-media/series/touching-void/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/touching-void/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/touching-void/video.mp4')
 )
 
 ########################################
@@ -632,7 +632,7 @@ call_myanmar = Serie.create!(
   author: ' ',
   mpaa_rating: 'PG',
   description: 'Shot clandestinely over a 2-year period by best-selling novelist and filmmaker, Robert H. Lieberman, this film provides a rare look at the second-most isolated country on the planet. It lifts the curtain to expose the everyday life in a country that has been held in the iron grip of a brutal military regime for 48 years.',
-  thumbnail: File.open("../docflix-media/series/call-myanmar/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/call-myanmar/logo.png")
 )
 SeriesGenre.create!(series_id: call_myanmar.id, genre_id: social.id)
 SeriesGenre.create!(series_id: call_myanmar.id, genre_id: travel.id)
@@ -642,35 +642,10 @@ Episode.create!(
   runtime: 3,
   episode_num: 1,
   series_id: call_myanmar.id,
-  thumbnail: File.open('../docflix-media/series/call-myanmar/ep-logo.png'),
-  video: File.open('../docflix-media/series/call-myanmar/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/call-myanmar/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/call-myanmar/video.mp4')
 )
 
-
-###NB: Seed for first Heroku push
-########################################
-############ Myanmar ############
-########################################
-
-call_myanmar = Serie.create!(
-  name: 'They Call It Myanmar: Lifting the Curtain',
-  year: 2012,
-  author: ' ',
-  mpaa_rating: 'PG',
-  description: 'Shot clandestinely over a 2-year period by best-selling novelist and filmmaker, Robert H. Lieberman, this film provides a rare look at the second-most isolated country on the planet. It lifts the curtain to expose the everyday life in a country that has been held in the iron grip of a brutal military regime for 48 years.',
-  thumbnail: ("https://s3.amazonaws.com/docflix-public/logo.png")
-)
-SeriesGenre.create!(series_id: call_myanmar.id, genre_id: social.id)
-SeriesGenre.create!(series_id: call_myanmar.id, genre_id: travel.id)
-Episode.create!(
-  name: call_myanmar.name,
-  description: call_myanmar.description,
-  runtime: 3,
-  episode_num: 1,
-  series_id: call_myanmar.id,
-  thumbnail: ('https://s3.amazonaws.com/docflix-public/ep-logo.png'),
-  video: ('https://s3.amazonaws.com/docflix-public/video.mp4')
-)
 
 ########################################
 ############ K2 Siren ############
@@ -682,7 +657,7 @@ k2_siren = Serie.create!(
   author: ' ',
   mpaa_rating: 'PG',
   description: 'Shot in Pakistan in the summer of 2009, the documentary follows world-class alpinists Fabrizio Zangrilli and Gerlinde Kaltenbrunner with veteran climbers Jake Meyer and Chris Szymiec in a breathtaking glimpse into the world of high altitude mountaineering.',
-  thumbnail: File.open("../docflix-media/series/k2-siren/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/k2-siren/logo.png")
 )
 SeriesGenre.create!(series_id: k2_siren.id, genre_id: travel.id)
 Episode.create!(
@@ -691,8 +666,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: k2_siren.id,
-  thumbnail: File.open('../docflix-media/series/k2-siren/ep-logo.png'),
-  video: File.open('../docflix-media/series/k2-siren/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/k2-siren/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/k2-siren/video.mp4')
 )
 
 
@@ -706,7 +681,7 @@ endless_summer = Serie.create!(
   author: ' ',
   mpaa_rating: 'PG',
   description: 'The Endless Summer is a seminal 1966 surf movie. Filmmaker/narrator Bruce Brown follows two surfers, Mike Hynson and Robert August, on a surfing trip around the world',
-  thumbnail: File.open("../docflix-media/series/endless-summer/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/endless-summer/logo.png")
 )
 SeriesGenre.create!(series_id: endless_summer.id, genre_id: travel.id)
 SeriesGenre.create!(series_id: endless_summer.id, genre_id: sports.id)
@@ -716,8 +691,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: endless_summer.id,
-  thumbnail: File.open('../docflix-media/series/endless-summer/ep-logo.png'),
-  video: File.open('../docflix-media/series/endless-summer/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/endless-summer/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/endless-summer/video.mp4')
 )
 
 ########################################
@@ -730,7 +705,7 @@ chasing_ice = Serie.create!(
   author: ' ',
   mpaa_rating: 'PG',
   description: 'Acclaimed photographer James Balog was once a skeptic about climate change. But through his Extreme Ice Survey, he discovers undeniable evidence of our changing planet. In Chasing Ice, Balog deploys revolutionary time-lapse cameras to capture a multi-year record of the world\'s changing glaciers. His hauntingly beautiful videos compress years into seconds and capture ancient mountains of ice in motion as they disappear at a breathtaking rate.',
-  thumbnail: File.open("../docflix-media/series/chasing-ice/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/chasing-ice/logo.png")
 )
 SeriesGenre.create!(series_id: chasing_ice.id, genre_id: travel.id)
 SeriesGenre.create!(series_id: chasing_ice.id, genre_id: nature.id)
@@ -740,8 +715,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: chasing_ice.id,
-  thumbnail: File.open('../docflix-media/series/chasing-ice/ep-logo.png'),
-  video: File.open('../docflix-media/series/chasing-ice/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/chasing-ice/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/chasing-ice/video.mp4')
 )
 
 ########################################
@@ -754,7 +729,7 @@ fair_chase = Serie.create!(
   author: ' ',
   mpaa_rating: 'PG',
   description: 'Inspired by the book Born to Run, ten distance runners from around the world attempt to chase down the fastest animal in North America and prove that running was the first human weapon and the key to our survival. This is their film.',
-  thumbnail: File.open("../docflix-media/series/fair-chase/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/fair-chase/logo.png")
 )
 SeriesGenre.create!(series_id: fair_chase.id, genre_id: travel.id)
 SeriesGenre.create!(series_id: fair_chase.id, genre_id: sports.id)
@@ -764,8 +739,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: fair_chase.id,
-  thumbnail: File.open('../docflix-media/series/fair-chase/ep-logo.png'),
-  video: File.open('../docflix-media/series/fair-chase/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/fair-chase/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/fair-chase/video.mp4')
 )
 
 ########################################
@@ -778,7 +753,7 @@ isolated_doc = Serie.create!(
   author: ' ',
   mpaa_rating: 'PG',
   description: 'Five world class surfers travel to New Guinea in search of undiscovered waves, but end up discovering so much more.',
-  thumbnail: File.open("../docflix-media/series/isolated-doc/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/isolated-doc/logo.png")
 )
 SeriesGenre.create!(series_id: isolated_doc.id, genre_id: travel.id)
 SeriesGenre.create!(series_id: isolated_doc.id, genre_id: social.id)
@@ -788,8 +763,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: isolated_doc.id,
-  thumbnail: File.open('../docflix-media/series/isolated-doc/ep-logo.png'),
-  video: File.open('../docflix-media/series/isolated-doc/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/isolated-doc/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/isolated-doc/video.mp4')
 )
 ########################################
 ############ Perfect Shot ############
@@ -801,7 +776,7 @@ perfect_shot = Serie.create!(
   author: ' ',
   mpaa_rating: 'PG',
   description: 'Under the tutelage of coach and mentor Holger Geschwindner, 7-foot German basketball player Dirk Nowitzki develops an extraordinary jump shot, helping to lead the Dallas Mavericks to an NBA championship.',
-  thumbnail: File.open("../docflix-media/series/perfect-shot/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/perfect-shot/logo.png")
 )
 SeriesGenre.create!(series_id: perfect_shot.id, genre_id: sports.id)
 Episode.create!(
@@ -810,8 +785,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: perfect_shot.id,
-  thumbnail: File.open('../docflix-media/series/perfect-shot/ep-logo.png'),
-  video: File.open('../docflix-media/series/perfect-shot/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/perfect-shot/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/perfect-shot/video.mp4')
 )
 
 ########################################
@@ -824,7 +799,7 @@ nash_doc = Serie.create!(
   author: ' ',
   mpaa_rating: 'PG',
   description: 'This coming of age documentary chronicles the life of NBA All Star Steve Nash as he tries to navigate his way through the somewhat toils of professional sports while trying to leave a lasting legacy on and off the court.',
-  thumbnail: File.open("../docflix-media/series/nash-doc/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/nash-doc/logo.png")
 )
 SeriesGenre.create!(series_id: nash_doc.id, genre_id: sports.id)
 Episode.create!(
@@ -833,8 +808,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: nash_doc.id,
-  thumbnail: File.open('../docflix-media/series/nash-doc/ep-logo.png'),
-  video: File.open('../docflix-media/series/nash-doc/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/nash-doc/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/nash-doc/video.mp4')
 )
 
 
@@ -848,7 +823,7 @@ stop_nothing = Serie.create!(
   author: ' ',
   mpaa_rating: 'PG',
   description: 'Filmmaker Alex Holmes creates an explosive portrait of disgraced cyclist Lance Armstrong by talking to the athlete\'s former friends, whose lives and careers he was said to have destroyed.',
-  thumbnail: File.open("../docflix-media/series/stop-nothing/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/stop-nothing/logo.png")
 )
 SeriesGenre.create!(series_id: stop_nothing.id, genre_id: sports.id)
 SeriesGenre.create!(series_id: stop_nothing.id, genre_id: social.id)
@@ -858,8 +833,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: stop_nothing.id,
-  thumbnail: File.open('../docflix-media/series/stop-nothing/ep-logo.png'),
-  video: File.open('../docflix-media/series/stop-nothing/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/stop-nothing/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/stop-nothing/video.mp4')
 )
 
 ########################################
@@ -872,7 +847,7 @@ am_ali = Serie.create!(
   author: ' ',
   mpaa_rating: 'PG',
   description: 'Unprecedented access to Muhammad Ali\'s personal archive of "audio journals" as well as interviews and testimonials from his inner circle of family and friends are used to tell the legend\'s life story.',
-  thumbnail: File.open("../docflix-media/series/am-ali/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/am-ali/logo.png")
 )
 SeriesGenre.create!(series_id: am_ali.id, genre_id: sports.id)
 Episode.create!(
@@ -881,8 +856,8 @@ Episode.create!(
   runtime: 2,
   episode_num: 1,
   series_id: am_ali.id,
-  thumbnail: File.open('../docflix-media/series/am-ali/ep-logo.png'),
-  video: File.open('../docflix-media/series/am-ali/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/am-ali/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/am-ali/video.mp4')
 )
 
 
@@ -896,7 +871,7 @@ ct_fletcher = Serie.create!(
   author: ' ',
   mpaa_rating: 'PG',
   description: 'The untold story of six-time world champion power lifter, CT Fletcher. Deemed one of the most influential and motivated fitness trainers, CT FLETCHER: MY MAGNIFICENT OBSESSION explores the pain, struggle, and hardships that he has endured throughout his life. Leaving an abusive childhood home, the film dives further into Fletcher’s personal and professional life - demonstrating the power motivation can have on the human spirit. Featuring appearances from Stone Cold Steve Austin, Bill Goldberg, and Kevin “Da Hulk” Washington, Fletcher’s life shows us how to push through our obstacles to achieve dreams of greatness.',
-  thumbnail: File.open("../docflix-media/series/ct-fletcher/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/ct-fletcher/logo.png")
 )
 SeriesGenre.create!(series_id: ct_fletcher.id, genre_id: sports.id)
 Episode.create!(
@@ -905,8 +880,8 @@ Episode.create!(
   runtime: 3,
   episode_num: 1,
   series_id: ct_fletcher.id,
-  thumbnail: File.open('../docflix-media/series/ct-fletcher/ep-logo.png'),
-  video: File.open('../docflix-media/series/ct-fletcher/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/ct-fletcher/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/ct-fletcher/video.mp4')
 )
 ########################################
 ############ battered bastards ############
@@ -918,7 +893,7 @@ battered_doc = Serie.create!(
   author: ' ',
   mpaa_rating: 'PG',
   description: 'In 1973, baseball lover and actor Bing Russell, father of Kurt Russell, starts an independent, single-A team composed of players that no one else wanted.',
-  thumbnail: File.open("../docflix-media/series/battered-doc/logo.png")
+  thumbnail: ("https://s3.amazonaws.com/docflix-prod/series/battered-doc/logo.png")
 )
 SeriesGenre.create!(series_id: battered_doc.id, genre_id: sports.id)
 SeriesGenre.create!(series_id: battered_doc.id, genre_id: historical.id)
@@ -928,8 +903,8 @@ Episode.create!(
   runtime: 3,
   episode_num: 1,
   series_id: battered_doc.id,
-  thumbnail: File.open('../docflix-media/series/battered-doc/ep-logo.png'),
-  video: File.open('../docflix-media/series/battered-doc/video.mp4')
+  thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/battered-doc/ep-logo.png'),
+  video: ('https://s3.amazonaws.com/docflix-prod/series/battered-doc/video.mp4')
 )
 
 
