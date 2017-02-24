@@ -31,7 +31,14 @@ class Serie < ActiveRecord::Base
     foreign_key: :series_id
   has_many :likes,
     class_name: 'Like',
-    foreign_key: :serie_id 
+    foreign_key: :serie_id
+
+  include PgSearch
+
+  pg_search_scope :search_by_name, :against => [:name],
+    :using => {
+      :tsearch => {:prefix => true }
+    }
 
   has_attached_file :thumbnail, default_url: "old_netflix_logo.png"
   validates_attachment_content_type :thumbnail, content_type: /\Aimage\/.*\z/

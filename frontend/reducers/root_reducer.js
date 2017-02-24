@@ -6,6 +6,7 @@ import SeriesReducer from './series_reducer';
 import ReviewsReducer from './reviews_reducer';
 import ErrorsReducer from './errors_reducer';
 import LikesReducer from './likes_reducer';
+import search from './search_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
@@ -14,7 +15,8 @@ const RootReducer = combineReducers({
   series: SeriesReducer,
   likes: LikesReducer,
   reviews: ReviewsReducer,
-  errors: ErrorsReducer
+  errors: ErrorsReducer,
+  search
 });
 
 export default RootReducer;

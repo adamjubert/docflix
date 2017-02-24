@@ -7,6 +7,8 @@ Rails.application.routes.draw do
       resources :reviews, only: [:index]
     end
     resources :genres, only: [:index, :show]
+
+    resources :search, only: [:create]
     resources :episodes, only: [:index, :show]
     resources :reviews, only: [:show, :create, :update, :destroy]
     resources :likes, only: [:index, :show, :create, :destroy]
