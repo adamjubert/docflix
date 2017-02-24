@@ -1,5 +1,4 @@
 import React from 'react';
-import Slider from 'react-slick';
 import SerieShowContainer from '../genre_index/serie_show/serie_show_container';
 
 
