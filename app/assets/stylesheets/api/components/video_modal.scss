@@ -26,3 +26,18 @@
   cursor: pointer;
   transition: 0.2s;
 }
+
+.fa-modal-back {
+  margin-left: 20px;
+  color: white;
+  font-size: 80px !important;
+  transition: 0.3s;
+  position: absolute;
+  z-index: 150;
+}
+
+.fa-modal-back:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s;
+}

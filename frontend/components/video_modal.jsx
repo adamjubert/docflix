@@ -77,8 +77,12 @@ class VideoModal extends React.Component {
           style={customStyles}
           contentLabel="Example Modal"
         >
+        <i
+          className="fa fa-arrow-circle-left fa-modal-back"
+          aria-hidden="true"
+          onClick={this.closeModal}></i>
 
-        <video width="100%" height="100%" controls autoPlay  >
+        <video width="100%" height="90%" controls autoPlay  >
           <source src={this.props.videoSource} type="video/mp4" />
         </video>
 
