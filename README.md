@@ -1,5 +1,3 @@
-This is the proposal README.
-
 # Docflix
 
 [Docflix Live](http://doclix.herokuapp.com)
@@ -10,7 +8,7 @@ Docflix is a video-streaming web application inspired by Netflix that features s
 ## Features & Implementation
 
 ### Welcome View
-![alt text](docflix/app/assets/images/readme/splash.png)
+![alt text](app/assets/images/readme/splash.png)
 
 ### User Authentication
 
