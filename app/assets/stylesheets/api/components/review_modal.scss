@@ -1,18 +1,11 @@
-.review-modal-container {
-
-}
-
 .ReactModal__Content {
   border-top: 5px solid $netflix-red;
   border-radius: none;
 }
 
-.ReactModal__Content--after-open {}
-
 .review-modal-top {
   border-bottom: 1px solid grey;
 }
-
 
 .review-modal-top section h2 {
   color: white;
@@ -32,8 +25,6 @@
 .close-review-modal:hover {
   cursor: pointer;
 }
-
-
 
 .fa-remove:before, .fa-close:before, .fa-times:before {
     font-size: 36px;

@@ -28,6 +28,7 @@
 
 * {
   font-family: $net-helvetica;
+  font-family: 'Helvetica-Neue';
 }
 
 body {
@@ -41,7 +42,6 @@ body {
 }
 
 .splash-body {
-  // background: linear-gradient(to right, #000, transparent), no-repeat center url('splash-bg');
   background: no-repeat center url('https://s3.amazonaws.com/docflix-prod/img/splash-bg.png');
   height: 100vh;
 
@@ -52,7 +52,3 @@ body {
   min-height: 800px;
   height: 100%;
 }
-
-// .signed-in-body {
-//
-// }

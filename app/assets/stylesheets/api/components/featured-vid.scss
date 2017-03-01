@@ -1,8 +1,5 @@
 .featured-vid {
-  // width: 100%;
-   // height: 80%;
    background-size: cover;
-
 }
 
 .dimmer {
@@ -11,10 +8,7 @@
 }
 
 .featured-vid video {
-  // max-height: 500px;
   filter: brightness(50%);
-
-  // zoom: 150%;
 }
 
 .featured-vid:hover {
@@ -61,7 +55,4 @@
 
 .featured-vid-text button i {
   margin-right: 10px;
-}
-
-.featured-vid-overlay {
 }
