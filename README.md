@@ -15,7 +15,7 @@ Docflix is a video-streaming web application inspired by Netflix that features s
 Built from the ground up, front-end and back-end user authentication encrypts user passwords and creates a unique session token for each user on signup or login. This allows for both secure access and the ability to customize content (like My List and Review functionality) based on the current user.
 
 ### Browse
-![alt text](app/assets/images/readme/browse.png)
+![alt text](http://recordit.co/HEjjg9qbZV)
 On login, users are taken to the main index, which features a nearly fullscreen video component. Below, users can browse through each genre's shows via the react-slick carousel component. Show thumbnails expand on hover. Each show can have multiple genres and each genre multiple shows; they are connected to each other through a join table.
 
 ### Docs
