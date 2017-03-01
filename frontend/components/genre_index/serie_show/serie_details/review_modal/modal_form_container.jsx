@@ -41,5 +41,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(ModalForm);
-
-// fetchReview: id => dispatch(fetchReview(id)),

@@ -1,5 +1,4 @@
 import { RECEIVE_SERIE } from '../actions/serie_actions';
-// import { RECEIVE_REVIEW } from '../actions/review_actions';
 
 
 
@@ -14,6 +13,3 @@ const SerieReducer = (state = {}, action) => {
 };
 
 export default SerieReducer;
-
-// case RECEIVE_REVIEW:
-//  return Object.assign({}, state, { reviews: state.reviews.push(action.review) });

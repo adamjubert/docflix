@@ -100,23 +100,3 @@ class ReviewForm extends React.Component {
 }
 
 export default ReviewForm;
-
-//
-// <label>Title
-//   <input
-//     type="text"
-//     value={this.state.title}
-//     onChange={this.update('title')} />
-// </label>
-// <label>
-//   <textarea
-//     value={this.state.body}
-//     onChange={this.update('body')} />
-// </label>
-
-// <label>Stars
-//   <input
-//     type="text"
-//     value={this.state.stars}
-//     onChange={this.update('stars')} />
-// </label>

@@ -97,6 +97,3 @@ class ReviewModal extends React.Component {
 
 
 export default ReviewModal;
-
-
-//  <ModalFormContainer userReview={this.props.userReview}/>

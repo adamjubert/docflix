@@ -41,5 +41,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(ReviewForm);
-
-// fetchReview: id => dispatch(fetchReview(id)),

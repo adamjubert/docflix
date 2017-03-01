@@ -16,7 +16,6 @@ Docflix is a video-streaming web application inspired by Netflix that features s
 ### Genres
 ![alt text](app/assets/images/readme/browse.png)
 
-
 ### Series
 ![alt text](app/assets/images/readme/ss-browse.png)
 

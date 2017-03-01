@@ -41,9 +41,4 @@ const Root = ({ store }) => {
   );
 };
 
-// <FeaturedVid />
-//
-
-
-
 export default Root;

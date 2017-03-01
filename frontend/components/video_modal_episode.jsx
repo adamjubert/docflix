@@ -2,11 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 
-//
-// //
-// //
-// const appElement = document.getElementById('root');
-
 const customStyles = {
   overlay : {
     position          : 'fixed',

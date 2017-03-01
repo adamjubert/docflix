@@ -28,6 +28,3 @@ class Splash extends React.Component {
 }
 
 export default Splash;
-
-// NB: bonus / at the end: Can add link to log in as guest
-// <Link to='/login' className='splash-btn-guest-login'>Log in as guest</Link>

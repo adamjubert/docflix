@@ -20,6 +20,3 @@ class StarRating extends React.Component {
 }
 
 export default StarRating;
-
-// Star rating info:
-// https://github.com/voronianski/react-star-rating-component

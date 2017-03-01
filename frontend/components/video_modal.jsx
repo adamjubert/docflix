@@ -2,11 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 
-//
-// //
-// //
-// const appElement = document.getElementById('root');
-
 const customStyles = {
   overlay : {
     position          : 'fixed',
@@ -54,7 +49,6 @@ class VideoModal extends React.Component {
   }
 
   afterOpenModal() {
-    // references are now sync'd and can be accessed.
     this.refs.subtitle.style.color = '#f00';
   }
 

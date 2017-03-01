@@ -9,9 +9,7 @@ class FeaturedVid extends React.Component {
   render() {
     return (
       <div className='featured-vid'>
-
-                <FeaturedVidModal videoSource='http://s3.amazonaws.com/docflix-dev/episodes/videos/000/000/195/original/video.mp4?1487771531' />
-
+        <FeaturedVidModal videoSource='http://s3.amazonaws.com/docflix-dev/episodes/videos/000/000/195/original/video.mp4?1487771531' />
       </div>
     );
   }
@@ -19,10 +17,3 @@ class FeaturedVid extends React.Component {
 }
 
 export default FeaturedVid;
-
-// openModal() {
-//   return(
-//     () => <VideoModalBasic videoSource='http://s3.amazonaws.com/docflix-dev/episodes/videos/000/000/141/original/video.mp4?1487540566'>
-//   }
-// }
-//         <VideoModalBasic videoSource='http://s3.amazonaws.com/docflix-dev/episodes/videos/000/000/141/original/video.mp4?1487540566' />

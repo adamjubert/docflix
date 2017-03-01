@@ -166,5 +166,3 @@ class GenreIndex extends React.Component {
 }
 
 export default withRouter(GenreIndex);
-
-// <GenreList genres={ this.props.genres }/>

@@ -5,7 +5,6 @@ import GenreIndex from './genre_index';
 
 const mapStateToProps = state => {
   let myList = { id: 0, name: 'My List', series: state.series };
-  // let genres = Object.assign({}, {myList: myList}, state.genres);
   let genres = [myList].concat(Object.keys(state.genres).map(id => state.genres[id]));
   return {
     genres

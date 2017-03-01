@@ -28,5 +28,3 @@ class SerieOverview extends React.Component {
 }
 
 export default SerieOverview;
-
-// NB: Pass the serie's first episode's video URL through props to VideoModal

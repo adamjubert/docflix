@@ -1,7 +1,6 @@
 import {  RECEIVE_SERIES } from '../actions/serie_actions';
 import { RECEIVE_LIKE, REMOVE_LIKE } from '../actions/like_actions';
 import merge from 'lodash/merge';
-// import { RECEIVE_REVIEW } from '../actions/review_actions';
 
 
 
@@ -26,6 +25,3 @@ const SeriesReducer = (state = {}, action) => {
 };
 
 export default SeriesReducer;
-
-// case RECEIVE_REVIEW:
-//  return Object.assign({}, state, { reviews: state.reviews.push(action.review) });
