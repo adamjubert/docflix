@@ -18,7 +18,6 @@ class SerieOverviewLeft extends React.Component {
   }
 
   addButton() {
-
     return(
       <div className='my-list'
         onClick={() => this.props.createLike({
@@ -41,9 +40,15 @@ class SerieOverviewLeft extends React.Component {
       }
     }
 
+    debugger
+
+
     return(
       <div className='my-list'
-            onClick={() => this.props.deleteLike(likeToDelete)}>
+            onClick={() => {
+              this.props.deleteLike(likeToDelete);
+            }
+            }>
         <i className="fa fa-check-circle my-list-btn"
            aria-hidden="true"
            ></i><p>MY LIST</p>

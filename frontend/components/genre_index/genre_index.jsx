@@ -27,7 +27,6 @@ class GenreIndex extends React.Component {
     window.removeEventListener('resize', this.handleResize);
   }
 
-  // NB: if slowdown, this could be the issue
   showSerie(serie, genre) {
     return () => {
 
@@ -66,7 +65,7 @@ class GenreIndex extends React.Component {
         <ul className='slider-list-main'>
           <Carousel
             slidesToShow={this.state.count}
-            slidesToScroll={'auto'}
+            slidesToScroll={this.state.count}
             dragging={false}
             swiping={false}
             wrapAround = {true}
@@ -74,15 +73,17 @@ class GenreIndex extends React.Component {
             initialSlideHeight={300}
             height={'100%'}
             width={'100%'}
-            cellSpacing={10}
+            speed={500}
+            cellSpacing={4}
             decorators={[{
                      component: React.createClass({
                        render() {
                          return (
-
                            <button
                              className="slider-button"
-                             onClick={this.props.previousSlide}>
+                             onClick={ this.props.currentSlide < this.props.slidesToScroll && this.props.currentSlide !== 0  ?
+                               () => this.props.goToSlide(0) :
+                               this.props.previousSlide  }>
                              <i className="fa fa-angle-left" aria-hidden="true" />
                            </button>
                          );
@@ -95,7 +96,9 @@ class GenreIndex extends React.Component {
                          return (
                            <button
                              className="slider-button"
-                             onClick={this.props.nextSlide}>
+                             onClick={this.props.currentSlide > this.props.slideCount - this.props.slidesToScroll ?
+                               () => this.props.goToSlide(this.props.slideCount) :
+                               this.props.nextSlide  }>
                              <i className="fa fa-angle-right" aria-hidden="true" />
                            </button>
                          );
