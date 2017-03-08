@@ -2,7 +2,24 @@
 /**** Selected Series ******/
 
 .serie-expand {
-  z-index: 1000;
+  position: relative;
+}
+
+.x-out-serie-show {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 30px;
+  color: lightgrey;
+  transition: 0.4s;
+}
+
+.x-out-serie-show:hover {
+  cursor: pointer;
+  transition: 0.4s;
+  transform: scale(1.1);
+  color: white;
+
 }
 
 .serie-expand-main {

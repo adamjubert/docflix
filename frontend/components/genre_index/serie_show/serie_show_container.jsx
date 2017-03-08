@@ -4,9 +4,13 @@ import { createReview } from '../../../actions/review_actions';
 import { fetchLikes } from '../../../actions/like_actions';
 import SerieShow from './serie_show';
 
-const mapStateToProps = ({ serie }) => {
+const mapStateToProps = (state, ownProps) => {
+  let serie = state.serie;
+  let removeSerieShow = ownProps.removeSerieShow.bind(this);
+
   return {
-    serie
+    serie,
+    removeSerieShow
   };
 };
 

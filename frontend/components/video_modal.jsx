@@ -16,7 +16,7 @@ const customStyles = {
     top                        : '40px',
     left                       : '0px',
     right                      : '0px',
-    bottom                     : '40px',
+    bottom                     : '0px',
     background                 : '#000',
     border                     : 'none',
     overflow                   : 'auto',
@@ -76,7 +76,7 @@ class VideoModal extends React.Component {
           aria-hidden="true"
           onClick={this.closeModal}></i>
 
-        <video width="100%" height="90%" controls autoPlay  >
+        <video width="100%" height="100%" controls autoPlay  >
           <source src={this.props.videoSource} type="video/mp4" />
         </video>
 

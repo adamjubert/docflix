@@ -40,9 +40,6 @@ class SerieOverviewLeft extends React.Component {
       }
     }
 
-    debugger
-
-
     return(
       <div className='my-list'
             onClick={() => {

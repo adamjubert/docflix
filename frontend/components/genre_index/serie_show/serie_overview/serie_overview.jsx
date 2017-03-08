@@ -18,7 +18,7 @@ class SerieOverview extends React.Component {
         <div className='serie-overview-right'>
           <section className='serie-overview-right-container'>
             <div className='serie-overview-video'>
-              <VideoModal videoSource={ videoUrl } thumbnail={ thumbUrl }/>
+              <VideoModal videoSource={ videoUrl } thumbnail={ thumbUrl } />
             </div>
           </section>
         </div>

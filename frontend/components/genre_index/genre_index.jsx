@@ -29,7 +29,6 @@ class GenreIndex extends React.Component {
 
   showSerie(serie, genre) {
     return () => {
-
       this.setState({
         clickedSerie: serie,
         clickedGenre: genre
@@ -121,12 +120,20 @@ class GenreIndex extends React.Component {
     );
   }
 
+
   goToGenre(id) {
       const path = `browse/genre/${id}`;
       return(
         () => this.props.router.push(path)
       );
     }
+
+  removeSerieShow() {
+    this.setState({
+      clickedSerie: null,
+      clickedGenre: null
+    });
+  }
 
   genresList() {
     let genres = this.props.genres;
@@ -144,7 +151,7 @@ class GenreIndex extends React.Component {
                 { this.seriesList(genre) }
 
               { this.state.clickedGenre && genre.id === this.state.clickedGenre.id ?
-                          <SerieShowContainer serieId={this.state.clickedSerie.id} /> :
+                          <SerieShowContainer serieId={this.state.clickedSerie.id} removeSerieShow={this.removeSerieShow.bind(this)} /> :
                             '' }
             </div>
           ))}

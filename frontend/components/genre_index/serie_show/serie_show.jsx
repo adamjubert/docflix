@@ -36,7 +36,10 @@ class SerieShow extends React.Component {
 
   selectTab(num) {
     this.setState({selectedPane: num});
+  }
 
+  removeSerieShow() {
+    this.props.removeSerieShow();
   }
 
 
@@ -57,6 +60,8 @@ class SerieShow extends React.Component {
 
     return(
       <div className='serie-expand'>
+        <p className='x-out-serie-show'
+             onClick={this.removeSerieShow.bind(this)}>&times;</p>
         <div className='serie-expand-content'>
           { this.selectPane(this.state.selectedPane) }
           <FootLinks episodeCount={serie.episodes.length}
