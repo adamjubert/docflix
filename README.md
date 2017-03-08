@@ -25,7 +25,7 @@ When a user clicks on a doc's thumbnail, that series will expand to show the ove
 Videos are hosted in the cloud using Amazon Web Services and displayed with the native HTML5 video player.
 
 ### Reviews
-![Reviews component](app/assets/images/readme/reviews1.gif)
+![Reviews component](app/assets/images/readme/reviews2.gif)
 
 Users can create, read, update, and delete their reviews, which update instantly.
 
