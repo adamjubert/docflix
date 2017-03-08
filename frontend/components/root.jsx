@@ -1,6 +1,6 @@
 import React from 'react';
 import App from './app';
-import Splash from './splash/splash';
+import SplashContainer from './splash/splash_container';
 import Browse from './browse/browse';
 import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
@@ -28,7 +28,7 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path='/' component={ App }>
-          <IndexRoute component={ Splash } onEnter={_redirectIfLoggedIn}/>
+          <IndexRoute component={ SplashContainer } onEnter={_redirectIfLoggedIn}/>
           <Route path='/login' component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path='/signup' component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path='/browse' component={ Browse } onEnter={_redirectIfNotLoggedIn }>

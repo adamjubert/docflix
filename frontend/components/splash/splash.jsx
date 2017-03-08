@@ -6,6 +6,17 @@ class Splash extends React.Component {
     super(props);
   }
 
+  componentDidUpdate() {
+    this.redirectIfLoggedIn();
+  }
+
+  redirectIfLoggedIn() {
+    debugger
+    if (this.props.loggedIn) {
+      this.props.router.push("/browse");
+    }
+  }
+
   handleGuestLogin() {
     const user = {email: 'guest@docflix.tech', password: 'testing'};
     return (this.props.login(user));
@@ -19,6 +30,7 @@ class Splash extends React.Component {
         <h2>Watch anywhere. Cancel anytime.</h2>
         <ul className='splash-buttons'>
           <Link to='/signup' className='splash-btn-signup'>Join free for a month</Link>
+          <Link className='splash-btn-signup' onClick={this.handleGuestLogin.bind(this)}>Sign in as guest</Link>
         </ul>
 
       </div>
