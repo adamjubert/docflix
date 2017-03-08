@@ -27,7 +27,7 @@ class GenreIndex extends React.Component {
     window.removeEventListener('resize', this.handleResize);
   }
 
-  showSerie(serie, genre) {
+  seriesExpand(serie, genre) {
     return () => {
       this.setState({
         clickedSerie: serie,
@@ -109,7 +109,7 @@ class GenreIndex extends React.Component {
 
               <div className='series-list-item'
                   key={"serie-" + serie.id}
-                  onClick={this.showSerie(serie, genre)}>
+                  onClick={this.seriesExpand(serie, genre)}>
                   <img src={serie.thumbnail_url} width="100%" height="100%" ></img>
               </div>
 
@@ -140,12 +140,10 @@ class GenreIndex extends React.Component {
     return(
       <div className='genre-list-container'>
         <ul className='genre-list'>
-          {this.props.genres.map((genre) => (
+          {genres.map((genre) => (
             <div key={"genre-" + genre.id} className='genre-list-item' >
               <div className='genre-title'>
-                <a
-                    className='genre-title-item'
-                    >{genre.name}</a>
+                <a className='genre-title-item'>{genre.name}</a>
               </div>
 
                 { this.seriesList(genre) }
