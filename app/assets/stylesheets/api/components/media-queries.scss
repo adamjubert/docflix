@@ -1,10 +1,25 @@
+@media (max-width: 2200px) {
+  .splash-main h1 {
+    font-size: 88px;
+    margin-bottom: 24px;
+  }
+
+  .splash-main h2 {
+    font-size: 32px;
+    margin-bottom: 30px !important;
+    letter-spacing: 1px;
+  }
+
+}
+
+
 @media (min-width: 1400px) {
   .series-list-item img {
     height: 175px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1600px) {
   .splash-main h1 {
     font-size: 68px;
 
@@ -29,6 +44,15 @@
 
 
 @media (max-width: 900px) {
+  .splash-main h1 {
+    font-size: 50px;
+  }
+
+  .splash-main h2 span {
+    // display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
   .series-list {
     justify-content: flex-start
   }
@@ -56,6 +80,11 @@
 
 
 @media (max-width: 670px) {
+  .all-nav-header-link img {
+    height: 30px;
+    width: 120px;
+    margin-left: 4px;
+  }
 
   .mobile-white {
     background: #fafafa;
@@ -133,4 +162,43 @@
 
 .review-preview-list {
   overflow-y: hidden;
+}
+
+/* Mobile */
+
+@media (max-width: 540px) {
+
+  .splash-main {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .splash-main h1 {
+    font-size: 34px;
+  }
+
+  .splash-main h2 span {
+    // display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .splash-main ul {
+    flex-direction: column;
+    display: flex;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .splash-btn-signup {
+    display: block;
+    // flex-direction: column;
+    max-width: 240px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .footer-container {
+    margin: 0 auto;
+    width: 80%;
+  }
 }
