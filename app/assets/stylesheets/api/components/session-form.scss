@@ -27,6 +27,10 @@
   margin-top: 20px;
 }
 
+.login-labels label {
+  margin-bottom: 2px;
+}
+
 .login-labels input {
   width: 96%;
   height: 28px;
@@ -44,17 +48,20 @@
 .auth-form-submit-btn {
   width: 100%;
   border: none;
-  background: $netflix-red;
+  background:  $netflix-red;
   color: white;
   font-size: 16px;
   padding-top: 14px;
   padding-bottom: 16px;
   box-shadow: 0px 1px 1px -1px rgba(0,0,0,1);
   border-radius: 2px;
+  transition: 0.3s;
 }
 
 .auth-form-submit-btn:hover {
   cursor: pointer;
+  background: #e50914;
+  transition: 0.3s;
 }
 
 .auth-errors {

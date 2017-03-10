@@ -31,11 +31,18 @@
   padding: 6px 14px;
   font-weight: 600;
   font-size: 16px;
+  transition: 0.3s;
 }
 
 .btn-review:hover {
   cursor: pointer;
   background: $netflix-red;
+  transition: 0.3s;
+}
+
+.btn-review:focus {
+  outline: 0;
+  background-color: $netflix-red;
 }
 
 .cancel {

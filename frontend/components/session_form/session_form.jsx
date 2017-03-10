@@ -93,7 +93,7 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'signup') {
       return(
         <div>
-          <label>First Name:</label>
+          <label>First Name</label>
             <input type='text'
                    value={this.state.fname}
                    onChange={this.update('fname')}
@@ -107,7 +107,7 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'signup') {
       return(
         <div>
-          <label>Last Name:</label>
+          <label>Last Name</label>
             <input type='text'
                    value={this.state.lname}
                    onChange={this.update('lname')}
