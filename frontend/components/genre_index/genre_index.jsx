@@ -43,79 +43,88 @@ class GenreIndex extends React.Component {
 
    if (width >= 1800 && count !== 6){
      this.setState({ count: 6 });
-   }else if(width < 1800 && width >= 1420 && count !== 5){
+   } else if(width < 1800 && width >= 1420 && count !== 5){
      this.setState({ count: 5 });
-   }else if(width < 1420 && width >= 1140 && count !== 4){
+   } else if(width < 1420 && width >= 1140 && count !== 4){
      this.setState({ count: 4 });
-   }else if(width < 1140 && width >= 820 && count !== 3){
+   } else if(width < 1140 && width >= 820 && count !== 3){
      this.setState({ count: 3 });
-   }else if(width < 820 && width > 480 && count !== 2){
+   } else if(width < 820 && width > 480 && count !== 2){
      this.setState({ count: 2 });
-   }else if(width <= 480 && count !== 1){
+   } else if(width <= 480 && count !== 1){
      this.setState({ count: 1 });
    }
  }
 
+ leftDecorator() {
+   return {
+    component: React.createClass({
+      render() {
+        return (
+          <button
+            className="slider-button"
+            onClick={ this.props.currentSlide < this.props.slidesToScroll && this.props.currentSlide !== 0  ?
+              () => this.props.goToSlide(0) :
+              this.props.previousSlide  }>
+            <i className="fa fa-angle-left" aria-hidden="true" />
+          </button>
+        );
+      }
+    }),
+    position: 'CenterLeft'
+  };
+ }
 
+ rightDecorator() {
+   return {
+    component: React.createClass({
+        render() {
+          return (
+            <button
+              className="slider-button"
+              onClick={this.props.currentSlide > this.props.slideCount - this.props.slidesToScroll ?
+                () => this.props.goToSlide(this.props.slideCount) :
+                this.props.nextSlide  }>
+              <i className="fa fa-angle-right" aria-hidden="true" />
+            </button>
+          );
+        },
+      }),
+      position: 'CenterRight'
+    };
+ }
+
+ carousel(genre) {
+   return <Carousel
+     slidesToShow={this.state.count}
+     slidesToScroll={this.state.count}
+     dragging={false}
+     swiping={false}
+     wrapAround = {true}
+     initialSlideWidth={500}
+     initialSlideHeight={300}
+     height={'100%'}
+     width={'100%'}
+     speed={500}
+     cellSpacing={4}
+     decorators={[ this.leftDecorator() , this.rightDecorator() ]}>
+
+      { genre.series.map((serie) => (
+       <div className='series-list-item'
+         key={"serie-" + serie.id}
+         onClick={this.seriesExpand(serie, genre)}>
+         <img src={serie.thumbnail_url} width="100%" height="100%" ></img>
+       </div>
+      )) }
+    </Carousel>;
+ }
 
   seriesList(genre) {
     if ( genre.series instanceof Array === false ) { return null; }
     return(
       <div >
         <ul className='slider-list-main'>
-          <Carousel
-            slidesToShow={this.state.count}
-            slidesToScroll={this.state.count}
-            dragging={false}
-            swiping={false}
-            wrapAround = {true}
-            initialSlideWidth={500}
-            initialSlideHeight={300}
-            height={'100%'}
-            width={'100%'}
-            speed={500}
-            cellSpacing={4}
-            decorators={[{
-                     component: React.createClass({
-                       render() {
-                         return (
-                           <button
-                             className="slider-button"
-                             onClick={ this.props.currentSlide < this.props.slidesToScroll && this.props.currentSlide !== 0  ?
-                               () => this.props.goToSlide(0) :
-                               this.props.previousSlide  }>
-                             <i className="fa fa-angle-left" aria-hidden="true" />
-                           </button>
-                         );
-                       }
-                     }),
-                     position: 'CenterLeft'
-                   },{
-                     component: React.createClass({
-                       render() {
-                         return (
-                           <button
-                             className="slider-button"
-                             onClick={this.props.currentSlide > this.props.slideCount - this.props.slidesToScroll ?
-                               () => this.props.goToSlide(this.props.slideCount) :
-                               this.props.nextSlide  }>
-                             <i className="fa fa-angle-right" aria-hidden="true" />
-                           </button>
-                         );
-                       },
-                     }),
-                     position: 'CenterRight'
-                   }]}>
-          { genre.series.map((serie) => (
-
-              <div className='series-list-item'
-                  key={"serie-" + serie.id}
-                  onClick={this.seriesExpand(serie, genre)}>
-                  <img src={serie.thumbnail_url} width="100%" height="100%" ></img>
-              </div>
-
-          )) }
-        </Carousel>
+          { this.carousel(genre) }
         </ul>
       </div>
     );
@@ -147,11 +156,12 @@ class GenreIndex extends React.Component {
                 <a className='genre-title-item'>{genre.name}</a>
               </div>
 
-                { this.seriesList(genre) }
+              { this.seriesList(genre) }
 
               { this.state.clickedGenre && genre.id === this.state.clickedGenre.id ?
-                          <SerieShowContainer serieId={this.state.clickedSerie.id} removeSerieShow={this.removeSerieShow.bind(this)} /> :
-                            '' }
+                <SerieShowContainer serieId={this.state.clickedSerie.id}
+                  removeSerieShow={this.removeSerieShow.bind(this)} /> :
+                '' }
             </div>
           ))}
         </ul>
