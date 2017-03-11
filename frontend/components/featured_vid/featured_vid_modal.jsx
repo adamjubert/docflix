@@ -59,8 +59,8 @@ class FeaturedVidModal extends React.Component {
   render() {
     return (
       <div className='featured-vid' >
-        <video width="100%" height="100%" autoPlay loop muted >
-          <source src={this.props.trailerSource}
+        <video width="100%" height="100%" autoPlay loop muted  >
+          <source src={this.props.videoSource}
                   type="video/mp4" />
         </video>
         <div className='featured-vid-text'>

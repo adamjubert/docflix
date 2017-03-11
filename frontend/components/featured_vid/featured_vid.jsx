@@ -10,8 +10,7 @@ class FeaturedVid extends React.Component {
     return (
       <div className='featured-vid'>
         <FeaturedVidModal
-          trailerSource='https://s3.amazonaws.com/docflix-prod/featured-vid.mp4'
-          videoSource='https://s3.amazonaws.com/docflix-prod/series/another-world/video.mp4' />
+          videoSource='http://s3.amazonaws.com/docflix-prod/featured-vid.mp4' />
       </div>
     );
   }
