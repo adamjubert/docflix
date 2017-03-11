@@ -64,7 +64,7 @@ class SerieShow extends React.Component {
              onClick={this.removeSerieShow.bind(this)}>&times;</p>
         <div className='serie-expand-content'>
           { this.selectPane(this.state.selectedPane) }
-          <FootLinks episodeCount={serie.episodes.length}
+          <FootLinks episodeCount={serie.episodes ? serie.episodes.length : 0}
                      selectedPane={this.state.selectedPane}
                      onTabChosen={this.selectTab.bind(this)} />
         </div>

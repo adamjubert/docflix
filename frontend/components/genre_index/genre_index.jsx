@@ -59,6 +59,7 @@ class GenreIndex extends React.Component {
 
 
   seriesList(genre) {
+    if ( genre.series instanceof Array === false ) { return null; }
     return(
       <div >
         <ul className='slider-list-main'>
