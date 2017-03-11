@@ -27,7 +27,7 @@ Episode.create!(
   episode_num: 1,
   series_id: another_world.id,
   thumbnail: ('https://s3.amazonaws.com/docflix-prod/series/another-world/ep-logo.png'),
-  video: ('https://s3.amazonaws.com/docflix-prod/series/another-world/video.mp4')
+  video: ('https://s3.amazonaws.com/docflix-prod/series/another-world/video.avi')
 )
 
 

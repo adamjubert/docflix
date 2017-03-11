@@ -60,11 +60,11 @@ class FeaturedVidModal extends React.Component {
     return (
       <div className='featured-vid' >
         <video width="100%" height="100%" autoPlay loop muted >
-          <source src={this.props.videoSource}
+          <source src={this.props.trailerSource}
                   type="video/mp4" />
         </video>
         <div className='featured-vid-text'>
-          <h1>Death Valley in HD</h1>
+          <h1>Another World</h1>
           <h2>A Docflix Featured Documentary</h2>
           <button onClick={ this.openModal }><i className="fa fa-play" aria-hidden="true"></i> Play Now</button>
         </div>
