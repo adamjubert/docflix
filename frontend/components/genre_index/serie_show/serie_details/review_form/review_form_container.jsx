@@ -32,7 +32,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   const action = ownProps.userReview ?  updateReview : createReview;
   return {
     action: review => dispatch(action(review)),
-    deleteReview: id => dispatch(deleteReview(id)),
+    deleteReview: review => dispatch(deleteReview(review)),
     clearErrors: () => dispatch(receiveReviewErrors([]))
   };
 };

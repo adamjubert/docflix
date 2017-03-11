@@ -1,4 +1,6 @@
-
+.review-form {
+  position: relative;
+}
 
 .review-form label {
   display: block;
@@ -20,7 +22,10 @@
   margin-bottom: 8px;
 }
 
-
+.review-form-btns {
+  display: flex;
+  justify-content: flex-start;
+}
 
 .btn-review {
   margin-top: 10px;
@@ -43,6 +48,10 @@
 .btn-review:focus {
   outline: 0;
   background-color: $netflix-red;
+}
+
+.btn-delete {
+
 }
 
 .cancel {

@@ -26,7 +26,8 @@ class ReviewForm extends React.Component {
   }
 
   deleteReview() {
-    this.props.deleteReview(this.props.userReview.id).then(
+    this.setState({ stars: 0, comment: '' })
+    this.props.deleteReview(this.props.userReview).then(
       () => this.setState({stars: 0, comment: ''}));
   }
 
@@ -60,28 +61,49 @@ class ReviewForm extends React.Component {
       this.setState({stars: nextValue});
   }
 
+  checkStars() {
+    return this.state.stars;
+  }
+
+  // gives the "real" star rating as opposed to defaultStarRating
+  starComponent() {
+    return <StarRatingComponent
+      name="rate1"
+      starCount={5}
+      starColor={'red'}
+      value={ this.state.stars }
+      onStarClick={this.onStarClick.bind(this)}/>;
+  }
+
+  // stars won't reset on delete without this
+  defaultStarComponent() {
+    return <StarRatingComponent
+      name="rate1"
+      starCount={5}
+      starColor={ "rgb(51, 51, 51)" }
+      value={ 5 }
+      onStarClick={this.onStarClick.bind(this)}/>;
+  }
+
   render () {
     const headText = this.props.formType === 'new' ? "Rate this title:" : "Edit your Review:";
     const btnText = this.props.formType === 'new' ? "Submit" : "Update";
     let deleteBtn;
     if (this.props.formType !== 'new') deleteBtn =
-      <input type="submit"
-             value="Delete"
-             className='btn-review'
-             onClick={() => this.deleteReview()}></input> ;
-    return (
+      <div
+        type="submit"
+        value="Delete"
+        className='btn-review btn-delete'
+        onClick={() => this.deleteReview()}>Delete</div> ;
+
+  let stars = this.state.stars === 0 ? this.defaultStarComponent() : this.starComponent();
+  return (
       <div className='review-form-container'>
         <h3>{headText}</h3>
         <form onSubmit={this.handleSubmit} className='review-form'>
           <div className='review-stars'>
             <label></label>
-            <StarRatingComponent
-                name="rate1"
-                starCount={5}
-                starColor={'red'}
-                value={this.state.stars}
-                onStarClick={this.onStarClick.bind(this)}
-            />
+            { stars }
           </div>
           <label>
             <textarea
@@ -91,8 +113,10 @@ class ReviewForm extends React.Component {
             </textarea>
           </label>
           <div className='auth-errors'>{this.errorHandler()}</div>
-          <input type="submit" value={btnText} className='btn-review' />
-          { deleteBtn }
+          <div className='review-form-btns'>
+            <input type="submit" value={btnText} className='btn-review' />
+            { deleteBtn }
+          </div>
         </form>
       </div>
     );
