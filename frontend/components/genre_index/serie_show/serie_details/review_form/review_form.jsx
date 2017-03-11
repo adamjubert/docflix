@@ -19,14 +19,10 @@ class ReviewForm extends React.Component {
     this.setState(newProps.review);
   }
 
-  update(field) {
-    return (e) => {
-      this.setState({[field]: e.target.value});
-    };
-  }
+
 
   deleteReview() {
-    this.setState({ stars: 0, comment: '' })
+    this.setState({ stars: 0, comment: '' });
     this.props.deleteReview(this.props.userReview).then(
       () => this.setState({stars: 0, comment: ''}));
   }
@@ -61,10 +57,6 @@ class ReviewForm extends React.Component {
       this.setState({stars: nextValue});
   }
 
-  checkStars() {
-    return this.state.stars;
-  }
-
   // gives the "real" star rating as opposed to defaultStarRating
   starComponent() {
     return <StarRatingComponent
@@ -85,42 +77,70 @@ class ReviewForm extends React.Component {
       onStarClick={this.onStarClick.bind(this)}/>;
   }
 
-  render () {
-    const headText = this.props.formType === 'new' ? "Rate this title:" : "Edit your Review:";
-    const btnText = this.props.formType === 'new' ? "Submit" : "Update";
-    let deleteBtn;
-    if (this.props.formType !== 'new') deleteBtn =
-      <div
-        type="submit"
-        value="Delete"
-        className='btn-review btn-delete'
-        onClick={() => this.deleteReview()}>Delete</div> ;
+  deleteButton() {
+    return <div
+      type="submit"
+      value="Delete"
+      className='btn-review btn-delete'
+      onClick={() => this.deleteReview()}>Delete</div> ;
+  }
 
-  let stars = this.state.stars === 0 ? this.defaultStarComponent() : this.starComponent();
-  return (
+
+  reviewButtons() {
+    const btnText = this.props.formType === 'new' ? "Submit" : "Update";
+    return <div className='review-form-btns'>
+      <input type="submit" value={btnText} className='btn-review' />
+      { this.props.formType !== 'new' ? this.deleteButton() : '' }
+    </div>;
+  }
+
+  reviewForm() {
+    return <form onSubmit={this.handleSubmit} className='review-form'>
+      { this.reviewStars() }
+      { this.reviewTextArea() }
+      <div className='auth-errors'>{this.errorHandler()}</div>
+      { this.reviewButtons() }
+    </form>;
+  }
+
+  reviewStars() {
+    return <div className='review-stars'>
+      <label></label>
+      { this.state.stars === 0 ?
+          this.defaultStarComponent() :
+          this.starComponent() }
+    </div>;
+  }
+
+  reviewTextArea() {
+    return <label>
+      <textarea
+        value={this.state.comment}
+        onChange={this.update('comment')}>
+
+      </textarea>
+    </label>;
+  }
+
+
+  render () {
+    const headText = this.props.formType === 'new' ?
+      "Rate this title:" :
+      "Edit your Review:";
+    return (
       <div className='review-form-container'>
         <h3>{headText}</h3>
-        <form onSubmit={this.handleSubmit} className='review-form'>
-          <div className='review-stars'>
-            <label></label>
-            { stars }
-          </div>
-          <label>
-            <textarea
-              value={this.state.comment}
-              onChange={this.update('comment')}>
-
-            </textarea>
-          </label>
-          <div className='auth-errors'>{this.errorHandler()}</div>
-          <div className='review-form-btns'>
-            <input type="submit" value={btnText} className='btn-review' />
-            { deleteBtn }
-          </div>
-        </form>
+        { this.reviewForm() }
       </div>
     );
   }
+
+  update(field) {
+    return (e) => {
+      this.setState({[field]: e.target.value});
+    };
+  }
+
 }
 
 export default ReviewForm;
