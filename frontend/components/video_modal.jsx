@@ -49,7 +49,7 @@ class VideoModal extends React.Component {
   }
 
   afterOpenModal() {
-    this.refs.subtitle.style.color = '#f00';
+    // this.refs.subtitle.style.color = '#f00';
   }
 
   closeModal() {
