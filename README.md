@@ -3,7 +3,7 @@
 [Docflix Live](http://docflix.us)
 
 ## Description
-Docflix is a video-streaming web application inspired by Netflix that features short, 1-to-3-minute clips of popular documentaries. The back end was built with Ruby on Rails and PostgreSQL. The front end was created with React.js and JavaScript.
+Docflix is a video-streaming web application inspired by Netflix that features short, 1-to-3-minute clips of popular documentaries. The back end was built with Ruby on `Rails` and `PostgreSQL`. The front end was created with `React.js` and `JavaScript`.
 
 ## Features & Implementation
 
