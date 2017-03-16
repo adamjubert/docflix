@@ -49,7 +49,7 @@ class FeaturedVidModal extends React.Component {
 
   afterOpenModal() {
     // references are now sync'd and can be accessed.
-    this.refs.subtitle.style.color = '#f00';
+    // this.refs.subtitle.style.color = '#f00';
   }
 
   closeModal() {
