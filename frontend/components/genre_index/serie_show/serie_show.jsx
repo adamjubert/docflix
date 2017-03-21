@@ -45,16 +45,7 @@ class SerieShow extends React.Component {
 
 
   render() {
-    if (this.state.fetching) return(
-      <div className='serie-expand'>
-        <div className='serie-expand-content'>
-          <div className='serie-expand-loading'>loading...</div>
-            <FootLinks episodeCount='0'
-                       selectedPane={this.state.selectedPane}
-                       onTabChosen={this.selectTab.bind(this)} />
-        </div>
-      </div>
-    );
+    if (this.state.fetching) return( null );
 
     const serie = this.props.serie;
 
