@@ -10,7 +10,7 @@
 
 .genre-list-item {
   margin-bottom: 60px;
-  height: 160px;
+  height: auto;
 }
 
 .genre-list {
@@ -112,4 +112,8 @@
 
 .slider-list-main:hover button {
   display: block;
+}
+
+.slider-list-main {
+  height: 150px;
 }
