@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SerieDetails from './serie_details';
-import { fetchReviews, fetchReview, createReview, updateReview } from '../../../../actions/review_actions';
+import { fetchReviews, fetchReview, createReview, updateReview } from '../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let userReview;

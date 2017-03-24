@@ -1,6 +1,6 @@
 import React from 'react';
-import StarRating from '../../../star_rating';
-import GenreIndex from '../../genre_index';
+import StarRating from '../star_rating';
+import GenreIndex from '../genre_index/genre_index';
 
 class SerieOverviewLeft extends React.Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import SerieShowContainer from '../genre_index/serie_show/serie_show_container';
+import SerieShowContainer from '../serie_show/serie_show_container';
 
 
 

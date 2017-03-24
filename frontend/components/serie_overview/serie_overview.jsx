@@ -1,6 +1,6 @@
 import React from 'react';
 import SerieOverviewLeftContainer from './serie_overview_left_container';
-import VideoModal from '../../../video_modal.jsx';
+import VideoModal from '../video_modal.jsx';
 
 class SerieOverview extends React.Component {
   constructor(props) {

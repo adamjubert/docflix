@@ -1,5 +1,5 @@
 import React from 'react';
-import StarRating from '../../../../star_rating';
+import StarRating from '../star_rating';
 
 
 class ReviewsPreview extends React.Component {

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { fetchSerie } from '../../../actions/serie_actions';
-import { createReview } from '../../../actions/review_actions';
-import { fetchLikes } from '../../../actions/like_actions';
+import { fetchSerie } from '../../actions/serie_actions';
+import { createReview } from '../../actions/review_actions';
+import { fetchLikes } from '../../actions/like_actions';
 import SerieShow from './serie_show';
 
 const mapStateToProps = (state, ownProps) => {

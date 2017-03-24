@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
-import ModalForm from './modal_form';
+import ReviewForm from './review_form';
 import {
   fetchReview,
   createReview,
   updateReview,
   deleteReview,
   receiveReviewErrors
-} from '../../../../../actions/review_actions';
+} from '../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let userReview = ownProps.userReview;
@@ -32,7 +32,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   const action = ownProps.userReview ?  updateReview : createReview;
   return {
     action: review => dispatch(action(review)),
-    deleteReview: id => dispatch(deleteReview(id)),
+    deleteReview: review => dispatch(deleteReview(review)),
     clearErrors: () => dispatch(receiveReviewErrors([]))
   };
 };
@@ -40,4 +40,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ModalForm);
+)(ReviewForm);

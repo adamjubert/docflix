@@ -1,5 +1,5 @@
 import React from 'react';
-import VideoModalEpisode from '../../../video_modal_episode.jsx';
+import VideoModalEpisode from '../video_modal_episode.jsx';
 import Carousel from 'nuka-carousel';
 
 

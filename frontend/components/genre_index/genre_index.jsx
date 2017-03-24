@@ -1,5 +1,5 @@
 import React from 'react';
-import SerieShowContainer from './serie_show/serie_show_container';
+import SerieShowContainer from '../serie_show/serie_show_container';
 import { Link, Router } from 'react-router';
 import { Route, IndexRoute, hashHistory, withRouter } from 'react-router';
 import Carousel from 'nuka-carousel';

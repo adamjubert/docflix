@@ -1,8 +1,8 @@
 import React from 'react';
 import SerieShowContainer from './serie_show_container';
-import SerieOverview from './serie_overview/serie_overview';
-import SerieEpisodes from './serie_episodes/serie_episodes';
-import SerieDetailsContainer from './serie_details/serie_details_container';
+import SerieOverview from '../serie_overview/serie_overview';
+import SerieEpisodes from '../serie_episodes/serie_episodes';
+import SerieDetailsContainer from '../serie_details/serie_details_container';
 import FootLinks from './foot_links';
 
 class SerieShow extends React.Component {

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import StarRating from '../../../star_rating';
-import ReviewsPreview from './reviews_preview/reviews_preview';
-import ReviewFormContainer from './review_form/review_form_container';
-import ReviewModal from './review_modal/review_modal';
+import StarRating from '../star_rating';
+import ReviewsPreview from '../reviews_preview/reviews_preview';
+import ReviewFormContainer from '../review_form/review_form_container';
+import ReviewModal from '../review_modal/review_modal';
 
 class SerieDetails extends React.Component {
   constructor(props) {

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import SerieOverviewLeft from './serie_overview_left';
-import { createLike, deleteLike } from '../../../../actions/like_actions.js';
-import { arrayOfLikes } from '../../../../reducers/selectors';
+import { createLike, deleteLike } from '../../actions/like_actions.js';
+import { arrayOfLikes } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
   return {
