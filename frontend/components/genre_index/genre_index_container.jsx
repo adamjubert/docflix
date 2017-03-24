@@ -5,6 +5,7 @@ import GenreIndex from './genre_index';
 
 const mapStateToProps = state => {
   let myList = { id: 0, name: 'My List', series: state.series };
+  // adds myList as a 'fake genre' to the list of current genres
   let genres = [myList].concat(Object.keys(state.genres).map(id => state.genres[id]));
   return {
     genres
